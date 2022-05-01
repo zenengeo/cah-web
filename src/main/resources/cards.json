@@ -1,0 +1,946 @@
+{
+    "black":[
+        {
+            "text":"I finally stopped when I saw __________",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"And the winner of the Bake Off is __________",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"We found _________!!! NOT CLICKBAIT",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"No one is safe from __________.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"______ killed me.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Nothing is better than __________.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Cards\nAgainst\n__________.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I ate _______ and it was DELICIOUS!",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Chillin with ____, eating bread.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"We found ______ in a sewer drain.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I don't want _____ for Christmas",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"__________\nAgainst\nHumanity",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"_____ wants to speak to the manager",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Cards\nAgainst\nHumanity\n\nNow with ______",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"All I want for Christmas is ________",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"________\nAgainst\n________",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"*sips drink* Tastes like _______",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"The best way to control my game is with ______.",
+            "cards": 1,
+            "by":"itzg"
+        },
+        {
+            "text":"Cards\nWith\n_______",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"______\nWith\nHumanity",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"______\nWith\n______",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"I always wash ______ with ______.",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"In 'Merica, we have _______.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I found ___ while looking for _______",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"Make sure to subscribe to get ______",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"You are ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Chillin' with _____, eating ______",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"Turns out, mixing ____ and ____ can cause explosions",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"For my next trick I will pull _____ out of ____",
+            "cards": 2,
+            "by":"",
+            "note-to-self":"this is costume number 28 in the scratch project, that's where to continue off"
+        },
+        {
+            "text":"What is ____?",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I found ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I feel like ____ is just staring at me",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"BREAKING NEWS: Floridaman stabbed person with ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I made a book that talks about ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"When I say potato you say ____.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"For Halloween, I got ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"The year is 3020, there is no longer ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"BREAKING NEWS: Local man shot with ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I think it was ____ who killed the person",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Outside my window I can smell ____.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Who put ____ in my Snickers bar?",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Was looking for my keys, but I found ____. Didnt know I had that.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I can tell it was photoshopped from the look of ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"My favorite game just added ____ to it",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I love the smell of ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Apparently eating ____ can cure multiple kinds of diseases",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I found 2 hidden cards in ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"In my opinion, ____ is not good",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"In my opinion, ____ is AMAZING",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Whoever thought of the idea of ____ should be killed",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"This message was sponsored by ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Have you ever had this issue? Your ____ doesn't fit in ____",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"Revealed at E3: a new game called ____: Rise of ____",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"Who even cares about ____ when there's ____",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"The next meme is going to be ____ with a ____",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"BREAKING NEWS: People start treating ____ like it's ____",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"____ can be commonly used as a substitute for ____",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"What're they gonna do next? Bag ____?",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Researchers find deep in the the woods a cult worshipping ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"The metaverse is probably only good for ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"____ probably only goes well with ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Time traveller asked about the future, says \"It's all ____\"",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Top 3 owners of nuclear warheads:\n3. Russia\n2: America\n1: ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I found ____ in a dumpster in the alleyway",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Oh no! Not ____ again!",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Nothing makes my heart happy like ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"My cats always wake me up in the morning with ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Tourists shocked to find ____ washed up on the beach",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Strange joke about ____ flooding the internet!",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"The invention of the ____ caused the decline of humanity",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Sausage factory discovered ____ is the perfect ingredient",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"A cat's favorite toy is ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Aw man, ____ just spontaneously combusted and now I  have to buy a new one",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Scientists discovered you don't actually need ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"New variant of snakes and ladders: ____ and ____",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"It would be so cool if it was possible to just make ____ out of nowhere",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Studies show that ____ under the influence of ____ has major side effects",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"They speak to me at night; they say \"Bring ____, Eliminate ___\"",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"New, strange internet term \"____ ____\" exists and we don't want to know what it means",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"New insult called \" Being a ____\" is becoming popular among multiple generations",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"What are they gonna take away next? ____?",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"No, it's not like I'm \"high on life\". I'm high on ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Word changed to insult. Here's the history of ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Have you checked out the convention that's just about ____?",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"New social media site just turned into people talking about ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I'm like ____. Y'know what I mean?",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Sorry, I confused ____ for ____",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"[Taking a picture] Say ____!",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"I'm making a call-out post on my twitter: ____, you got a stupid ____!",
+            "cards": 2,
+            "by":""
+        },
+        {
+            "text":"You've been hit by, you've been struck by ____",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"____, ____. Same thing.",
+            "cards": 2,
+            "by":""
+        }
+    ],
+    "white":[
+        {
+            "text":"9 dismembered bodies",
+            "by":""
+        },
+        {
+            "text":"Karen",
+            "by":""
+        },
+        {
+            "text":"A gun",
+            "by":""
+        },
+        {
+            "text":"A slice of bread",
+            "by":""
+        },
+        {
+            "text":"Guy Fieri",
+            "by":""
+        },
+        {
+            "text":"Humanity",
+            "by":""
+        },
+        {
+            "text":"Chicken",
+            "by":""
+        },
+        {
+            "text":"The ducks",
+            "by":""
+        },
+        {
+            "text":"You",
+            "by":""
+        },
+        {
+            "text":"My cat",
+            "by":""
+        },
+        {
+            "text":"My dog",
+            "by":""
+        },
+        {
+            "text":"Eels",
+            "by":""
+        },
+        {
+            "text":"Cards",
+            "by":""
+        },
+        {
+            "text":"The redditors",
+            "by":""
+        },
+        {
+            "text":"The only blank cards in the deck",
+            "by":""
+        },
+        {
+            "text":"Danny Devito",
+            "by":""
+        },
+        {
+            "text":"A Cards Against Humanity deck",
+            "by":""
+        },
+        {
+            "text":"A can of Heinz beans",
+            "by":""
+        },
+        {
+            "text":"Kevin",
+            "by":""
+        },
+        {
+            "text":"Communism",
+            "by":""
+        },
+        {
+            "text":"The manager",
+            "by":""
+        },
+        {
+            "text":"Keanu Reaves",
+            "by":""
+        },
+        {
+            "text":"Bees",
+            "by":""
+        },
+        {
+            "text":"A lifetime supply of soup",
+            "by":""
+        },
+        {
+            "text":"Half a banana",
+            "by":""
+        },
+        {
+            "text":"Banana bread",
+            "by":""
+        },
+        {
+            "text":"A full ketchup bottle",
+            "by":""
+        },
+        {
+            "text":"Garlic bread",
+            "by":""
+        },
+        {
+            "text":"Kinder surprise eggs",
+            "by":""
+        },
+        {
+            "text":"Disappointment",
+            "by":""
+        },
+        {
+            "text":"3/4 of a tube of toothpaste",
+            "by":""
+        },
+        {
+            "text":"Discounts",
+            "by":""
+        },
+        {
+            "text":"30 bottles of soda",
+            "by":""
+        },
+        {
+            "text":"The duolingo owl",
+            "by":""
+        },
+        {
+            "text":"A problem",
+            "by":""
+        },
+        {
+            "text":"A saucy boy",
+            "by":""
+        },
+        {
+            "text":"Vaccines",
+            "by":""
+        },
+        {
+            "text":"America",
+            "by":""
+        },
+        {
+            "text":"Child protection services",
+            "by":""
+        },
+        {
+            "text":"A jar of nails",
+            "by":""
+        },
+        {
+            "text":"A scoop of icecream",
+            "by":""
+        },
+        {
+            "text":"Everyone",
+            "by":""
+        },
+        {
+            "text":"Artificial intelligence",
+            "by":""
+        },
+        {
+            "text":"Max Temkin, one of the original creators of Cards Against Humanity",
+            "by":""
+        },
+        {
+            "text":"Nothing",
+            "by":""
+        },
+        {
+            "text":"The latest iPhone",
+            "by":""
+        },
+        {
+            "text":"A box full of water",
+            "by":""
+        },
+        {
+            "text":"A slice of cheese",
+            "by":""
+        },
+        {
+            "text":"A child",
+            "by":""
+        },
+        {
+            "text":"A squirrel",
+            "by":""
+        },
+        {
+            "text":"A knife",
+            "by":""
+        },
+        {
+            "text":"Diabetes",
+            "by":""
+        },
+        {
+            "text":"A strand of Coronavirus",
+            "by":""
+        },
+        {
+            "text":"Fires",
+            "by":""
+        },
+        {
+            "text":"McDonald's",
+            "by":""
+        },
+        {
+            "text":"A pre-school full of children",
+            "by":""
+        },
+        {
+            "text":"An alligator",
+            "by":""
+        },
+        {
+            "text":"A bowl made from beans",
+            "by":""
+        },
+        {
+            "text":"Strange promotional material",
+            "by":""
+        },
+        {
+            "text":"A MacBook",
+            "by":""
+        },
+        {
+            "text":"The $1000 Mac Pro stand",
+            "by":""
+        },
+        {
+            "text":"Drugs",
+            "by":""
+        },
+        {
+            "text":"A razorblade",
+            "by":""
+        },
+        {
+            "text":"Burgers",
+            "by":""
+        },
+        {
+            "text":"Someone",
+            "by":""
+        },
+        {
+            "text":"A severed head",
+            "by":""
+        },
+        {
+            "text":"A bar of chocolate",
+            "by":""
+        },
+        {
+            "text":"A different set of cards",
+            "by":""
+        },
+        {
+            "text":"PETA",
+            "by":""
+        },
+        {
+            "text":"Anti-pineapples",
+            "by":""
+        },
+        {
+            "text":"A digital exclusive card",
+            "by":""
+        },
+        {
+            "text":"Bad grammar",
+            "by":""
+        },
+        {
+            "text":"A baseball bat",
+            "by":""
+        },
+        {
+            "text":"Potatoes",
+            "by":""
+        },
+        {
+            "text":"Raid Shadow Legends",
+            "by":""
+        },
+        {
+            "text":"The letter E",
+            "by":""
+        },
+        {
+            "text":"A self-referential card",
+            "by":""
+        },
+        {
+            "text":"Me",
+            "by":""
+        },
+        {
+            "text":"You",
+            "by":""
+        },
+        {
+            "text":"Yo mama",
+            "by":""
+        },
+        {
+            "text":"A rabbit with rabbies",
+            "by":""
+        },
+        {
+            "text":"A generic holiday gift",
+            "by":""
+        },
+        {
+            "text":"A funny joke that doesn't age well",
+            "by":""
+        },
+        {
+            "text":"A jelly-filled donut",
+            "by":""
+        },
+        {
+            "text":"Sliced Edd",
+            "by":""
+        },
+        {
+            "text":"My butt",
+            "by":""
+        },
+        {
+            "text":"A magic hat",
+            "by":""
+        },
+        {
+            "text":"A perfect clone of someone",
+            "by":""
+        },
+        {
+            "text":"Satan",
+            "by":""
+        },
+        {
+            "text":"Alcohol",
+            "by":""
+        },
+        {
+            "text":"Cocaine",
+            "by":""
+        },
+        {
+            "text":"Squishy, fresh catpuke",
+            "by":""
+        },
+        {
+            "text":"A Google rabbit hole",
+            "by":""
+        },
+        {
+            "text":"Angry gnomes",
+            "by":""
+        },
+        {
+            "text":"The lollipop I stole from a child",
+            "by":""
+        },
+        {
+            "text":"A mermaid",
+            "by":""
+        },
+        {
+            "text":"A random award",
+            "by":""
+        },
+        {
+            "text":"A drunken sailor",
+            "by":""
+        },
+        {
+            "text":"A genie in a bottle",
+            "by":""
+        },
+        {
+            "text":"A dozen eggs",
+            "by":""
+        },
+        {
+            "text":"Severed fingers",
+            "by":""
+        },
+        {
+            "text":"Your brain",
+            "by":""
+        },
+        {
+            "text":"Meth",
+            "by":""
+        },
+        {
+            "text":"The right to free speech",
+            "by":""
+        },
+        {
+            "text":"Slurs",
+            "by":""
+        },
+        {
+            "text":"The last thing you digested",
+            "by":""
+        },
+        {
+            "text":"A bucket of vomit",
+            "by":""
+        },
+        {
+            "text":"A disappointing hotdog",
+            "by":""
+        },
+        {
+            "text":"Love",
+            "by":""
+        },
+        {
+            "text":"Pain",
+            "by":""
+        },
+        {
+            "text":"A street light",
+            "by":""
+        },
+        {
+            "text":"Every type of cheese",
+            "by":""
+        },
+        {
+            "text":"A walnut",
+            "by":""
+        },
+        {
+            "text":"Your face",
+            "by":""
+        },
+        {
+            "text":"A smooth criminal",
+            "by":""
+        },
+        {
+            "text":"A shark burglar",
+            "by":""
+        },
+        {
+            "text":"A truck",
+            "by":""
+        },
+        {
+            "text":"Nazis",
+            "by":""
+        },
+        {
+            "text":"White people",
+            "by":""
+        },
+        {
+            "text":"Hitler",
+            "by":""
+        },
+        {
+            "text":"My dad",
+            "by":""
+        }
+    ]
+}

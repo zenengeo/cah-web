@@ -1,0 +1,7 @@
+.BlackCard {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 2px 2px 10px -2px #000000;
+}

@@ -1,0 +1,38 @@
+.FlexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.FlexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.FlexJustifyCenter {
+  justify-content: center;
+}
+
+.FlexJustifyStretch {
+  justify-content: stretch;
+}
+
+.FlexJustifyEnd {
+  justify-content: end;
+}
+
+.FlexJustifyBetween {
+  justify-content: space-around;
+}
+
+.FlexAlignEnd {
+  align-items: end;
+}
+
+.FlexExpand {
+  flex: 1;
+}
+
+.FlexGap {
+  gap: 5px;
+}
+

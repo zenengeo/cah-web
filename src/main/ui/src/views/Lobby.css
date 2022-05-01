@@ -1,0 +1,50 @@
+.Lobby {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Choices {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.ChoiceDivider {
+  text-align: center;
+  font-size: 60px;
+  margin: 20px 0;
+}
+
+.ChoiceButton {
+  display: block;
+  font-size: 80px;
+}
+
+.JoinButton {
+  display: block;
+  font-size: 30px;
+  width: 100%;
+}
+
+.Details {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.JoinField {
+  margin: 0.5em 0;
+}
+
+.JoinField label {
+  font-size: 30px;
+  display: block;
+}
+
+.JoinField input[type="text"] {
+  font-size: 40px;
+  display: block;
+}

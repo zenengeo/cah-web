@@ -1,0 +1,5 @@
+spring:
+  cache:
+    cache-names: rooms
+    caffeine:
+      spec: expireAfterAccess=1h

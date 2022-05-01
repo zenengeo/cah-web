@@ -1,0 +1,16 @@
+.SmallCard {
+  height: max(20vh,20vw);
+  width: var(--small-card-width);
+  border-radius: 3vh;
+  padding: 2vh;
+  font-size: max(2vh,2vw);
+}
+
+.LargeCard {
+  /* About 0.625 ratio */
+  height: 70vh;
+  width: 44vh;
+  border-radius: 5vh;
+  padding: 5vh;
+  font-size: 7vh;
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
+
+:root {
+  --small-card-width: max(15vh,15vw)
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  background-color: #aaa;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+html, body, .root {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.TextCenter {
+  text-align: center;
+}

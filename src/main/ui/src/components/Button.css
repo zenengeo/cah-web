@@ -1,0 +1,21 @@
+button {
+  color: #000;
+  background-color: #f3f3f3;
+  border: thin solid black;
+  padding: 20px;
+  border-radius: 5px
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+button:active {
+  color: #fff;
+  background-color: #111;
+}
+
+button:focus-visible {
+  outline: solid 2px #0000ff;
+}
