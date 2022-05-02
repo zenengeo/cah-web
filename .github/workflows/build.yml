@@ -35,4 +35,4 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build image
-        run: ./gradlew bootBuildImage --publishImage=true
+        run: ./gradlew bootBuildImage --publishImage
