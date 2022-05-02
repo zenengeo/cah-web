@@ -64,5 +64,10 @@ tasks.named('test') {
 tasks.named("bootBuildImage") {
     imageName = "${imageOrg}/${project.name}:${project.version}"
     tags = ["${imageOrg}/${project.name}:latest"]
+    docker {
+        publishRegistry {
+            token = System.getenv('IMAGE_REGISTRY_TOKEN')
+        }
+    }
 }
 
