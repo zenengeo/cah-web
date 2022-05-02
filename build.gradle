@@ -62,11 +62,16 @@ tasks.named('test') {
 }
 
 tasks.named("bootBuildImage") {
-    imageName = "${imageOrg}/${project.name}:${project.version}"
-    tags = ["${imageOrg}/${project.name}:latest"]
+    def containerRegistry = System.getenv("CONTAINER_REGISTRY") ?: "ghcr.io"
+    def containerImageName = System.getenv("CONTAINER_IMAGE_NAME") ?: "zenengeo/${project.name}"
+
+    imageName = "${containerRegistry}/${containerImageName}:${project.version}"
+    tags = ["${containerRegistry}/${containerImageName}:latest"]
     docker {
         publishRegistry {
-            token = System.getenv('IMAGE_REGISTRY_TOKEN')
+            username = System.getenv("CONTAINER_REGISTRY_USER") ?: ""
+            password = System.getenv("CONTAINER_REGISTRY_PASSWORD") ?: ""
+            url = "https://${containerRegistry}"
         }
     }
 }

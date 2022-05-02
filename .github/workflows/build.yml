@@ -29,5 +29,6 @@ jobs:
 
       - name: Build image
         env:
-          IMAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONTAINER_REGISTRY_USER: ${{ github.actor }}
+          CONTAINER_REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew bootBuildImage --publishImage
