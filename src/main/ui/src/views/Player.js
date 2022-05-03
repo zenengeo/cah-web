@@ -5,7 +5,6 @@ import "./Player.css";
 import Button from "../components/Button";
 
 function Waiting({text}) {
-  console.debug("Rendering Waiting", text);
   return (
       <main className="Waiting">
         {text}
@@ -54,8 +53,6 @@ function Vote({roomCode, round, handleVote}) {
   const [candidates, setCandidates] = useState([]);
   const [vote, setVote] = useState();
 
-  console.debug("Rendering Vote", roomCode, round);
-
   useEffect(() => {
     console.debug("GET submittedCards", roomCode, round);
     let isAttached = true;
@@ -95,8 +92,6 @@ function Vote({roomCode, round, handleVote}) {
 function Player({roomCode, playerId, playerName}) {
   const [state, setState] = useState("waiting_to_start");
   const [round, setRound] = useState(0);
-
-  console.debug("Rendering Player", roomCode, round, state);
 
   useEffect(() => {
 
@@ -139,7 +134,6 @@ function Player({roomCode, playerId, playerName}) {
   }, [roomCode, playerId]);
 
   function handleSubmitCard(card) {
-    console.debug("Submitting card", card);
     setState("picked_card");
     postJson(`/room/${roomCode}/submittedCard`, {
       cardId: card.id,

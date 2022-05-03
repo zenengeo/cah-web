@@ -33,7 +33,6 @@ function useCurrentBlackCard(roomCode, round) {
   const [blackCard, setBlackCard] = useState();
 
   useEffect(() => {
-    console.log("Getting black card", roomCode);
     getJson(`/room/${roomCode}/blackCard`)
         .then(json => setBlackCard(json))
         .catch(err => console.error("Failed to get black card", err));
@@ -162,7 +161,6 @@ function Main({roomCode}) {
     }
 
     function updatePlayers() {
-      console.log("Getting players");
       getJson(`/room/${roomCode}/players`)
           .then(json => {
             console.log("Updating players");
@@ -252,7 +250,6 @@ function Main({roomCode}) {
 }
 
 function Host({roomCode}) {
-  console.log("Host render");
   return (
       <div className="Host">
         <Main roomCode={roomCode}/>
