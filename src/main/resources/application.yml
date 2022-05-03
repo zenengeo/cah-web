@@ -3,3 +3,6 @@ spring:
     cache-names: rooms
     caffeine:
       spec: expireAfterAccess=1h
+logging:
+  group:
+    app: me.itzg.cahweb
