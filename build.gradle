@@ -9,6 +9,26 @@ plugins {
 }
 
 version = '0.0.1-SNAPSHOT'
+gitVersioning.apply {
+    refs {
+        tag('.+') {
+            version = '${ref}'
+        }
+        branch('main') {
+            version = '${describe.tag}-SNAPSHOT'
+        }
+        branch('.+') {
+            version = '${ref}-SNAPSHOT'
+        }
+    }
+
+    // optional fallback configuration in case of no matching ref configuration
+    rev {
+        version = '${commit}'
+    }
+
+}
+
 group = 'me.itzg'
 sourceCompatibility = '17'
 
