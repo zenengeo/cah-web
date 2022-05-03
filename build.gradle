@@ -42,25 +42,39 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    uiSrcDir = "${projectDir}/src/main/ui"
+    uiDestBuildDir = "${buildDir}/ui"
+}
+
 frontend {
     nodeVersion = '16.15.0'
     nodeInstallDirectory = file("${buildDir}/node")
-    packageJsonDirectory = file("${projectDir}/src/main/ui")
+    packageJsonDirectory = file(uiSrcDir)
 
     assembleScript = 'run build'
+}
+
+tasks.named('installFrontend') {
+    inputs.files("${uiSrcDir}/package.json", "${uiSrcDir}/package-lock.json")
+    outputs.dir("${uiSrcDir}/node_modules")
+}
+
+tasks.named('assembleFrontend') {
+    inputs.dir("${uiSrcDir}/src")
+    inputs.dir("${uiSrcDir}/public")
+    outputs.dir("${uiSrcDir}/build")
 }
 
 var copyOverReactBuild = tasks.register('copyOverReactBuild', Copy) {
     dependsOn 'assembleFrontend'
     from(file('src/main/ui/build'))
-    into(file("${buildDir}/resources/main/static"))
+    into(file("${uiDestBuildDir}/static"))
 }
 
-tasks.named('bootJarMainClassName') {
-    dependsOn copyOverReactBuild
-}
 tasks.named('bootJar') {
     dependsOn copyOverReactBuild
+    classpath(file(uiDestBuildDir))
 }
 
 dependencies {
