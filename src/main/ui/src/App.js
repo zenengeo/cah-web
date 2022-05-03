@@ -11,8 +11,6 @@ function App() {
   const [playerName, setPlayerName] = useState("");
   const [playerId, setPlayerId] = useState("");
 
-  console.log("App render");
-
   function startAsHost() {
     postJson('/room')
         .then(roomInfo => {
