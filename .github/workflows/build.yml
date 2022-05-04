@@ -28,6 +28,7 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+          cache-dependency-path: 'src/main/ui/package-lock.json'
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
