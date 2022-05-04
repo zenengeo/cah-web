@@ -4,8 +4,8 @@ plugins {
     id 'java'
     // https://github.com/qoomon/gradle-git-versioning-plugin
     id 'me.qoomon.git-versioning' version '5.2.0'
-    // https://siouan.github.io/frontend-gradle-plugin/
-    id 'org.siouan.frontend-jdk11' version '6.0.0'
+    // https://github.com/node-gradle/gradle-node-plugin
+    id "com.github.node-gradle.node" version "3.2.1"
 }
 
 version = '0.0.1-SNAPSHOT'
@@ -47,33 +47,27 @@ ext {
     uiDestBuildDir = "${buildDir}/ui"
 }
 
-frontend {
-    nodeVersion = '16.15.0'
-    nodeInstallDirectory = file("${buildDir}/node")
-    packageJsonDirectory = file(uiSrcDir)
-
-    assembleScript = 'run build'
+node {
+    download = true
+    version = '16.15.0'
+    nodeProjectDir = file(uiSrcDir)
 }
 
-tasks.named('installFrontend') {
+task buildReact(type: NpmTask) {
     inputs.files("${uiSrcDir}/package.json", "${uiSrcDir}/package-lock.json")
-    outputs.dir("${uiSrcDir}/node_modules")
-}
-
-tasks.named('assembleFrontend') {
     inputs.dir("${uiSrcDir}/src")
     inputs.dir("${uiSrcDir}/public")
-    outputs.dir("${uiSrcDir}/build")
-}
+    outputs.dir("${uiDestBuildDir}/static")
 
-var copyOverReactBuild = tasks.register('copyOverReactBuild', Copy) {
-    dependsOn 'assembleFrontend'
-    from(file('src/main/ui/build'))
-    into(file("${uiDestBuildDir}/static"))
+    args = ['run', 'build']
+
+    execOverrides {
+        environment('BUILD_PATH', file("${uiDestBuildDir}/static"))
+    }
 }
 
 tasks.named('bootJar') {
-    dependsOn copyOverReactBuild
+    dependsOn buildReact
     classpath(file(uiDestBuildDir))
 }
 
