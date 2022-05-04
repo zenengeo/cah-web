@@ -24,6 +24,11 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 

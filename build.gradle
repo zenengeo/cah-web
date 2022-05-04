@@ -48,7 +48,7 @@ ext {
 }
 
 node {
-    download = true
+    download = findProperty('downloadNode') as boolean
     version = '16.15.0'
     nodeProjectDir = file(uiSrcDir)
 }
