@@ -53,7 +53,17 @@ node {
     nodeProjectDir = file(uiSrcDir)
 }
 
-task buildReact(type: NpmTask) {
+task reactStart(type: NpmTask) {
+    dependsOn 'npmInstall'
+    args = ['run', 'start']
+}
+
+task reactTest(type: NpmTask) {
+    dependsOn 'npmInstall'
+    args = ['run', 'test']
+}
+
+task reactBuild(type: NpmTask) {
     dependsOn 'npmInstall'
     inputs.files("${uiSrcDir}/package.json", "${uiSrcDir}/package-lock.json")
     inputs.dir("${uiSrcDir}/src")
@@ -68,7 +78,7 @@ task buildReact(type: NpmTask) {
 }
 
 tasks.named('bootJar') {
-    dependsOn buildReact
+    dependsOn reactBuild
     classpath(file(uiDestBuildDir))
 }
 
