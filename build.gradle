@@ -54,6 +54,7 @@ node {
 }
 
 task buildReact(type: NpmTask) {
+    dependsOn 'npmInstall'
     inputs.files("${uiSrcDir}/package.json", "${uiSrcDir}/package-lock.json")
     inputs.dir("${uiSrcDir}/src")
     inputs.dir("${uiSrcDir}/public")
