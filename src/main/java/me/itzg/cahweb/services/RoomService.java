@@ -1,9 +1,11 @@
 package me.itzg.cahweb.services;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
 import me.itzg.cahweb.model.Action;
@@ -46,13 +48,35 @@ public class RoomService {
             .build();
     }
 
+    public void addGhostPlayer(String roomCode) {
+        final Room room = roomStorage.getRoom(roomCode);
+
+        final String playerName = cardsProvider.getSomeWhiteCards(
+                1,
+                WhiteCard::useAsName)
+            .iterator().next().text();
+
+        final PlayerInfo playerInfo = PlayerInfo.builder()
+            .playerName(playerName)
+            .playerId(generatePlayerId())
+            .ghost(true)
+            .build();
+        room.addGhostPlayer(playerInfo);
+
+        log.debug("Ghost player={} joined room={}", playerInfo, roomCode);
+
+        tellHost(room, roomCode, GameEvent.builder()
+            .action(Action.PlayerJoined)
+            .build());
+    }
+
     public PlayerInfo join(String roomCode, String playerName) {
         log.debug("Player joining room={} name={}", roomCode, playerName);
         final Room room = roomStorage.getRoom(roomCode);
 
         final PlayerInfo playerInfo = PlayerInfo.builder()
             .playerName(playerName)
-            .playerId(UUID.randomUUID().toString())
+            .playerId(generatePlayerId())
             .build();
 
         room.addPlayer(playerInfo);
@@ -64,6 +88,10 @@ public class RoomService {
         log.debug("Player={} joined room={}", playerInfo, roomCode);
 
         return playerInfo;
+    }
+
+    private String generatePlayerId() {
+        return UUID.randomUUID().toString();
     }
 
     private void tellHost(Room room, String roomCode, GameEvent event) {
@@ -138,9 +166,10 @@ public class RoomService {
     public List<DealtCard> dealWhiteCards(String roomCode, String playerId, int count) {
         final Room room = roomStorage.getRoom(roomCode);
 
-        final List<DealtCard> hand = cardsProvider.getSomeWhiteCards(count,
-                card -> !room.hasDealtCardText(card.text())
-                ).stream()
+        final List<DealtCard> hand = cardsProvider.getSomeWhiteCards(
+                count,
+                ensureNotDealt(room)
+            ).stream()
             .map(whiteCard -> DealtCard.builder()
                 .card(whiteCard)
                 .id(room.allocateCardId())
@@ -155,6 +184,10 @@ public class RoomService {
         return hand;
     }
 
+    private Predicate<WhiteCard> ensureNotDealt(Room room) {
+        return card -> !room.hasDealtCardText(card.text());
+    }
+
     public void submitCard(String roomCode, String playerId, int cardId) {
         log.debug("Player={} in room={} submitted card={}", playerId, roomCode, cardId);
         final Room room = roomStorage.getRoom(roomCode);
@@ -166,11 +199,36 @@ public class RoomService {
         final boolean allReady = room.submitCard(playerId, cardId);
 
         if (allReady) {
+            submitGhostCards(room);
+
             final GameEvent event = GameEvent.builder()
                 .action(Action.VotingStarted)
                 .build();
             tellHost(room, roomCode, event);
             tellPlayers(room, roomCode, event);
+        }
+    }
+
+    private void submitGhostCards(Room room) {
+        final List<String> ids = room.ghostPlayersIds();
+
+        final Collection<WhiteCard> cards = cardsProvider.getSomeWhiteCards(ids.size(), ensureNotDealt(room));
+
+        final Iterator<String> idsItr = ids.iterator();
+        final Iterator<WhiteCard> cardsItr = cards.iterator();
+        while (idsItr.hasNext() && cardsItr.hasNext()) {
+            final int cardId = room.allocateCardId();
+            final String ghostPlayerId = idsItr.next();
+            room.saveDealtHand(
+                ghostPlayerId,
+                List.of(
+                    DealtCard.builder()
+                        .id(cardId)
+                        .card(cardsItr.next())
+                        .build()
+                )
+            );
+            room.submitGhostCard(ghostPlayerId, cardId);
         }
     }
 

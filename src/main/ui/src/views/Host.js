@@ -2,22 +2,33 @@ import {useEffect, useState} from "react";
 import Button from "../components/Button";
 import {getJson, postJson} from "../utils/fetchWrappers";
 import BlackCard from "../components/BlackCard";
+import WhiteCard from "../components/WhiteCard";
 import "./Host.css";
 import "../utils/Flex.css";
-import WhiteCard from "../components/WhiteCard";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGhost} from '@fortawesome/free-solid-svg-icons'
 
-function PlayersJoining({players, onReadyToStart}) {
-  const lackingPlayerCount = Math.max(0, 2 - players.length);
+function PlayersJoining({players, onReadyToStart, addGhostPlayer}) {
+  const nonGhostPlayers = players.filter(player => !player.ghost).length;
+  const lackingPlayerCount = Math.max(0, 2 - nonGhostPlayers);
   return (
       <main className="PlayersJoining">
         <div className="Players">
           <h2>Players</h2>
             {
-              players.flatMap(player => <div className="JoinedPlayer" key={player.playerId}>{player.playerName}</div>)
+              players.flatMap(player =>
+                  <div className="JoinedPlayer" key={player.playerId}>
+                    {player.playerName}
+                    {player.ghost && <FontAwesomeIcon className="GhostPlayer" icon={faGhost} size="lg" />}
+                  </div>
+              )
             }
         </div>
+        <div>
+          <Button className="AddGhostButton" block onClick={addGhostPlayer}><FontAwesomeIcon icon={faGhost} size="2x" /> Add ghost player</Button>
+        </div>
         {
-          players.length >= 2 ?
+          nonGhostPlayers >= 2 ?
             <div>
               <Button className="ReadyToStartButton" block onClick={onReadyToStart}>Ready to start!</Button>
             </div>
@@ -57,8 +68,8 @@ function Voting({roomCode, round}) {
 
   return (
       <main className="Voting">
-        <div className="Status">Waiting for votes...</div>
         <div>{blackCard && <BlackCard text={blackCard.text}/>}</div>
+        <div className="Status">Waiting for votes...</div>
       </main>
   );
 }
@@ -97,7 +108,7 @@ function Reveal({roomCode, round, startNewRound}) {
               winners.flatMap(winner =>
                   <div key={winner.playedBy.playerName} className="WinningCard">
                     <div className="PlayedByText">
-                      Played by {winner.playedBy.playerName} with {winner.votes} vote{winner.votes>1?"s":""}
+                      Played by {winner.playedBy.playerName}{winner.playedBy.ghost && <FontAwesomeIcon className="GhostPlayer" icon={faGhost} />} with {winner.votes} vote{winner.votes>1?"s":""}
                     </div>
                     <div>
                       <WhiteCard text={winner.card.card.text}/>
@@ -113,7 +124,10 @@ function Reveal({roomCode, round, startNewRound}) {
             {
               scores.flatMap(playerScore =>
                 <div className="PlayerScore FlexColumn TextCenter">
-                  <div className="PlayerScoreName">{playerScore.info.playerName}</div>
+                  <div className="PlayerScoreName">
+                    {playerScore.info.playerName}
+                    {playerScore.info.ghost && <FontAwesomeIcon className="GhostPlayer" icon={faGhost} />}
+                  </div>
                   <div>{playerScore.score}</div>
                 </div>
               )
@@ -233,10 +247,15 @@ function Main({roomCode}) {
         .catch(err => console.error("Failed to start", err));
   }
 
+  function addGhostPlayer() {
+    postJson(`/room/${roomCode}/ghostPlayer`)
+        .catch(err => console.error("Failed to add ghost player", err));
+  }
+
   switch (state) {
     default:
     case "players_joining":
-      return <PlayersJoining players={players} onReadyToStart={startRound}/>;
+      return <PlayersJoining players={players} onReadyToStart={startRound} addGhostPlayer={addGhostPlayer}/>;
 
     case "selecting":
       return <Selecting roomCode={roomCode} round={round}/>;

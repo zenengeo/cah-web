@@ -1,12 +1,12 @@
 package me.itzg.cahweb.model;
 
 import javax.validation.constraints.NotBlank;
-import lombok.EqualsAndHashCode;
 
 public record WhiteCard(
     @NotBlank
     String text,
-    String by
+    String by,
+    boolean useAsName
 ) {
 
     @Override

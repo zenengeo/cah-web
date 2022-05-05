@@ -41,10 +41,8 @@ function PickCards({roomCode, playerId, handleSubmitCard}) {
             )
           }
         </div>
-        {selectedCard &&
-            <Button className="PlayerSubmitButton" block
-                    onClick={() => handleSubmitCard(selectedCard)}>Send</Button>
-        }
+        <Button disabled={!selectedCard} className="PlayerSubmitButton" block
+                onClick={() => handleSubmitCard(selectedCard)}>Send</Button>
       </main>
   )
 }
@@ -54,20 +52,10 @@ function Vote({roomCode, round, handleVote}) {
   const [vote, setVote] = useState();
 
   useEffect(() => {
-    console.debug("GET submittedCards", roomCode, round);
-    let isAttached = true;
-
     getJson(`/room/${roomCode}/submittedCards`)
         .then(json => {
-          if (isAttached) {
             setCandidates(json.contents);
-          }
         });
-
-    return () => {
-      console.debug("Player detaching vote query", roomCode, round);
-      isAttached = false;
-    }
   }, [roomCode, round]);
 
   return (
@@ -81,10 +69,8 @@ function Vote({roomCode, round, handleVote}) {
           )
           }
         </div>
-        {vote &&
-            <Button className="PlayerSubmitButton" block
+            <Button disabled={!vote} className="PlayerSubmitButton" block
                     onClick={() => handleVote(vote)}>Send</Button>
-        }
       </main>
   )
 }

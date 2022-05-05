@@ -1,4 +1,4 @@
-button {
+button.Button {
   color: #000;
   background-color: #f3f3f3;
   border: thin solid black;
@@ -6,16 +6,22 @@ button {
   border-radius: 5px
 }
 
-button:hover {
+button.Button:hover {
   cursor: pointer;
   background-color: #ccc;
 }
 
-button:active {
+button.Button:active {
   color: #fff;
   background-color: #111;
 }
 
-button:focus-visible {
+button.Button:focus-visible {
   outline: solid 2px #0000ff;
+}
+
+button.Button:disabled {
+  background-color: #e7e7e7;
+  color: #a2a2a2;
+  cursor: inherit;
 }

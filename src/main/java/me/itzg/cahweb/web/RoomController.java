@@ -3,16 +3,15 @@ package me.itzg.cahweb.web;
 import static me.itzg.cahweb.model.ListResponse.ofList;
 import static me.itzg.cahweb.model.ValueResponse.ofValue;
 
-import java.net.SocketException;
 import lombok.extern.slf4j.Slf4j;
 import me.itzg.cahweb.model.BlackCard;
 import me.itzg.cahweb.model.CardSubmission;
+import me.itzg.cahweb.model.DealHandRequest;
 import me.itzg.cahweb.model.DealtCard;
 import me.itzg.cahweb.model.GameEvent;
 import me.itzg.cahweb.model.JoinRequest;
 import me.itzg.cahweb.model.ListResponse;
 import me.itzg.cahweb.model.PlayerInfo;
-import me.itzg.cahweb.model.DealHandRequest;
 import me.itzg.cahweb.model.PlayerScore;
 import me.itzg.cahweb.model.RoomInfo;
 import me.itzg.cahweb.model.ValueResponse;
@@ -45,6 +44,11 @@ public class RoomController {
     @PostMapping
     public RoomInfo createRoom() {
         return roomService.createRoom();
+    }
+
+    @PostMapping("/{roomCode}/ghostPlayer")
+    public void addGhostPlayer(@PathVariable String roomCode) {
+        roomService.addGhostPlayer(roomCode);
     }
 
     @PostMapping("/{roomCode}/join")

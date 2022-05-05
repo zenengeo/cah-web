@@ -23,6 +23,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+}
+
+.GhostPlayer {
+  margin-left: 0.5em;
 }
 
 .Players {
@@ -110,10 +115,13 @@
 }
 
 .PlayerScores {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 1em;
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 0.5em;
+}
+
+.PlayerScore {
+  grid-row: 1;
 }
 
 .StartNewRoundButton,.ReadyToStartButton {

@@ -1,16 +1,17 @@
 .PickCards,.Vote {
-  padding: 20px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.PickCards h1 {
+.PickCards h1,.Vote h1 {
   text-align: center;
+  margin-block: 10px;
 }
 
 .PlayerSubmitButton {
-  margin-top: 20px;
+  margin: 10px;
   font-size: 30px;
 }
 
@@ -23,6 +24,9 @@
 }
 
 .CardsContainer {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

@@ -287,7 +287,7 @@
             "by":""
         },
         {
-            "text":"What're they gonna do next? Bag ____?",
+            "text":"What're they gonna do next?\nBag ____?",
             "cards": 1,
             "by":""
         },
@@ -437,7 +437,7 @@
             "by":""
         },
         {
-            "text":"[Taking a picture] Say ____!",
+            "text":"[Taking a picture]\nSay ____!",
             "cards": 1,
             "by":""
         },
@@ -464,7 +464,8 @@
         },
         {
             "text":"Karen",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A gun",
@@ -476,15 +477,18 @@
         },
         {
             "text":"Guy Fieri",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Humanity",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Chicken",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"The ducks",
@@ -492,19 +496,23 @@
         },
         {
             "text":"You",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"My cat",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"My dog",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Eels",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Cards",
@@ -520,7 +528,8 @@
         },
         {
             "text":"Danny Devito",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A Cards Against Humanity deck",
@@ -532,7 +541,8 @@
         },
         {
             "text":"Kevin",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Communism",
@@ -540,15 +550,18 @@
         },
         {
             "text":"The manager",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Keanu Reaves",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Bees",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A lifetime supply of soup",
@@ -560,7 +573,8 @@
         },
         {
             "text":"Banana bread",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A full ketchup bottle",
@@ -568,7 +582,8 @@
         },
         {
             "text":"Garlic bread",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Kinder surprise eggs",
@@ -592,7 +607,8 @@
         },
         {
             "text":"The duolingo owl",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A problem",
@@ -600,7 +616,8 @@
         },
         {
             "text":"A saucy boy",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Vaccines",
@@ -608,7 +625,8 @@
         },
         {
             "text":"America",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Child protection services",
@@ -624,11 +642,13 @@
         },
         {
             "text":"Everyone",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Artificial intelligence",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Max Temkin, one of the original creators of Cards Against Humanity",
@@ -636,7 +656,8 @@
         },
         {
             "text":"Nothing",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"The latest iPhone",
@@ -652,11 +673,13 @@
         },
         {
             "text":"A child",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A squirrel",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A knife",
@@ -676,7 +699,8 @@
         },
         {
             "text":"McDonald's",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A pre-school full of children",
@@ -684,7 +708,8 @@
         },
         {
             "text":"An alligator",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A bowl made from beans",
@@ -716,7 +741,8 @@
         },
         {
             "text":"Someone",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A severed head",
@@ -732,7 +758,8 @@
         },
         {
             "text":"PETA",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Anti-pineapples",
@@ -752,7 +779,8 @@
         },
         {
             "text":"Potatoes",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Raid Shadow Legends",
@@ -760,7 +788,8 @@
         },
         {
             "text":"The letter E",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A self-referential card",
@@ -768,15 +797,18 @@
         },
         {
             "text":"Me",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"You",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Yo mama",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A rabbit with rabbies",
@@ -796,11 +828,13 @@
         },
         {
             "text":"Sliced Edd",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"My butt",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A magic hat",
@@ -812,7 +846,8 @@
         },
         {
             "text":"Satan",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Alcohol",
@@ -832,7 +867,8 @@
         },
         {
             "text":"Angry gnomes",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"The lollipop I stole from a child",
@@ -840,7 +876,8 @@
         },
         {
             "text":"A mermaid",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A random award",
@@ -864,7 +901,8 @@
         },
         {
             "text":"Your brain",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Meth",
@@ -908,7 +946,8 @@
         },
         {
             "text":"A walnut",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Your face",
@@ -936,11 +975,13 @@
         },
         {
             "text":"Hitler",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"My dad",
-            "by":""
+            "by":"",
+            "useAsName": true
         }
     ]
 }

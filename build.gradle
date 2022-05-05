@@ -53,11 +53,6 @@ node {
     nodeProjectDir = file(uiSrcDir)
 }
 
-task reactStart(type: NpmTask) {
-    dependsOn 'npmInstall'
-    args = ['run', 'start']
-}
-
 task reactTest(type: NpmTask) {
     dependsOn 'npmInstall'
     args = ['run', 'test']

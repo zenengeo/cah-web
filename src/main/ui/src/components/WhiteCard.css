@@ -11,6 +11,5 @@
 }
 
 .Selected {
-  box-shadow: 4px 4px 20px 2px #000000;
   outline: solid 2px #0000ff;
 }

@@ -30,6 +30,9 @@ public class Room {
 
     private final Map<String/*playerId*/, PlayersEntry> players = new HashMap<>();
 
+    @Getter
+    private final List<String/*playerId*/> ghostPlayersIds = new ArrayList<>();
+
     private final Map<String/*playerId*/, List<DealtCard>> dealtCardsByPlayer = new HashMap<>();
 
     private final Map<Integer/*cardId*/, DealtCard> allDealtCards = new HashMap<>();
@@ -66,6 +69,11 @@ public class Room {
         players.put(playerInfo.playerId(),
             new PlayersEntry(playerInfo)
         );
+    }
+
+    public synchronized void addGhostPlayer(PlayerInfo playerInfo) {
+        addPlayer(playerInfo);
+        ghostPlayersIds.add(playerInfo.playerId());
     }
 
     public synchronized Collection<PlayerInfo> players() {
@@ -121,6 +129,12 @@ public class Room {
             Math.min(subscriberCount, dealtPlayerCount);
     }
 
+    public synchronized void submitGhostCard(String ghostPlayerId, int cardId) {
+        log.debug("Ghost player={} submitted card={}",
+            ghostPlayerId, cardId);
+        submitted.put(ghostPlayerId, cardId);
+    }
+
     /**
      * @return shuffled list of the cards submitted for votes
      */
@@ -139,7 +153,10 @@ public class Room {
     public synchronized boolean submitVote(String playerId, int cardId) {
         votes.put(playerId, cardId);
         return votes.size() >=
-            Math.min(playersSink.currentSubscriberCount(), submitted.size());
+            Math.min(
+                playersSink.currentSubscriberCount(),
+                submitted.size() - ghostPlayersIds().size()
+            );
     }
 
     public PlayerInfo findPlayerThatSubmitted(int cardId) {

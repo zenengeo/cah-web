@@ -1,6 +1,8 @@
 /**
  * @param {string} url
  */
+import {useState} from "react";
+
 export function getJson(url) {
   return fetch(url, {
     headers: {
@@ -37,8 +39,7 @@ export function postJson(url, obj) {
             return {};
           }
           return response.json();
-        }
-        else {
+        } else {
           // get error details provided by Spring Boot
           return response.json()
               .then(json => {
@@ -46,4 +47,18 @@ export function postJson(url, obj) {
               });
         }
       });
+}
+
+export function useClickOnce() {
+  const [clicked, setClicked] = useState(false);
+
+  return [
+    clicked,
+    (handler) => {
+      return () => {
+        setClicked(true);
+        handler();
+      }
+    }
+  ]
 }

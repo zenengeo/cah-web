@@ -4,7 +4,8 @@ import lombok.Builder;
 
 @Builder
 public record PlayerInfo(String playerId,
-                         String playerName
+                         String playerName,
+                         boolean ghost
 ) {
 
 }
