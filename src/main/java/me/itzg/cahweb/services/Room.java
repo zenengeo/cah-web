@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import lombok.Data;
@@ -32,6 +34,8 @@ public class Room {
 
     @Getter
     private final List<String/*playerId*/> ghostPlayersIds = new ArrayList<>();
+
+    private Iterator<BlackCard> deckOfBlackCards;
 
     private final Map<String/*playerId*/, List<DealtCard>> dealtCardsByPlayer = new HashMap<>();
 
@@ -94,6 +98,15 @@ public class Room {
 
     public synchronized int allocateCardId() {
         return nextCardId++;
+    }
+
+    public synchronized BlackCard dealNextBlackCard(Supplier<Iterable<BlackCard>> deckSupplier) {
+        if (deckOfBlackCards != null && deckOfBlackCards.hasNext()) {
+            return deckOfBlackCards.next();
+        }
+
+        deckOfBlackCards = deckSupplier.get().iterator();
+        return deckOfBlackCards.next();
     }
 
     public synchronized DealtCard findDealtCard(int cardId) {

@@ -139,10 +139,12 @@ public class RoomService {
 
         room.startRound();
 
-        final Collection<BlackCard> cards = cardsProvider.getSomeBlackCards(1);
-
-        final BlackCard card = cards.iterator().next();
-        room.blackCard(card);
+        room.blackCard(
+            room.dealNextBlackCard(() -> cardsProvider.shuffleDeckOfBlackCards(
+                // can only handle one slot for now
+                blackCard -> blackCard.cards() == 1
+            ))
+        );
 
         final GameEvent event = GameEvent.builder()
             .action(Action.RoundStarted)
