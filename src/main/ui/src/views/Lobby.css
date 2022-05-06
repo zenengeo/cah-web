@@ -23,13 +23,8 @@
   font-size: 80px;
 }
 
-.JoinButton {
-  display: block;
-  font-size: 30px;
-  width: 100%;
-}
-
 .Details {
+  align-self: start;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -44,7 +39,15 @@
   display: block;
 }
 
-.JoinField input[type="text"] {
+.JoinInput {
+  box-sizing: border-box;
+  width: 100%;
   font-size: 40px;
   display: block;
+}
+
+.JoinButton {
+  display: block;
+  font-size: 30px;
+  width: 100%;
 }

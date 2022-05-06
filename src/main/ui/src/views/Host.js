@@ -7,6 +7,7 @@ import "./Host.css";
 import "../utils/Flex.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGhost} from '@fortawesome/free-solid-svg-icons'
+import GhostIcon from "../components/GhostIcon";
 
 function PlayersJoining({players, onReadyToStart, addGhostPlayer}) {
   const nonGhostPlayers = players.filter(player => !player.ghost).length;
@@ -15,17 +16,18 @@ function PlayersJoining({players, onReadyToStart, addGhostPlayer}) {
       <main className="PlayersJoining">
         <div className="Players">
           <h2>Players</h2>
+          <div className="PlayersJoined">
             {
               players.flatMap(player =>
                   <div className="JoinedPlayer" key={player.playerId}>
-                    {player.playerName}
-                    {player.ghost && <FontAwesomeIcon className="GhostPlayer" icon={faGhost} size="lg" />}
+                    {player.playerName} {player.ghost && <GhostIcon />}
                   </div>
               )
             }
+          </div>
         </div>
         <div>
-          <Button className="AddGhostButton" block onClick={addGhostPlayer}><FontAwesomeIcon icon={faGhost} size="2x" /> Add ghost player</Button>
+          <Button className="AddGhostButton" block onClick={addGhostPlayer}><GhostIcon /> Add ghost player</Button>
         </div>
         {
           nonGhostPlayers >= 2 ?
@@ -108,7 +110,7 @@ function Reveal({roomCode, round, startNewRound}) {
               winners.flatMap(winner =>
                   <div key={winner.playedBy.playerName} className="WinningCard">
                     <div className="PlayedByText">
-                      Played by {winner.playedBy.playerName}{winner.playedBy.ghost && <FontAwesomeIcon className="GhostPlayer" icon={faGhost} />} with {winner.votes} vote{winner.votes>1?"s":""}
+                      Played by {winner.playedBy.playerName}{winner.playedBy.ghost && <GhostIcon className="GhostPlayer" />} with {winner.votes} vote{winner.votes>1?"s":""}
                     </div>
                     <div>
                       <WhiteCard text={winner.card.card.text}/>

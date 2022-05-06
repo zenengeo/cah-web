@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
 
 :root {
-  --small-card-width: max(15vh,15vw)
+  --small-card-width: max(15vh,15vw);
+  --purply: #4545c4;
 }
 
 html {
