@@ -1,9 +1,13 @@
 package me.itzg.cahweb.services;
 
+import static java.util.stream.Collectors.collectingAndThen;
+import static java.util.stream.Collectors.toList;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -12,8 +16,6 @@ import me.itzg.cahweb.AppProperties;
 import me.itzg.cahweb.model.BlackCard;
 import me.itzg.cahweb.model.CardsSource;
 import me.itzg.cahweb.model.WhiteCard;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -44,6 +46,16 @@ public class CardsProvider {
             // TODO support blackcards with 2+ slots
         }
         return picked;
+    }
+
+    public Collection<BlackCard> shuffleDeckOfBlackCards(Predicate<BlackCard> filter) {
+        return cardsSource.black().stream()
+            .filter(filter)
+            .collect(collectingAndThen(toList(), blackCards -> {
+                Collections.shuffle(blackCards);
+                return blackCards;
+            }));
+
     }
 
     /**
