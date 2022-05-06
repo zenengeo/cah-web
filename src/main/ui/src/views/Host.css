@@ -26,6 +26,12 @@
   gap: 20px;
 }
 
+.PlayersJoined {
+  width: fit-content;
+  text-align: left;
+  margin: 0 auto;
+}
+
 .GhostPlayer {
   margin-left: 0.5em;
 }
@@ -124,7 +130,7 @@
   grid-row: 1;
 }
 
-.StartNewRoundButton,.ReadyToStartButton {
+.StartNewRoundButton,.ReadyToStartButton,.AddGhostButton {
   font-size: 30px;
 }
 

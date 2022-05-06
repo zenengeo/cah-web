@@ -1,15 +1,17 @@
-input[type="text"] {
+.TextInput {
+  --border-bottom-width: 3px;
   background-color: #f3f3f3;
   border: none;
-  border-bottom: 1px solid #a2a2a2;
+  border-bottom: var(--border-bottom-width) solid transparent;
   padding: 0.2em;
 }
 
-input[type="text"]:focus-visible {
+.TextInput:focus-visible {
   outline: none;
 }
 
-input[type="text"]:focus {
+.TextInput:focus {
+  box-sizing: border-box;
   border: none;
-  border-bottom: 1px solid #6f6fff;
+  border-bottom: var(--border-bottom-width) solid var(--purply);
 }
