@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cah-web-dev
+  labels:
+    app: cah-web-dev
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: cah-web-dev
+      labels:
+        app: cah-web-dev
+    spec:
+      containers:
+        - name: app
+          image: cah-web-dev
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: LOGGING_LEVEL_APP
+              value: DEBUG
+      imagePullSecrets:
+        - name: ghcr-pull
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: cah-web-dev

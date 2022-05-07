@@ -38,6 +38,9 @@ configurations {
     }
 }
 
+// https://skaffold.dev/docs/pipeline-stages/builders/custom/
+test.onlyIf { !System.getenv('SKIP_TESTS') }
+
 repositories {
     mavenCentral()
 }
@@ -99,13 +102,22 @@ tasks.named("bootBuildImage") {
     def containerRegistry = System.getenv("CONTAINER_REGISTRY") ?: "ghcr.io"
     def containerImageName = System.getenv("CONTAINER_IMAGE_NAME") ?: "zenengeo/${project.name}"
 
-    imageName = "${containerRegistry}/${containerImageName}:${project.version}"
-    tags = ["${containerRegistry}/${containerImageName}:latest"]
+    // IMAGE and PUSH_IMAGE enable skaffold build support
+    // https://skaffold.dev/docs/pipeline-stages/builders/custom/
+    def imageOverride = System.getenv('IMAGE')
+    if (imageOverride) {
+        imageName = imageOverride
+    } else {
+        imageName = "${containerRegistry}/${containerImageName}:${project.version}"
+        tags = ["${containerRegistry}/${containerImageName}:latest"]
+    }
+    if (System.getenv('PUSH_IMAGE') == 'true') {
+        publish = true
+    }
     docker {
         publishRegistry {
             username = System.getenv("CONTAINER_REGISTRY_USER") ?: ""
             password = System.getenv("CONTAINER_REGISTRY_PASSWORD") ?: ""
-            url = "https://${containerRegistry}"
         }
     }
 }

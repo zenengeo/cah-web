@@ -13,8 +13,8 @@ public class RoomStorage {
     public Room getRoom(String roomCode) {
         log.debug("Creating room={}", roomCode);
         return new Room(
-            Sinks.many().multicast().directAllOrNothing(),
-            Sinks.many().multicast().directBestEffort()
+            Sinks.many().replay().latest(),
+            Sinks.many().replay().latest()
         );
     }
 }

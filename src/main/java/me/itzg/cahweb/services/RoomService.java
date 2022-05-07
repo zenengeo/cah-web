@@ -1,6 +1,8 @@
 package me.itzg.cahweb.services;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +25,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Sinks.EmitFailureHandler;
+import reactor.core.publisher.Sinks.EmitResult;
 
 @Service
 @Slf4j
@@ -100,7 +103,7 @@ public class RoomService {
             event,
             (signalType, emitResult) -> {
                 log.error("Emit failed with signalType={}, emitResult={}", signalType, emitResult);
-                return false;
+                return (emitResult == EmitResult.FAIL_ZERO_SUBSCRIBER);
             });
     }
 
@@ -130,7 +133,9 @@ public class RoomService {
 
     public Collection<PlayerInfo> players(String roomCode) {
         final Room room = roomStorage.getRoom(roomCode);
-        return room.players();
+        return room.players().stream()
+            .sorted(Comparator.comparing(PlayerInfo::playerName, String::compareToIgnoreCase))
+            .toList();
     }
 
     public void startRound(String roomCode) {
@@ -318,6 +323,8 @@ public class RoomService {
 
     public Collection<PlayerScore> listPlayerScores(String roomCode) {
         final Room room = roomStorage.getRoom(roomCode);
-        return room.playerScores();
+        return room.playerScores().stream()
+            .sorted(Comparator.comparing(PlayerScore::score, Collections.reverseOrder()))
+            .toList();
     }
 }
