@@ -5,8 +5,6 @@ import BlackCard from "../components/BlackCard";
 import WhiteCard from "../components/WhiteCard";
 import "./Host.css";
 import "../utils/Flex.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGhost} from '@fortawesome/free-solid-svg-icons'
 import GhostIcon from "../components/GhostIcon";
 
 function PlayersJoining({players, onReadyToStart, addGhostPlayer}) {
@@ -125,10 +123,9 @@ function Reveal({roomCode, round, startNewRound}) {
           <div className="PlayerScores">
             {
               scores.flatMap(playerScore =>
-                <div className="PlayerScore FlexColumn TextCenter">
+                <div key={playerScore.info.playerId} className="PlayerScore FlexColumn TextCenter">
                   <div className="PlayerScoreName">
-                    {playerScore.info.playerName}
-                    {playerScore.info.ghost && <FontAwesomeIcon className="GhostPlayer" icon={faGhost} />}
+                    {playerScore.info.playerName} {playerScore.info.ghost && <GhostIcon />}
                   </div>
                   <div>{playerScore.score}</div>
                 </div>

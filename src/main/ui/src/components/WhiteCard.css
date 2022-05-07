@@ -11,5 +11,5 @@
 }
 
 .Selected {
-  outline: solid 2px #0000ff;
+  outline: solid 2px var(--purply);
 }

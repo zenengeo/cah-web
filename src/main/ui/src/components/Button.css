@@ -17,7 +17,7 @@ button.Button:active {
 }
 
 button.Button:focus-visible {
-  outline: solid 2px #0000ff;
+  outline: solid 2px var(--purply);
 }
 
 button.Button:disabled {

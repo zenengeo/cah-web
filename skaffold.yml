@@ -1,0 +1,31 @@
+apiVersion: skaffold/v2beta27
+kind: Config
+metadata:
+  name: cah-web-dev
+build:
+  artifacts:
+  - image: cah-web-dev
+    custom:
+      buildCommand: ./gradlew bootBuildImage
+      dependencies:
+        paths:
+          - src/main/java
+          - src/main/resources
+          - src/main/ui/src
+          - src/main/ui/public
+          - src/main/ui/package-lock.json
+          - build.gradle
+  tagPolicy:
+    inputDigest:  {}
+deploy:
+  kubectl:
+    manifests:
+    - k8s/*.yml
+profiles:
+- name: windows
+  build:
+    artifacts:
+      - image: cah-web-dev
+        custom:
+          # Windows needs backslash'y paths
+          buildCommand: .\gradlew bootBuildImage
