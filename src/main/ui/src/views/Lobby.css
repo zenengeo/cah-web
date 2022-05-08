@@ -5,11 +5,32 @@
   justify-content: center;
 }
 
+.Choosing {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .Choices {
+  flex: 1;
+  margin: auto 0;
   max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+}
+
+.Title {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 2.2em;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.TitleReady {
+  opacity: 100;
 }
 
 .ChoiceDivider {
