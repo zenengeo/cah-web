@@ -8,7 +8,7 @@ function BreakableText({text}) {
   return (
       <>
         {
-          parts.flatMap((part, index) =>
+          parts.map((part, index) =>
               <span key={index}>
               {part}
                 {index < parts.length - 1 && <br/>}

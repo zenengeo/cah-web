@@ -6,6 +6,13 @@
 }
 
 .Choosing {
+  justify-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Choosing {
   align-self: start;
   display: flex;
   flex-direction: column;
@@ -19,6 +26,19 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+}
+
+.Title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 2.2em;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.TitleReady {
+  opacity: 100;
 }
 
 .Title {

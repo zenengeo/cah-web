@@ -16,7 +16,7 @@ function PlayersJoining({players, onReadyToStart, addGhostPlayer}) {
           <h2>Players</h2>
           <div className="PlayersJoined">
             {
-              players.flatMap(player =>
+              players.map(player =>
                   <div className="JoinedPlayer" key={player.playerId}>
                     {player.playerName} {player.ghost && <GhostIcon />}
                   </div>
@@ -105,7 +105,7 @@ function Reveal({roomCode, round, startNewRound}) {
           <BlackCard text={blackCard.text} large={false}/>
           <div className="WinningCards">
             {
-              winners.flatMap(winner =>
+              winners.map(winner =>
                   <div key={winner.playedBy.playerName} className="WinningCard">
                     <div className="PlayedByText">
                       Played by {winner.playedBy.playerName}{winner.playedBy.ghost && <GhostIcon className="GhostPlayer" />} with {winner.votes} vote{winner.votes>1?"s":""}
@@ -122,7 +122,7 @@ function Reveal({roomCode, round, startNewRound}) {
           <div className="AllScoresTitle TextCenter">Scores</div>
           <div className="PlayerScores">
             {
-              scores.flatMap(playerScore =>
+              scores.map(playerScore =>
                 <div key={playerScore.info.playerId} className="PlayerScore FlexColumn TextCenter">
                   <div className="PlayerScoreName">
                     {playerScore.info.playerName} {playerScore.info.ghost && <GhostIcon />}

@@ -32,7 +32,7 @@ function PickCards({roomCode, playerId, handleSubmitCard}) {
         <h1>Pick your card to put up for vote</h1>
         <div className="CardsContainer">
           {
-            cards.flatMap(card =>
+            cards.map(card =>
                 <WhiteCard key={card.id} text={card.card.text}
                            onClick={() => setSelectedCard(card)}
                            selected={selectedCard && selectedCard.id
@@ -62,7 +62,7 @@ function Vote({roomCode, round, handleVote}) {
       <main className="Vote">
         <h1>Pick your favorite</h1>
         <div className="CardsContainer">
-          {candidates.flatMap(card =>
+          {candidates.map(card =>
               <WhiteCard key={card.id} text={card.card.text}
                          onClick={() => setVote(card)}
                          selected={vote && vote.id === card.id}/>

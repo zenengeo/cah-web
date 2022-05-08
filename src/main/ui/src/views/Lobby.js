@@ -6,20 +6,24 @@ import {getJson, useClickOnce} from "../utils/fetchWrappers";
 
 function Choosing({handleJoin, handleHost}) {
   const [clicked, clickWrapper] = useClickOnce();
-  const [title, setTitle] = useState(null);
+  const [titles, setTitles] = useState(null);
 
   useEffect(() => {
-    getJson('/cards/randomNameCard')
-        .then(card => {
-          setTitle(`${card.text} Against Humanity`);
+    getJson('/cards/randomNameCards?count=2')
+        .then(resp => {
+          setTitles(resp.contents.map(card => card.text));
         })
   }, []);
 
-  const titleClass = "Title" + (title ? " TitleReady" : "");
+  const titleClass = "Title" + (titles ? " TitleReady" : "");
 
   return (
       <div className="Choosing">
-        <h1 className={titleClass}>{title}</h1>
+        <h1 className={titleClass}>
+          <div>{titles && titles[0]}</div>
+          <div>Against</div>
+          <div>{titles && titles[1]}</div>
+        </h1>
         <div className="Choices">
           <Button disabled={clicked} className="ChoiceButton" onClick={clickWrapper(handleHost)}>Host</Button>
           <div className="ChoiceDivider">or</div>
