@@ -1,17 +1,30 @@
 import './Lobby.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import TextInput from "../components/TextInput";
 import Button from "../components/Button";
-import {useClickOnce} from "../utils/fetchWrappers";
+import {getJson, useClickOnce} from "../utils/fetchWrappers";
 
 function Choosing({handleJoin, handleHost}) {
   const [clicked, clickWrapper] = useClickOnce();
+  const [title, setTitle] = useState(null);
+
+  useEffect(() => {
+    getJson('/cards/randomNameCard')
+        .then(card => {
+          setTitle(`${card.text} Against Humanity`);
+        })
+  }, []);
+
+  const titleClass = "Title" + (title ? " TitleReady" : "");
 
   return (
-      <div className="Choices">
-        <Button disabled={clicked} className="ChoiceButton" onClick={clickWrapper(handleHost)}>Host</Button>
-        <div className="ChoiceDivider">or</div>
-        <Button disabled={clicked} className="ChoiceButton" onClick={clickWrapper(handleJoin)}>Join</Button>
+      <div className="Choosing">
+        <h1 className={titleClass}>{title}</h1>
+        <div className="Choices">
+          <Button disabled={clicked} className="ChoiceButton" onClick={clickWrapper(handleHost)}>Host</Button>
+          <div className="ChoiceDivider">or</div>
+          <Button disabled={clicked} className="ChoiceButton" onClick={clickWrapper(handleJoin)}>Join</Button>
+        </div>
       </div>
   )
 }
