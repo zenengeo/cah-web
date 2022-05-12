@@ -4,25 +4,56 @@ import TextInput from "../components/TextInput";
 import Button from "../components/Button";
 import {getJson, useClickOnce} from "../utils/fetchWrappers";
 
-function Choosing({handleJoin, handleHost}) {
-  const [clicked, clickWrapper] = useClickOnce();
-  const [titles, setTitles] = useState(null);
+function CrossFade({text}) {
+  const [textToRender, setTextToRender] = useState(text);
+  const [show, setShow] = useState(text != null);
 
   useEffect(() => {
-    getJson('/cards/randomNameCards?count=2')
-        .then(resp => {
-          setTitles(resp.contents.map(card => card.text));
-        })
-  }, []);
+    if (text !== textToRender) {
+      setShow(false);
+    }
+  }, [text, textToRender]);
 
-  const titleClass = "Title" + (titles ? " TitleReady" : "");
+  function transitionEnded() {
+    if (text) {
+      setTextToRender(text);
+      setShow(true);
+    }
+  }
+
+  let classes = "CrossFade " + (show ? "CrossFadeShow" : "CrossFadeHide");
+
+  return <div className={classes} onTransitionEnd={transitionEnded}>{textToRender}</div>
+}
+
+function useTimedNameSwap(name, setName) {
+  useEffect(() => {
+    const id = setTimeout(() => {
+      getJson('/cards/randomNameCards?count=1')
+          .then(resp => {
+            setName(resp.contents[0].text);
+          })
+    }, Math.random()*4000 + 6000);
+
+    return () => {
+      clearTimeout(id);
+    }
+  }, [name, setName])
+}
+
+function Choosing({handleJoin, handleHost}) {
+  const [clicked, clickWrapper] = useClickOnce();
+  const [upper, setUpper] = useState("Clones");
+  const [lower, setLower] = useState("Humanity");
+  useTimedNameSwap(upper, setUpper);
+  useTimedNameSwap(lower, setLower);
 
   return (
       <div className="Choosing">
-        <h1 className={titleClass}>
-          <div>{titles && titles[0]}</div>
-          <div>Against</div>
-          <div>{titles && titles[1]}</div>
+        <h1 className="Title">
+          <CrossFade text={upper} />
+          <div className="NamesAgainst">Against</div>
+          <CrossFade text={lower} />
         </h1>
         <div className="Choices">
           <Button disabled={clicked} className="ChoiceButton" onClick={clickWrapper(handleHost)}>Host</Button>
