@@ -1,62 +1,64 @@
 .Lobby {
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .Choosing {
-  justify-self: stretch;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
-.Choosing {
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.Title {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 2.2em;
+  --border: 1px solid #000000;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.NamesAgainst {
+  font-style: italic;
+  /*color: #2a2a2a;*/
+  font-size: 0.8em;
+}
+
+.CrossFade {
+  transition: opacity 3s ease-in;
+}
+.CrossFadeHide {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+.CrossFadeShow {
+  opacity: 100;
+  transition: opacity 500ms ease-out;
 }
 
 .Choices {
-  flex: 1;
-  margin: auto 0;
-  max-width: 400px;
+  margin-bottom: 1em;
+
   display: flex;
   flex-direction: column;
+  gap: 1em;
   align-items: stretch;
+  justify-content: center;
 }
 
-.Title {
-  position: relative;
-  text-align: center;
-  margin-bottom: 2em;
-  font-size: 2.2em;
-  opacity: 0;
-  transition: opacity 3s ease-in-out;
-}
-
-.TitleReady {
-  opacity: 100;
-}
-
-.Title {
-  text-align: center;
-  margin-bottom: 2em;
-  font-size: 2.2em;
-  opacity: 0;
-  transition: opacity 3s ease-in-out;
-}
-
-.TitleReady {
-  opacity: 100;
+@media (min-aspect-ratio: 8/5) {
+  .Choices {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .ChoiceDivider {
   text-align: center;
   font-size: 60px;
-  margin: 20px 0;
 }
 
 .ChoiceButton {
