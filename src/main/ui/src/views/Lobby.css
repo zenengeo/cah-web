@@ -40,7 +40,8 @@
 }
 
 .Choices {
-  margin-bottom: 1em;
+  flex: 1;
+  margin: auto 0;
 
   display: flex;
   flex-direction: column;
