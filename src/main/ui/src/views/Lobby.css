@@ -16,8 +16,9 @@
   text-align: center;
   margin-top: 1em;
   font-size: 2.2em;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  --border: 1px solid #000000;
+  border-top: var(--border);
+  border-bottom: var(--border);
 }
 
 .NamesAgainst {
