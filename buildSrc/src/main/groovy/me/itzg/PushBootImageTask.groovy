@@ -31,7 +31,7 @@ abstract class PushBootImageTask extends DefaultTask {
     void push() {
         final DockerClient client = dockerClientService.get().client
 
-        def fullImageName = imageRepo.isPresent() ? imageRepo.get()+"/"+imageName.get() : imageName.get()
+        def fullImageName = imageRepo.isPresent() ? imageRepo.get() + "/" + imageName.get() : imageName.get()
 
         logger.info('Pushing {} with tags {}', fullImageName, tags.get())
 
@@ -41,12 +41,13 @@ abstract class PushBootImageTask extends DefaultTask {
                     .exec(new ResultCallback.Adapter<PushResponseItem>() {
                         @Override
                         void onNext(PushResponseItem resp) {
-                            if (!resp.stream?.isBlank()) {
+                            if (resp.stream != null && !resp.stream.isBlank()) {
                                 logger.info('Push: {}', resp.stream.trim())
                             }
                             super.onNext(resp)
                         }
                     })
+                    .awaitCompletion()
 
 
         }
