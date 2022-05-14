@@ -38,7 +38,7 @@ public abstract class BuildBootImageTask extends DefaultTask {
     abstract ListProperty<String> getTags()
 
     @Input
-    abstract Property<Boolean> getPull()
+    abstract Property<Boolean> getPullForBuild()
 
     @OutputFile
     abstract RegularFileProperty getBootImageInfoFile()
@@ -62,7 +62,7 @@ public abstract class BuildBootImageTask extends DefaultTask {
                 .withBuildArg("BASE_IMG", getBaseImage().get())
                 .withBuildArg("EXPOSE_PORT", String.valueOf(getExposePort().get()))
                 .withTags(imageTags)
-                .withPull(pull.get())
+                .withPull(pullForBuild.get())
 
         final String imageId = cmd.exec(new BuildImageResultCallback() {
             @Override

@@ -11,14 +11,15 @@ class BuildPushSpringBootImagePlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
-        def extension = project.extensions.create('bootImage', BootImageExtension)
+        def extension = project.extensions.create('plainBootImage', BootImageExtension)
         extension.baseImage.convention("eclipse-temurin:17")
         extension.with {
             imageName.convention(project.name)
             baseImage.convention("eclipse-temurin:17")
             exposePort.convention(8080)
             tags.convention(["latest"])
-            pull.convention(false)
+            pullForBuild.convention(false)
+            push.convention(true)
         }
 
         def dockerClientServiceProvider = project.gradle.sharedServices.registerIfAbsent(
@@ -37,13 +38,13 @@ class BuildPushSpringBootImagePlugin implements Plugin<Project> {
                         })
 
         final TaskProvider<GenerateDockerfileTask> generateDockerfileTask =
-                project.tasks.register("generateDockerfile", GenerateDockerfileTask,
+                project.tasks.register("generatePlainDockerfile", GenerateDockerfileTask,
                         {
                             group = "build"
                             dockerfile.convention(project.layout.buildDirectory.file("bootImage/Dockerfile"))
                         })
 
-        def buildTask = project.tasks.register("buildBootImage", BuildBootImageTask.class,
+        def buildTask = project.tasks.register("buildPlainBootImage", BuildBootImageTask.class,
                 {
                     group = "build"
                     dockerfile.set(generateDockerfileTask.flatMap(GenerateDockerfileTask::getDockerfile))
@@ -57,13 +58,14 @@ class BuildPushSpringBootImagePlugin implements Plugin<Project> {
                     baseImage.set(extension.baseImage)
                     exposePort.set(extension.exposePort)
                     imageName.set(extension.imageName)
-                    pull.set(extension.pull)
+                    pullForBuild.set(extension.pullForBuild)
                     tags.set(extension.tags)
                     imageRepo.set(extension.imageRepo)
                 })
 
-        project.tasks.register("pushBootImage", PushBootImageTask, {
+        project.tasks.register("pushPlainBootImage", PushBootImageTask, {
             group = "build"
+            onlyIf { extension.push.get() }
 
             dockerClientService.set(dockerClientServiceProvider)
             usesService(dockerClientServiceProvider)

@@ -14,5 +14,7 @@ abstract class BootImageExtension {
 
     abstract ListProperty<String> getTags()
 
-    abstract Property<Boolean> getPull()
+    abstract Property<Boolean> getPullForBuild()
+
+    abstract Property<Boolean> getPush()
 }
