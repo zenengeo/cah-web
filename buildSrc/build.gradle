@@ -1,0 +1,10 @@
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform("com.github.docker-java:docker-java-bom:3.2.13")
+    implementation("com.github.docker-java:docker-java")
+    implementation("com.github.docker-java:docker-java-transport-zerodep")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.12.5")
+}

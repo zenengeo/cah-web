@@ -8,6 +8,8 @@ plugins {
     id "com.github.node-gradle.node" version "3.2.1"
 }
 
+apply plugin: me.itzg.BuildPushSpringBootImagePlugin
+
 version = '0.0.1-SNAPSHOT'
 gitVersioning.apply {
     refs {
@@ -76,7 +78,7 @@ task reactBuild(type: NpmTask) {
 }
 
 tasks.named('bootJar') {
-    dependsOn reactBuild
+//    dependsOn reactBuild
     classpath(file(uiDestBuildDir))
 }
 
@@ -96,6 +98,10 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+bootImage {
+    imageRepo = findProperty('bootImageRepo') ?: System.getenv("BOOT_IMAGE_REPO") ?: ''
 }
 
 tasks.named("bootBuildImage") {
