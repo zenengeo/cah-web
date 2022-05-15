@@ -69,9 +69,11 @@ public abstract class BuildImageTask extends DefaultTask {
         getLogger().info("Building {} with base image {} tagged with {}",
             fullImageName, getBaseImage().get(), getTags().get());
 
-        try (Stream<Path> pathStream = Files.walk(getBootImageDirectory().get().getAsFile().toPath())) {
-            pathStream
-                .forEach(path -> getLogger().info("Context: {}{}", path, Files.isDirectory(path) ? "/" : ""));
+        if (getLogger().isTraceEnabled()) {
+            try (Stream<Path> pathStream = Files.walk(getBootImageDirectory().get().getAsFile().toPath())) {
+                pathStream
+                    .forEach(path -> getLogger().trace("Context: {}{}", path, Files.isDirectory(path) ? "/" : ""));
+            }
         }
 
         var cmd = client.buildImageCmd()
