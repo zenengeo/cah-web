@@ -28,9 +28,6 @@ jobs:
           cache: 'npm'
           cache-dependency-path: 'src/main/ui/package-lock.json'
 
-      - name: Setup Docker Buildx
-        uses: docker/setup-buildx-action@v2
-
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
@@ -39,4 +36,6 @@ jobs:
 
       - name: Try docker build with CLI
         if: failure()
-        run: docker build -t cah-web build/bootImage
+        run: |
+          docker version
+          docker build -t cah-web build/bootImage
