@@ -32,10 +32,4 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build image
-        run: ./gradlew buildPlainBootImage --info
-
-      - name: Try docker build with CLI
-        if: failure()
-        run: |
-          docker version
-          docker build -t cah-web build/bootImage
+        run: ./gradlew buildPlainBootImage
