@@ -105,9 +105,6 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
                 task.setGroup(GROUP);
                 task.dependsOn(buildTask);
 
-                task.getDockerClientService().set(dockerClientServiceProvider);
-                task.usesService(dockerClientServiceProvider);
-
                 processImageNaming(extension, task);
             });
     }
