@@ -80,7 +80,7 @@ task reactBuild(type: NpmTask) {
 }
 
 tasks.named('bootJar') {
-//    dependsOn reactBuild
+    dependsOn reactBuild
     classpath(file(uiDestBuildDir))
 }
 
@@ -104,7 +104,7 @@ tasks.named('test') {
 }
 
 plainBootImage {
-    imageRepo = findProperty('imageRepo') ?: System.getenv('IMAGE_REPO') ?: ''
+    imageRepo = findProperty('imageRepo') ?: System.getenv('IMAGE_REPO')
     imageName = System.getenv('IMAGE') ?: project.name
     tags = ['latest', project.version]
     push = Boolean.parseBoolean(findProperty('bootImagePush') ?: System.getenv('PUSH_IMAGE') ?: 'true')
