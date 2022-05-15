@@ -1,3 +1,5 @@
+import me.itzg.plain.BuildPushSpringBootImagePlugin
+
 plugins {
     id 'org.springframework.boot' version '2.6.7'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
@@ -8,7 +10,7 @@ plugins {
     id "com.github.node-gradle.node" version "3.2.1"
 }
 
-apply plugin: me.itzg.BuildPushSpringBootImagePlugin
+apply plugin: BuildPushSpringBootImagePlugin
 
 version = '0.0.1-SNAPSHOT'
 gitVersioning.apply {
@@ -104,30 +106,6 @@ tasks.named('test') {
 plainBootImage {
     imageRepo = findProperty('bootImageRepo') ?: System.getenv("BOOT_IMAGE_REPO") ?: ''
     imageName = System.getenv('PUSH_IMAGE') ?: project.name
+    tags = ['latest', project.version]
     push = Boolean.parseBoolean(findProperty('bootImagePush') ?: System.getenv('PUSH_IMAGE') ?: 'true')
 }
-
-tasks.named("bootBuildImage") {
-    def containerRegistry = System.getenv("CONTAINER_REGISTRY") ?: "ghcr.io"
-    def containerImageName = System.getenv("CONTAINER_IMAGE_NAME") ?: "zenengeo/${project.name}"
-
-    // IMAGE and PUSH_IMAGE enable skaffold build support
-    // https://skaffold.dev/docs/pipeline-stages/builders/custom/
-    def imageOverride = System.getenv('IMAGE')
-    if (imageOverride) {
-        imageName = imageOverride
-    } else {
-        imageName = "${containerRegistry}/${containerImageName}:${project.version}"
-        tags = ["${containerRegistry}/${containerImageName}:latest"]
-    }
-    if (System.getenv('PUSH_IMAGE') == 'true') {
-        publish = true
-    }
-    docker {
-        publishRegistry {
-            username = System.getenv("CONTAINER_REGISTRY_USER") ?: ""
-            password = System.getenv("CONTAINER_REGISTRY_PASSWORD") ?: ""
-        }
-    }
-}
-
