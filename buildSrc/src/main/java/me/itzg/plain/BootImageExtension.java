@@ -18,4 +18,10 @@ public abstract class BootImageExtension {
     abstract Property<Boolean> getPullForBuild();
 
     abstract Property<Boolean> getPush();
+
+    /**
+     * Indicates if the built image should use Spring Boot's layertools and index or just
+     * bundle and execute the jar as-is.
+     */
+    abstract Property<Boolean> getLayered();
 }

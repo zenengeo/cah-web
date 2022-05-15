@@ -6,7 +6,7 @@ build:
   artifacts:
   - image: cah-web-dev
     custom:
-      buildCommand: ./gradlew bootBuildImage
+      buildCommand: ./gradlew pushPlainBootImage
       dependencies:
         paths:
           - src/main/java
@@ -27,5 +27,5 @@ profiles:
     artifacts:
       - image: cah-web-dev
         custom:
-          # Windows needs backslash'y paths
-          buildCommand: .\gradlew bootBuildImage
+          # override this since Windows needs backslash'y paths
+          buildCommand: .\gradlew pushPlainBootImage

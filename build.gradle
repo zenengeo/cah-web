@@ -79,9 +79,16 @@ task reactBuild(type: NpmTask) {
     }
 }
 
+boolean isLayered() {
+    Boolean.parseBoolean(findProperty('layeredImage') ?: 'true')
+}
+
 tasks.named('bootJar') {
     dependsOn reactBuild
     classpath(file(uiDestBuildDir))
+    layered {
+        enabled = isLayered()
+    }
 }
 
 dependencies {
@@ -104,6 +111,7 @@ tasks.named('test') {
 }
 
 plainBootImage {
+    layered = isLayered()
     imageRepo = findProperty('imageRepo') ?: System.getenv('IMAGE_REPO')
     imageName = System.getenv('IMAGE') ?: project.name
     tags = ['latest', project.version]

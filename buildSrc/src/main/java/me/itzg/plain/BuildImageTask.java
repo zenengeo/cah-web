@@ -28,9 +28,6 @@ public abstract class BuildImageTask extends DefaultTask {
     @InputDirectory
     abstract DirectoryProperty getBootImageDirectory();
 
-    @InputDirectory
-    abstract DirectoryProperty getLayersDirectory();
-
     @InputFile
     abstract RegularFileProperty getDockerfile();
 
@@ -63,7 +60,7 @@ public abstract class BuildImageTask extends DefaultTask {
     void build() throws IOException {
         final DockerClient client = getDockerClientService().get().getClient();
 
-        var fullImageName = getImageRepo().isPresent() ? getImageRepo().get() + "/" + getImageName().get() : getImageName().get();
+        var fullImageName = FullImageName.calculate(getImageRepo(), getImageName());
         var imageTags = expandImageTags();
 
         getLogger().info("Building {} with base image {} tagged with {}",
