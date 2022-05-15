@@ -24,12 +24,15 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Setup node
+      - name: Setup NodeJS
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'npm'
           cache-dependency-path: 'src/main/ui/package-lock.json'
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
