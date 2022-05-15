@@ -4,10 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.command.BuildImageResultCallback;
 import com.github.dockerjava.api.model.BuildResponseItem;
-import com.github.dockerjava.api.model.ResponseItem.ErrorDetail;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.file.RegularFileProperty;
@@ -67,6 +69,11 @@ public abstract class BuildImageTask extends DefaultTask {
         getLogger().info("Building {} with base image {} tagged with {}",
             fullImageName, getBaseImage().get(), getTags().get());
 
+        try (Stream<Path> pathStream = Files.walk(getBootImageDirectory().get().getAsFile().toPath())) {
+            pathStream
+                .forEach(path -> getLogger().info("Context: {}{}", path, Files.isDirectory(path) ? "/" : ""));
+        }
+
         var cmd = client.buildImageCmd()
             .withBaseDirectory(getBootImageDirectory().get().getAsFile())
             .withDockerfile(getDockerfile().getAsFile().get())
@@ -80,12 +87,6 @@ public abstract class BuildImageTask extends DefaultTask {
                 public void onNext(BuildResponseItem item) {
                     if (item.getStream() != null && !item.getStream().isBlank()) {
                         getLogger().info("Docker build: {}", item.getStream().trim());
-                    }
-                    if (item.isErrorIndicated() && item.getErrorDetail() != null) {
-                        final ErrorDetail errorDetail = item.getErrorDetail();
-                        getLogger().error("Docker build error: ({}) {}",
-                            errorDetail.getCode(), errorDetail.getMessage()
-                        );
                     }
                     super.onNext(item);
                 }
