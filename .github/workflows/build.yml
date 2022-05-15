@@ -45,4 +45,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
-        run: ./gradlew -PimageRepo=ghcr.io/zenengeo pushPlainBootImage
+        run: ./gradlew -PimageRepo=ghcr.io/zenengeo pushSimpleBootImage

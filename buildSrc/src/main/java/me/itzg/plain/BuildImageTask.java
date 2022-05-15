@@ -7,23 +7,18 @@ import com.github.dockerjava.api.model.BuildResponseItem;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Set;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import org.gradle.api.DefaultTask;
 import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.file.RegularFileProperty;
-import org.gradle.api.provider.ListProperty;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.InputDirectory;
 import org.gradle.api.tasks.InputFile;
 import org.gradle.api.tasks.Internal;
-import org.gradle.api.tasks.Optional;
 import org.gradle.api.tasks.OutputFile;
 import org.gradle.api.tasks.TaskAction;
 
-public abstract class BuildImageTask extends DefaultTask {
+public abstract class BuildImageTask extends ImageHandlingTask {
 
     @InputDirectory
     abstract DirectoryProperty getBootImageDirectory();
@@ -36,16 +31,6 @@ public abstract class BuildImageTask extends DefaultTask {
 
     @Input
     abstract Property<Integer> getExposePort();
-
-    @Optional
-    @Input
-    abstract Property<String> getImageRepo();
-
-    @Input
-    abstract Property<String> getImageName();
-
-    @Input
-    abstract ListProperty<String> getTags();
 
     @Input
     abstract Property<Boolean> getPullForBuild();
@@ -60,8 +45,8 @@ public abstract class BuildImageTask extends DefaultTask {
     void build() throws IOException {
         final DockerClient client = getDockerClientService().get().getClient();
 
-        var fullImageName = FullImageName.calculate(getImageRepo(), getImageName());
-        var imageTags = expandImageTags();
+        final var fullImageName = calculateFullImageName();
+        final var imageTags = expandImageTags();
 
         getLogger().info("Building {} with base image {} tagged with {}",
             fullImageName, getBaseImage().get(), getTags().get());
@@ -99,15 +84,6 @@ public abstract class BuildImageTask extends DefaultTask {
         final BootImageInfo bootImageInfo = new BootImageInfo()
             .setImageId(imageId);
         objectMapper.writeValue(getBootImageInfoFile().getAsFile().get(), bootImageInfo);
-    }
-
-    Set<String> expandImageTags() {
-        return getTags().get().stream()
-            .map(tag ->
-                getImageRepo().isPresent() ?
-                    getImageRepo().get() + "/" + getImageName().get() + ":" + tag
-                    : getImageName().get() + ":" + tag)
-            .collect(Collectors.toSet());
     }
 
 }

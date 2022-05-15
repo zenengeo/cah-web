@@ -9,6 +9,11 @@ public abstract class BootImageExtension {
 
     abstract Property<Integer> getExposePort();
 
+    /**
+     * Intended for build systems that supply the full repo/name:tag identifier
+     */
+    abstract Property<String> getFullyQualifiedImageName();
+
     abstract Property<String> getImageRepo();
 
     abstract Property<String> getImageName();

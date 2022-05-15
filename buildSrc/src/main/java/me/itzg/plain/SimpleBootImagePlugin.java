@@ -2,6 +2,8 @@ package me.itzg.plain;
 
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 import org.gradle.api.file.RegularFile;
@@ -9,12 +11,17 @@ import org.gradle.api.provider.Provider;
 import org.gradle.api.tasks.bundling.AbstractArchiveTask;
 import org.gradle.api.tasks.bundling.Jar;
 
-public class BuildPushSpringBootImagePlugin implements Plugin<Project> {
+public class SimpleBootImagePlugin implements Plugin<Project> {
 
-    protected static final String BOOT_IMAGE_PATH = "bootImage";
-    protected static final String LAYERS_SUBPATH = "bootImage/layers";
-    protected static final String DOCKERFILE_SUBPATH = "bootImage/Dockerfile";
-    protected static final String FAT_JAR_SUBPATH = "bootImage/application.jar";
+    public static final String EXTENSION_NAME = "simpleBootImage";
+    public static final String BUILD_TASK_NAME = "buildSimpleBootImage";
+    public static final String PUSH_TASK_NAME = "pushSimpleBootImage";
+
+    protected static final String BOOT_IMAGE_PATH = "simpleBootImage";
+    protected static final String LAYERS_SUBPATH = BOOT_IMAGE_PATH + "/layers";
+    protected static final String DOCKERFILE_SUBPATH = BOOT_IMAGE_PATH + "/Dockerfile";
+    protected static final String FAT_JAR_SUBPATH = BOOT_IMAGE_PATH + "/application.jar";
+    protected static final String GROUP = "simple boot image";
 
     @Override
     public void apply(Project project) {
@@ -32,7 +39,7 @@ public class BuildPushSpringBootImagePlugin implements Plugin<Project> {
         final var extractBootLayersTask =
             project.getTasks().register("extractBootLayers", ExtractBootLayersTask.class,
                 task -> {
-                    task.setGroup("build");
+                    task.setGroup(GROUP);
                     task.onlyIf(spec -> extension.getLayered().get());
 
                     task.getLayersDirectory().convention(project.getLayout().getBuildDirectory().dir(LAYERS_SUBPATH));
@@ -41,7 +48,7 @@ public class BuildPushSpringBootImagePlugin implements Plugin<Project> {
 
         final var stageJarTask = project.getTasks().register("stageBootJarForImage", StageJarTask.class,
             task -> {
-                task.setGroup("build");
+                task.setGroup(GROUP);
                 task.onlyIf(spec -> !extension.getLayered().get());
 
                 task.getBootJar().set(bootJarProvider(project));
@@ -52,7 +59,7 @@ public class BuildPushSpringBootImagePlugin implements Plugin<Project> {
         final var layeredDockerfileTask =
             project.getTasks().register("generateLayeredDockerfile", GenerateLayeredDockerfileTask.class,
                 task -> {
-                    task.setGroup("build");
+                    task.setGroup(GROUP);
                     task.onlyIf(spec -> extension.getLayered().get());
 
                     task.getDockerfile().convention(project.getLayout().getBuildDirectory().file(DOCKERFILE_SUBPATH));
@@ -61,7 +68,7 @@ public class BuildPushSpringBootImagePlugin implements Plugin<Project> {
         final var fatJarDockerfileTask =
             project.getTasks().register("generateFatJarDockerfile", GenerateFatJarDockerfileTask.class,
                 task -> {
-                    task.setGroup("build");
+                    task.setGroup(GROUP);
                     task.onlyIf(spec -> !extension.getLayered().get());
 
                     task.getDockerfile().convention(project.getLayout().getBuildDirectory().file(DOCKERFILE_SUBPATH));
@@ -70,9 +77,9 @@ public class BuildPushSpringBootImagePlugin implements Plugin<Project> {
                 }
             );
 
-        final var buildTask = project.getTasks().register("buildPlainBootImage", BuildImageTask.class,
+        final var buildTask = project.getTasks().register(BUILD_TASK_NAME, BuildImageTask.class,
             task -> {
-                task.setGroup("build");
+                task.setGroup(GROUP);
                 if (extension.getLayered().get()) {
                     task.getDockerfile().set(layeredDockerfileTask.flatMap(GenerateLayeredDockerfileTask::getDockerfile));
                     task.dependsOn(extractBootLayersTask);
@@ -86,27 +93,44 @@ public class BuildPushSpringBootImagePlugin implements Plugin<Project> {
                 task.getDockerClientService().set(dockerClientServiceProvider);
                 task.usesService(dockerClientServiceProvider);
 
+                processImageNaming(extension, task);
                 task.getBaseImage().set(extension.getBaseImage());
                 task.getExposePort().set(extension.getExposePort());
-                task.getImageName().set(extension.getImageName());
                 task.getPullForBuild().set(extension.getPullForBuild());
-                task.getTags().set(extension.getTags());
-                task.getImageRepo().set(extension.getImageRepo());
             });
 
-        project.getTasks().register("pushPlainBootImage", PushImageTask.class,
+        project.getTasks().register(PUSH_TASK_NAME, PushImageTask.class,
             task -> {
                 task.onlyIf(spec -> extension.getPush().get());
-                task.setGroup("build");
+                task.setGroup(GROUP);
                 task.dependsOn(buildTask);
 
                 task.getDockerClientService().set(dockerClientServiceProvider);
                 task.usesService(dockerClientServiceProvider);
 
-                task.getImageName().set(extension.getImageName());
-                task.getTags().set(extension.getTags());
-                task.getImageRepo().set(extension.getImageRepo());
+                processImageNaming(extension, task);
             });
+    }
+
+    private void processImageNaming(BootImageExtension extension, ImageHandlingTask task) {
+        if (extension.getFullyQualifiedImageName().isPresent()) {
+            final Pattern namePattern = Pattern.compile("(.*)/(.*?)(:(.*))?");
+            final Matcher matcher = namePattern.matcher(extension.getFullyQualifiedImageName().get());
+            if (matcher.matches()) {
+                task.getImageRepo().set(matcher.group(1));
+                task.getImageName().set(matcher.group(2));
+                task.getTags().set(matcher.group(3) != null ?
+                    List.of(matcher.group(4)) : List.of("latest"));
+            }
+            else {
+                throw new IllegalArgumentException("Malformed fullyQualifiedImageName in "+EXTENSION_NAME);
+            }
+        }
+        else {
+            task.getImageRepo().set(extension.getImageRepo());
+            task.getImageName().set(extension.getImageName());
+            task.getTags().set(extension.getTags());
+        }
     }
 
     private Provider<DockerClientService> registerDockerClientService(Project project) {
@@ -117,7 +141,7 @@ public class BuildPushSpringBootImagePlugin implements Plugin<Project> {
     }
 
     private BootImageExtension registerExtension(Project project) {
-        var extension = project.getExtensions().create("plainBootImage", BootImageExtension.class);
+        var extension = project.getExtensions().create(EXTENSION_NAME, BootImageExtension.class);
         extension.getBaseImage().convention("eclipse-temurin:17");
         extension.getImageName().convention(project.getName());
         extension.getExposePort().convention(8080);

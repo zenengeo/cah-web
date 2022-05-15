@@ -1,4 +1,4 @@
-import me.itzg.plain.BuildPushSpringBootImagePlugin
+import me.itzg.plain.SimpleBootImagePlugin
 
 plugins {
     id 'org.springframework.boot' version '2.6.7'
@@ -10,7 +10,7 @@ plugins {
     id "com.github.node-gradle.node" version "3.2.1"
 }
 
-apply plugin: BuildPushSpringBootImagePlugin
+apply plugin: SimpleBootImagePlugin
 
 version = '0.0.1-SNAPSHOT'
 gitVersioning.apply {
@@ -110,10 +110,17 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-plainBootImage {
+simpleBootImage {
     layered = isLayered()
-    imageRepo = findProperty('imageRepo') ?: System.getenv('IMAGE_REPO')
-    imageName = System.getenv('IMAGE') ?: project.name
+    imageRepo = findProperty('imageRepo')
+    // for skaffold
+    fullyQualifiedImageName = System.getenv('IMAGE')
+    imageName = findProperty('imageName') ?: project.name
     tags = ['latest', project.version]
-    push = Boolean.parseBoolean(findProperty('bootImagePush') ?: System.getenv('PUSH_IMAGE') ?: 'true')
+    push = Boolean.parseBoolean(findProperty('imagePush') ?:
+            // for skaffold
+            System.getenv('PUSH_IMAGE') ?:
+                    // default
+                    'true'
+    )
 }
