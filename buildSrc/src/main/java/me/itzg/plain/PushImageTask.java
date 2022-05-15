@@ -3,6 +3,7 @@ package me.itzg.plain;
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.async.ResultCallback;
 import com.github.dockerjava.api.model.PushResponseItem;
+import com.github.dockerjava.api.model.ResponseItem.ErrorDetail;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.provider.ListProperty;
@@ -44,11 +45,17 @@ public abstract class PushImageTask extends DefaultTask {
                 .withTag(tag)
                 .exec(new ResultCallback.Adapter<PushResponseItem>() {
                     @Override
-                    public void onNext(PushResponseItem resp) {
-                        if (resp.getStream() != null && !resp.getStream().isBlank()) {
-                            getLogger().info("Push: {}", resp.getStream().trim());
+                    public void onNext(PushResponseItem item) {
+                        if (item.getStream() != null && !item.getStream().isBlank()) {
+                            getLogger().info("Docker push: {}", item.getStream().trim());
                         }
-                        super.onNext(resp);
+                        if (item.isErrorIndicated() && item.getErrorDetail() != null) {
+                            final ErrorDetail errorDetail = item.getErrorDetail();
+                            getLogger().error("Docker push error: ({}) {}",
+                                errorDetail.getCode(), errorDetail.getMessage()
+                            );
+                        }
+                        super.onNext(item);
                     }
                 })
                 .awaitCompletion();

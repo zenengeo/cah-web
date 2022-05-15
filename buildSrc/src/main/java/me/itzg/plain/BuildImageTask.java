@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.command.BuildImageResultCallback;
 import com.github.dockerjava.api.model.BuildResponseItem;
+import com.github.dockerjava.api.model.ResponseItem.ErrorDetail;
 import java.io.IOException;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -78,7 +79,13 @@ public abstract class BuildImageTask extends DefaultTask {
                 @Override
                 public void onNext(BuildResponseItem item) {
                     if (item.getStream() != null && !item.getStream().isBlank()) {
-                        getLogger().info("Progress: {}", item.getStream().trim());
+                        getLogger().info("Docker build: {}", item.getStream().trim());
+                    }
+                    if (item.isErrorIndicated() && item.getErrorDetail() != null) {
+                        final ErrorDetail errorDetail = item.getErrorDetail();
+                        getLogger().error("Docker build error: ({}) {}",
+                            errorDetail.getCode(), errorDetail.getMessage()
+                        );
                     }
                     super.onNext(item);
                 }
