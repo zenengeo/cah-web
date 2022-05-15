@@ -36,3 +36,7 @@ jobs:
 
       - name: Build image
         run: ./gradlew buildPlainBootImage --info
+
+      - name: Try docker build with CLI
+        if: failure()
+        run: docker build -t cah-web build/bootImage
