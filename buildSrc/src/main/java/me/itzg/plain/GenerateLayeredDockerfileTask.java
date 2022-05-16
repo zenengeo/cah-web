@@ -30,8 +30,6 @@ public abstract class GenerateLayeredDockerfileTask extends DefaultTask {
                 "COPY layers/dependencies/ ./",
                 "COPY layers/spring-boot-loader/ ./",
                 "COPY layers/snapshot-dependencies/ ./",
-                // Workaround of https://github.com/moby/moby/issues/37965
-                "RUN true",
                 "COPY layers/application/ ./",
                 "ENTRYPOINT [\"java\", \"org.springframework.boot.loader.JarLauncher\"]"
             )

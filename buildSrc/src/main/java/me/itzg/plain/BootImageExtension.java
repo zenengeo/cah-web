@@ -22,6 +22,10 @@ public abstract class BootImageExtension {
 
     abstract Property<Boolean> getPullForBuild();
 
+    abstract Property<String> getCacheFrom();
+
+    abstract Property<String> getCacheTo();
+
     abstract Property<Boolean> getPush();
 
     /**

@@ -2,8 +2,6 @@ package me.itzg.plain;
 
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 import org.gradle.api.file.RegularFile;
@@ -28,14 +26,11 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
         if (project.getPlugins().hasPlugin("org.springframework.boot")) {
             final BootImageExtension extension = registerExtension(project);
 
-            final Provider<DockerClientService> dockerClientServiceProvider = registerDockerClientService(project);
-
-            registerTasks(project, extension, dockerClientServiceProvider);
+            registerTasks(project, extension);
         }
     }
 
-    private void registerTasks(Project project, BootImageExtension extension,
-        Provider<DockerClientService> dockerClientServiceProvider) {
+    private void registerTasks(Project project, BootImageExtension extension) {
         final var extractBootLayersTask =
             project.getTasks().register("extractBootLayers", ExtractBootLayersTask.class,
                 task -> {
@@ -88,15 +83,8 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
                     task.dependsOn(stageJarTask);
                 }
                 task.getBootImageDirectory().convention(project.getLayout().getBuildDirectory().dir(BOOT_IMAGE_PATH));
-                task.getBootImageInfoFile().convention(project.getLayout().getBuildDirectory().file("boot-image-info.json"));
 
-                task.getDockerClientService().set(dockerClientServiceProvider);
-                task.usesService(dockerClientServiceProvider);
-
-                processImageNaming(extension, task);
-                task.getBaseImage().set(extension.getBaseImage());
-                task.getExposePort().set(extension.getExposePort());
-                task.getPullForBuild().set(extension.getPullForBuild());
+                task.apply(extension);
             });
 
         project.getTasks().register(PUSH_TASK_NAME, PushImageTask.class,
@@ -105,36 +93,8 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
                 task.setGroup(GROUP);
                 task.dependsOn(buildTask);
 
-                processImageNaming(extension, task);
+                task.apply(extension);
             });
-    }
-
-    private void processImageNaming(BootImageExtension extension, ImageHandlingTask task) {
-        if (extension.getFullyQualifiedImageName().isPresent()) {
-            final Pattern namePattern = Pattern.compile("(.*)/(.*?)(:(.*))?");
-            final Matcher matcher = namePattern.matcher(extension.getFullyQualifiedImageName().get());
-            if (matcher.matches()) {
-                task.getImageRepo().set(matcher.group(1));
-                task.getImageName().set(matcher.group(2));
-                task.getTags().set(matcher.group(3) != null ?
-                    List.of(matcher.group(4)) : List.of("latest"));
-            }
-            else {
-                throw new IllegalArgumentException("Malformed fullyQualifiedImageName in "+EXTENSION_NAME);
-            }
-        }
-        else {
-            task.getImageRepo().set(extension.getImageRepo());
-            task.getImageName().set(extension.getImageName());
-            task.getTags().set(extension.getTags());
-        }
-    }
-
-    private Provider<DockerClientService> registerDockerClientService(Project project) {
-        return project.getGradle().getSharedServices().registerIfAbsent(
-            "dockerClientService", DockerClientService.class, spec -> {
-            }
-        );
     }
 
     private BootImageExtension registerExtension(Project project) {
