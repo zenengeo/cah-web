@@ -20,6 +20,8 @@ public abstract class BootImageExtension {
 
     abstract ListProperty<String> getTags();
 
+    abstract Property<Boolean> getUseBuildx();
+
     abstract Property<Boolean> getPullForBuild();
 
     abstract Property<String> getCacheFrom();

@@ -32,6 +32,9 @@ public abstract class BuildImageTask extends ImageHandlingTask {
     abstract Property<Integer> getExposePort();
 
     @Input
+    abstract Property<Boolean> getUseBuildx();
+
+    @Input
     abstract Property<Boolean> getPullForBuild();
 
     @Optional
@@ -49,6 +52,7 @@ public abstract class BuildImageTask extends ImageHandlingTask {
     void apply(BootImageExtension extension) {
         getBaseImage().set(extension.getBaseImage());
         getExposePort().set(extension.getExposePort());
+        getUseBuildx().set(extension.getUseBuildx());
         getPullForBuild().set(extension.getPullForBuild());
         getCacheFrom().set(extension.getCacheFrom());
         getCacheTo().set(extension.getCacheTo());
@@ -119,7 +123,7 @@ public abstract class BuildImageTask extends ImageHandlingTask {
     }
 
     private boolean needsBuildx() {
-        return getCacheTo().isPresent();
+        return getUseBuildx().get() || getCacheTo().isPresent();
     }
 
     private void addBuildArg(ArrayList<String> args, String name, Object value) {

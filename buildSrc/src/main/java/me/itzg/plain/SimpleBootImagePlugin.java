@@ -103,6 +103,7 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
         extension.getImageName().convention(project.getName());
         extension.getExposePort().convention(8080);
         extension.getTags().convention(List.of("latest"));
+        extension.getUseBuildx().convention(true);
         extension.getPullForBuild().convention(false);
         extension.getPush().convention(true);
         extension.getLayered().convention(true);
