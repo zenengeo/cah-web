@@ -1,5 +1,6 @@
 package me.itzg.plain;
 
+import java.util.ArrayList;
 import javax.inject.Inject;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.process.ExecOperations;
@@ -10,7 +11,7 @@ public abstract class PushImageTask extends ImageHandlingTask {
     protected abstract ExecOperations getExecOperations();
 
     @TaskAction
-    void push() throws InterruptedException {
+    void push() {
         var fullImageName = calculateFullImageName();
 
         for (final String tag : getTags().get()) {
@@ -18,7 +19,14 @@ public abstract class PushImageTask extends ImageHandlingTask {
 
             getExecOperations().exec(spec -> {
                 spec.executable("docker");
-                spec.args("push", fullImageName+":"+tag);
+
+                final ArrayList<Object> args = new ArrayList<>();
+                args.add("push");
+                if (!getLogger().isInfoEnabled()) {
+                    args.add("--quiet");
+                }
+                args.add(fullImageName + ":" + tag);
+                spec.args(args);
             }).assertNormalExitValue();
 
 

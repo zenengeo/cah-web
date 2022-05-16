@@ -91,6 +91,10 @@ public abstract class BuildImageTask extends ImageHandlingTask {
         }
         args.add("build");
 
+        if (!getLogger().isInfoEnabled()) {
+            args.add("--quiet");
+        }
+
         addBuildArg(args, "BASE_IMG", getBaseImage().get());
         addBuildArg(args, "EXPOSE_PORT", getExposePort().get());
 

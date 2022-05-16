@@ -84,7 +84,7 @@ boolean isLayered() {
 }
 
 tasks.named('bootJar') {
-//    dependsOn reactBuild
+    dependsOn reactBuild
     classpath(file(uiDestBuildDir))
     layered {
         enabled = isLayered()
