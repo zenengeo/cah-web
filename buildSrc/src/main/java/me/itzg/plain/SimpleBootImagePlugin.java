@@ -1,7 +1,6 @@
 package me.itzg.plain;
 
 
-import java.util.List;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 import org.gradle.api.file.RegularFile;
@@ -99,14 +98,7 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
 
     private BootImageExtension registerExtension(Project project) {
         var extension = project.getExtensions().create(EXTENSION_NAME, BootImageExtension.class);
-        extension.getBaseImage().convention("eclipse-temurin:17");
-        extension.getImageName().convention(project.getName());
-        extension.getExposePort().convention(8080);
-        extension.getTags().convention(List.of("latest"));
-        extension.getUseBuildx().convention(true);
-        extension.getPullForBuild().convention(false);
-        extension.getPush().convention(false);
-        extension.getLayered().convention(true);
+        extension.apply(project);
         return extension;
     }
 

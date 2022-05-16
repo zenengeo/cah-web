@@ -1,9 +1,22 @@
 package me.itzg.plain;
 
+import java.util.List;
+import org.gradle.api.Project;
 import org.gradle.api.provider.ListProperty;
 import org.gradle.api.provider.Property;
 
 public abstract class BootImageExtension {
+
+    void apply(Project project) {
+        getBaseImage().convention("eclipse-temurin:17");
+        getImageName().convention(project.getName());
+        getExposePort().convention(8080);
+        getTags().convention(List.of("latest"));
+        getUseBuildx().convention(true);
+        getPullForBuild().convention(false);
+        getPush().convention(false);
+        getLayered().convention(true);
+    }
 
     abstract Property<String> getBaseImage();
 
