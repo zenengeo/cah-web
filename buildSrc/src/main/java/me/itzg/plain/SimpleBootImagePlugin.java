@@ -89,9 +89,7 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
 
         project.getTasks().register(PUSH_TASK_NAME, PushImageTask.class,
             task -> {
-                task.onlyIf(spec -> extension.getPush().get()
-                    // build task will take care of pushing when using buildx
-                    && !extension.getUseBuildx().get());
+                task.onlyIf(spec -> !extension.getUseBuildx().get());
                 task.setGroup(GROUP);
                 task.dependsOn(buildTask);
 
@@ -107,7 +105,7 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
         extension.getTags().convention(List.of("latest"));
         extension.getUseBuildx().convention(true);
         extension.getPullForBuild().convention(false);
-        extension.getPush().convention(true);
+        extension.getPush().convention(false);
         extension.getLayered().convention(true);
         return extension;
     }
