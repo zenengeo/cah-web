@@ -35,6 +35,9 @@ public abstract class BuildImageTask extends ImageHandlingTask {
     abstract Property<Boolean> getUseBuildx();
 
     @Input
+    abstract Property<Boolean> getPush();
+
+    @Input
     abstract Property<Boolean> getPullForBuild();
 
     @Optional
@@ -55,7 +58,12 @@ public abstract class BuildImageTask extends ImageHandlingTask {
         getUseBuildx().set(extension.getUseBuildx());
         getPullForBuild().set(extension.getPullForBuild());
         getCacheFrom().set(extension.getCacheFrom());
-        getCacheTo().set(extension.getCacheTo());
+        if (getUseBuildx().get()) {
+            getCacheTo().set(extension.getCacheTo());
+        } else {
+            throw new IllegalArgumentException("Can't set cacheTo without buildx enabled");
+        }
+        getPush().set(extension.getPush().get() && getUseBuildx().get());
 
         super.apply(extension);
     }
@@ -86,7 +94,7 @@ public abstract class BuildImageTask extends ImageHandlingTask {
 
     private List<String> createArgsList() {
         final ArrayList<String> args = new ArrayList<>();
-        if (needsBuildx()) {
+        if (usesBuildx()) {
             args.add("buildx");
         }
         args.add("build");
@@ -114,6 +122,15 @@ public abstract class BuildImageTask extends ImageHandlingTask {
             args.add("--pull");
         }
 
+        if (usesBuildx()) {
+            if (getPush().get()) {
+                args.add("--push");
+            }
+            else {
+                args.add("--load");
+            }
+        }
+
         args.add(getBootImageDirectory().get().getAsFile().getPath());
 
         return args;
@@ -126,7 +143,7 @@ public abstract class BuildImageTask extends ImageHandlingTask {
         }
     }
 
-    private boolean needsBuildx() {
+    private boolean usesBuildx() {
         return getUseBuildx().get() || getCacheTo().isPresent();
     }
 

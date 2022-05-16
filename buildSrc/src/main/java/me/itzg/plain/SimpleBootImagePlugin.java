@@ -89,7 +89,9 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
 
         project.getTasks().register(PUSH_TASK_NAME, PushImageTask.class,
             task -> {
-                task.onlyIf(spec -> extension.getPush().get());
+                task.onlyIf(spec -> extension.getPush().get()
+                    // build task will take care of pushing when using buildx
+                    && !extension.getUseBuildx().get());
                 task.setGroup(GROUP);
                 task.dependsOn(buildTask);
 

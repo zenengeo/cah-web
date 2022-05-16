@@ -9,14 +9,12 @@ build:
       buildCommand: ./gradlew pushSimpleBootImage --info
       dependencies:
         paths:
+          - build.gradle
           - src/main/java
           - src/main/resources
+          - src/main/ui/package-lock.json
           - src/main/ui/src
           - src/main/ui/public
-          - src/main/ui/package-lock.json
-          - build.gradle
-  tagPolicy:
-    inputDigest:  {}
 deploy:
   kubectl:
     manifests:
