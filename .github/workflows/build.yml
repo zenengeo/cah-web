@@ -22,7 +22,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
 
       - name: Setup NodeJS
         uses: actions/setup-node@v3
@@ -44,5 +43,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push image
-        run: ./gradlew -PimageRepo=ghcr.io/zenengeo pushSimpleBootImage
+      - name: Gradle setup and build
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: -PimageRepo=ghcr.io/zenengeo pushSimpleBootImage
