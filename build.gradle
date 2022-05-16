@@ -1,4 +1,4 @@
-import me.itzg.plain.SimpleBootImagePlugin
+import me.itzg.simpleimg.SimpleBootImagePlugin
 
 plugins {
     id 'org.springframework.boot' version '2.6.7'

@@ -1,4 +1,4 @@
-package me.itzg.plain;
+package me.itzg.simpleimg;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,27 +7,18 @@ import org.gradle.api.DefaultTask;
 import org.gradle.api.NonNullApi;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.tasks.CacheableTask;
-import org.gradle.api.tasks.InputFile;
 import org.gradle.api.tasks.OutputFile;
-import org.gradle.api.tasks.PathSensitive;
-import org.gradle.api.tasks.PathSensitivity;
 import org.gradle.api.tasks.TaskAction;
 
 @CacheableTask
 @NonNullApi
-public abstract class GenerateFatJarDockerfileTask extends DefaultTask {
-
-    @InputFile
-    @PathSensitive(value = PathSensitivity.RELATIVE)
-    abstract RegularFileProperty getStagedJar();
+public abstract class GenerateLayeredDockerfileTask extends DefaultTask {
 
     @OutputFile
     abstract RegularFileProperty getDockerfile();
 
     @TaskAction
     public void generate() throws IOException {
-        final String bootJarFilename = getStagedJar().get().getAsFile().getName();
-
         Files.write(getDockerfile().get().getAsFile().toPath(),
             List.of(
                 // ARG for base image needs a placeholder
@@ -36,8 +27,11 @@ public abstract class GenerateFatJarDockerfileTask extends DefaultTask {
                 "ARG EXPOSE_PORT",
                 "EXPOSE ${EXPOSE_PORT}",
                 "WORKDIR /application",
-                "COPY " + bootJarFilename + " ./",
-                "ENTRYPOINT [\"java\", \"-jar\", \"" + bootJarFilename + "\"]"
+                "COPY layers/dependencies/ ./",
+                "COPY layers/spring-boot-loader/ ./",
+                "COPY layers/snapshot-dependencies/ ./",
+                "COPY layers/application/ ./",
+                "ENTRYPOINT [\"java\", \"org.springframework.boot.loader.JarLauncher\"]"
             )
         );
     }

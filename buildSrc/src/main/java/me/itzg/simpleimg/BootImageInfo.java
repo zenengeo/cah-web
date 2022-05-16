@@ -1,4 +1,4 @@
-package me.itzg.plain;
+package me.itzg.simpleimg;
 
 public class BootImageInfo {
 

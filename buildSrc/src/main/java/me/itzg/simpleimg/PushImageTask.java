@@ -1,4 +1,4 @@
-package me.itzg.plain;
+package me.itzg.simpleimg;
 
 import java.util.ArrayList;
 import javax.inject.Inject;

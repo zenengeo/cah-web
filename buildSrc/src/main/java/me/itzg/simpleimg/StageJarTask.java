@@ -1,4 +1,4 @@
-package me.itzg.plain;
+package me.itzg.simpleimg;
 
 import java.io.IOException;
 import java.nio.file.Files;

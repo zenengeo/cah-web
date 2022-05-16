@@ -1,4 +1,4 @@
-package me.itzg.plain;
+package me.itzg.simpleimg;
 
 import javax.inject.Inject;
 import org.gradle.api.DefaultTask;
