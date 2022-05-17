@@ -1,4 +1,4 @@
-name: PRs
+name: Verify PR
 
 on:
   pull_request:
@@ -19,16 +19,15 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
 
-      - uses: actions/setup-node@v3
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'npm'
           cache-dependency-path: 'src/main/ui/package-lock.json'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Build
-        run: ./gradlew build
+      - name: Gradle setup and build
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: buildSimpleBootImage

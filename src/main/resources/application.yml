@@ -6,3 +6,14 @@ spring:
 logging:
   group:
     app: me.itzg.cahweb
+
+management:
+  server:
+    port: 9090
+  endpoint:
+    startup:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,startup
