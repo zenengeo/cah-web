@@ -56,6 +56,8 @@ public class SimpleBootImagePlugin implements Plugin<Project> {
                     task.setGroup(GROUP);
                     task.onlyIf(spec -> extension.getLayered().get());
 
+                    task.apply(extension);
+
                     task.getDockerfile().convention(project.getLayout().getBuildDirectory().file(DOCKERFILE_SUBPATH));
                 });
 
