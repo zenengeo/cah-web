@@ -5,7 +5,7 @@ plugins {
     // https://github.com/qoomon/gradle-git-versioning-plugin
     id 'me.qoomon.git-versioning' version '6.1.1'
     // https://github.com/node-gradle/gradle-node-plugin
-    id "com.github.node-gradle.node" version "3.2.1"
+    id "com.github.node-gradle.node" version "3.3.0"
 }
 
 version = '0.0.1-SNAPSHOT'
