@@ -2,7 +2,9 @@ This is yet another clone of Cards Against Humanity&trade;, with all original co
 
 ![image](https://user-images.githubusercontent.com/988985/169138459-3e41159c-7e4f-4f44-8375-bb61d076e457.png)
 
-## What you need to play?
+> **Fun Fact:** It's named "-web" since this is a port of the mechanics and content from [enenbee](https://github.com/enenbee)'s [Scratch project](https://scratch.mit.edu/projects/677362945/).
+
+## What you need to play
 
 - A deployment of the server, which is available [as a Docker image](https://github.com/zenengeo/cah-web/pkgs/container/cah-web)
 - A computer or web-enabled TV that everyone can see
@@ -26,7 +28,7 @@ When the host starts the game or a new round, everyone's display will update to 
 
 When everyone has submitted their card for voting, each player gets the list of submitted cards to pick their favorite. Maybe it's your own. That's ok.
 
-When all votes are submitted, the host's display will show which card(s) got the most votes and award points to the submitters. If two or more cards got the most votes, then all of those players get a point.
+When all votes are submitted, the host's display will show which card(s) got the most votes and award points to the submitters. If two or more cards got the most votes, then all of those players get a point. Even ghosts can get points -- sometimes you lose to the roll of a dice.
 
 # Deploying
 
@@ -38,4 +40,6 @@ docker run -d --name cah -p 8080:8080 ghcr.io/zenengeo/cah-web
 
 # Development
 
-This application is a hybrid of Spring Boot for the backend/API and a React frontend. The Spring Boot code is located in the usual places, such as `src/main/java` along with cards and config in `src/main/resources`. The frontend code is located in `src/main/ui`.
+This application is a hybrid of Spring Boot for the backend/API and a React for the frontend. The Spring Boot code is located in the usual places, such as `src/main/java` along with cards and config in `src/main/resources`. The frontend code is located in `src/main/ui`.
+
+Building the image with `./gradlew jib` blends the frontend and backend all into one server jar.
