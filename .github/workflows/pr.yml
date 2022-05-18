@@ -19,7 +19,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
 
       - uses: actions/setup-node@v3
         with:
@@ -27,8 +26,8 @@ jobs:
           cache: 'npm'
           cache-dependency-path: 'src/main/ui/package-lock.json'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Build
-        run: ./gradlew build
+      - name: Gradle build
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: |
+            build

@@ -1,3 +1,9 @@
+buildscript {
+    dependencies {
+        classpath('com.google.cloud.tools:jib-spring-boot-extension-gradle:0.1.0')
+    }
+}
+
 plugins {
     id 'org.springframework.boot' version '2.6.7'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
@@ -6,6 +12,7 @@ plugins {
     id 'me.qoomon.git-versioning' version '6.1.0'
     // https://github.com/node-gradle/gradle-node-plugin
     id "com.github.node-gradle.node" version "3.2.1"
+    id 'com.google.cloud.tools.jib' version '3.2.1'
 }
 
 version = '0.0.1-SNAPSHOT'
@@ -38,9 +45,6 @@ configurations {
     }
 }
 
-// https://skaffold.dev/docs/pipeline-stages/builders/custom/
-test.onlyIf { !System.getenv('SKIP_TESTS') }
-
 repositories {
     mavenCentral()
 }
@@ -66,18 +70,13 @@ task reactBuild(type: NpmTask) {
     inputs.files("${uiSrcDir}/package.json", "${uiSrcDir}/package-lock.json")
     inputs.dir("${uiSrcDir}/src")
     inputs.dir("${uiSrcDir}/public")
-    outputs.dir("${uiDestBuildDir}/static")
+    outputs.dir(uiDestBuildDir)
 
     args = ['run', 'build']
 
     execOverrides {
         environment('BUILD_PATH', file("${uiDestBuildDir}/static"))
     }
-}
-
-tasks.named('bootJar') {
-    dependsOn reactBuild
-    classpath(file(uiDestBuildDir))
 }
 
 dependencies {
@@ -98,27 +97,35 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-tasks.named("bootBuildImage") {
-    def containerRegistry = System.getenv("CONTAINER_REGISTRY") ?: "ghcr.io"
-    def containerImageName = System.getenv("CONTAINER_IMAGE_NAME") ?: "zenengeo/${project.name}"
+tasks.named('jib') {
+    dependsOn reactBuild
+}
+tasks.named('jibDockerBuild') {
+    dependsOn reactBuild
+}
 
-    // IMAGE and PUSH_IMAGE enable skaffold build support
-    // https://skaffold.dev/docs/pipeline-stages/builders/custom/
-    def imageOverride = System.getenv('IMAGE')
-    if (imageOverride) {
-        imageName = imageOverride
-    } else {
-        imageName = "${containerRegistry}/${containerImageName}:${project.version}"
-        tags = ["${containerRegistry}/${containerImageName}:latest"]
+jib {
+    pluginExtensions {
+        // https://github.com/GoogleContainerTools/jib-extensions/blob/master/first-party/jib-spring-boot-extension-gradle/README.md
+        pluginExtension {
+            implementation = 'com.google.cloud.tools.jib.gradle.extension.springboot.JibSpringBootExtension'
+        }
     }
-    if (System.getenv('PUSH_IMAGE') == 'true') {
-        publish = true
+
+    from {
+        image = 'eclipse-temurin:17'
     }
-    docker {
-        publishRegistry {
-            username = System.getenv("CONTAINER_REGISTRY_USER") ?: ""
-            password = System.getenv("CONTAINER_REGISTRY_PASSWORD") ?: ""
+    to {
+        image = project.name
+        tags = [project.version]
+    }
+
+    extraDirectories {
+        paths {
+            path {
+                from = uiDestBuildDir
+                into = '/app/resources'
+            }
         }
     }
 }
-
