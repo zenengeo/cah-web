@@ -8,7 +8,7 @@ This is yet another clone of Cards Against Humanity&trade;, with all original co
 
 - A deployment of the server, which is available [as a Docker image](https://github.com/zenengeo/cah-web/pkgs/container/cah-web)
 - A computer or web-enabled TV that everyone can see
-- Each player uses a web browser on their mobile device
+- Each player uses a web browser on their mobile device and/or computer
 
 ## Hosting the game
 
