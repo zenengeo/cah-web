@@ -1,0 +1,10 @@
+changelog:
+  categories:
+    changes:
+      title: Changes
+      labels:
+        - "*"
+    deps:
+      title: Dependencies
+      labels:
+        - dependencies
