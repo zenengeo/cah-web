@@ -1,6 +1,6 @@
 changelog:
   categories:
-    - title: Changes
+    - title: General
       labels:
         - "*"
     - title: Dependencies
