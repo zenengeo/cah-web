@@ -1,9 +1,3 @@
-buildscript {
-    dependencies {
-        classpath('com.google.cloud.tools:jib-spring-boot-extension-gradle:0.1.0')
-    }
-}
-
 plugins {
     id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
@@ -12,7 +6,7 @@ plugins {
     id 'me.qoomon.git-versioning' version '6.1.1'
     // https://github.com/node-gradle/gradle-node-plugin
     id "com.github.node-gradle.node" version "3.3.0"
-    id 'com.google.cloud.tools.jib' version '3.2.1'
+    id "io.github.itzg.simple-boot-image" version "0.1.0"
 }
 
 version = '0.0.1-SNAPSHOT'
@@ -44,6 +38,9 @@ configurations {
         extendsFrom annotationProcessor
     }
 }
+
+// https://skaffold.dev/docs/pipeline-stages/builders/custom/
+test.onlyIf { !System.getenv('SKIP_TESTS') }
 
 repositories {
     mavenCentral()
@@ -79,6 +76,18 @@ task reactBuild(type: NpmTask) {
     }
 }
 
+boolean isLayered() {
+    Boolean.parseBoolean(findProperty('layeredImage') ?: 'true')
+}
+
+tasks.named('bootJar') {
+    dependsOn reactBuild
+    classpath(file(uiDestBuildDir))
+    layered {
+        enabled = isLayered()
+    }
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-cache'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
@@ -98,35 +107,17 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-tasks.named('jib') {
-    dependsOn reactBuild
-}
-tasks.named('jibDockerBuild') {
-    dependsOn reactBuild
-}
-
-jib {
-    pluginExtensions {
-        // https://github.com/GoogleContainerTools/jib-extensions/blob/master/first-party/jib-spring-boot-extension-gradle/README.md
-        pluginExtension {
-            implementation = 'com.google.cloud.tools.jib.gradle.extension.springboot.JibSpringBootExtension'
-        }
-    }
-
-    from {
-        image = 'eclipse-temurin:17'
-    }
-    to {
-        image = project.name
-        tags = [project.version]
-    }
-
-    extraDirectories {
-        paths {
-            path {
-                from = uiDestBuildDir
-                into = '/app/resources'
-            }
-        }
-    }
+simpleBootImage {
+    layered = isLayered()
+    imageRepo = findProperty('imageRepo')
+    // for skaffold
+    fullyQualifiedImageName = System.getenv('IMAGE')
+    imageName = findProperty('imageName') ?: project.name
+    tags = ['latest', project.version]
+    push = Boolean.parseBoolean(findProperty('imagePush') ?:
+            // for skaffold
+            System.getenv('PUSH_IMAGE') ?:
+                    // default
+                    'false'
+    )
 }

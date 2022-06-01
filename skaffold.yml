@@ -6,8 +6,25 @@ metadata:
 build:
   artifacts:
   - image: cah-web-dev
-    jib: {}
+    custom:
+      buildCommand: ./gradlew pushSimpleBootImage
+      dependencies:
+        paths:
+          - build.gradle
+          - src/main/java
+          - src/main/resources
+          - src/main/ui/package-lock.json
+          - src/main/ui/src
+          - src/main/ui/public
 deploy:
   kubectl:
     manifests:
     - k8s/*.yml
+profiles:
+- name: windows
+  build:
+    artifacts:
+      - image: cah-web-dev
+        custom:
+          # override this since Windows needs backslash'y paths
+          buildCommand: .\gradlew pushSimpleBootImage
