@@ -43,4 +43,6 @@ jobs:
           arguments: |
             -PimageRepo=ghcr.io/zenengeo 
             -PimagePush=true 
+            -PimageCacheFrom=type=gha
+            -PimageCacheTo=type=gha,mode=max
             buildSimpleBootImage
