@@ -5,8 +5,8 @@ plugins {
     // https://github.com/qoomon/gradle-git-versioning-plugin
     id 'me.qoomon.git-versioning' version '6.1.2'
     // https://github.com/node-gradle/gradle-node-plugin
-    id "com.github.node-gradle.node" version "3.3.0"
-    id "io.github.itzg.simple-boot-image" version "0.2.0"
+    id "com.github.node-gradle.node" version '3.3.0'
+    id "io.github.itzg.simple-boot-image" version '0.3.0'
 }
 
 version = '0.0.1-SNAPSHOT'
@@ -98,21 +98,4 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
-}
-
-simpleBootImage {
-    layered = Boolean.parseBoolean(findProperty('layeredImage') ?: 'true')
-    imageRepo = findProperty('imageRepo')
-    // for skaffold
-    fullyQualifiedImageName = System.getenv('IMAGE')
-    imageName = findProperty('imageName') ?: project.name
-    tags = ['latest', project.version]
-    push = Boolean.parseBoolean(findProperty('imagePush') ?:
-            // for skaffold
-            System.getenv('PUSH_IMAGE') ?:
-                    // default
-                    'false'
-    )
-    cacheFrom = findProperty('imageCacheFrom')
-    cacheTo = findProperty('imageCacheTo')
 }
