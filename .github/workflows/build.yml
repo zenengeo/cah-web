@@ -23,13 +23,14 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - uses: actions/setup-node@v3
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'npm'
           cache-dependency-path: 'src/main/ui/package-lock.json'
 
-      - name: Login to DockerHub
+      - name: Login to image registry
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
@@ -40,5 +41,8 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: |
-            jib
-            --image=ghcr.io/zenengeo/cah-web
+            -PimageRepo=ghcr.io/zenengeo 
+            -PimagePush=true 
+            -PimageCacheFrom=type=gha
+            -PimageCacheTo=type=gha,mode=max
+            buildSimpleBootImage
