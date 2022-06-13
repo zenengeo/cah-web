@@ -3,7 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     // https://github.com/qoomon/gradle-git-versioning-plugin
-    id 'me.qoomon.git-versioning' version '6.1.2'
+    id 'me.qoomon.git-versioning' version '6.1.4'
     // https://github.com/node-gradle/gradle-node-plugin
     id "com.github.node-gradle.node" version '3.3.0'
     id "io.github.itzg.simple-boot-image" version '0.3.0'
