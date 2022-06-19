@@ -6,7 +6,7 @@ plugins {
     id 'me.qoomon.git-versioning' version '6.1.4'
     // https://github.com/node-gradle/gradle-node-plugin
     id "com.github.node-gradle.node" version '3.3.0'
-    id "io.github.itzg.simple-boot-image" version '0.3.0'
+    id "io.github.itzg.simple-boot-image" version '0.5.0'
 }
 
 version = '0.0.1-SNAPSHOT'
@@ -22,16 +22,12 @@ gitVersioning.apply {
             version = '${ref}-SNAPSHOT'
         }
     }
-
-    // optional fallback configuration in case of no matching ref configuration
-    rev {
-        version = '${commit}'
-    }
-
 }
 
 group = 'me.itzg'
-sourceCompatibility = '17'
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
 
 configurations {
     compileOnly {
