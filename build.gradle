@@ -6,7 +6,7 @@ plugins {
     id 'me.qoomon.git-versioning' version '6.4.2'
     // https://github.com/node-gradle/gradle-node-plugin
     id "com.github.node-gradle.node" version '3.5.1'
-    id "io.github.itzg.simple-boot-image" version '0.5.2'
+    id "io.github.itzg.simple-boot-image" version '3.0.0'
 }
 
 version = '0.0.1-SNAPSHOT'
