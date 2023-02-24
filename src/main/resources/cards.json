@@ -462,7 +462,7 @@
             "by": ""
         },
         {
-            "Hey, it's the person with the hair that looks like ____",
+            "text":"Hey, it's the person with the hair that looks like ____",
             "cards": 1,
             "by": ""
         }
@@ -999,6 +999,10 @@
         },
         {
             "text":"Inappropriate Jokes",
+            "by":""
+        },
+        {
+            "text":"Something",
             "by":""
         }
     ]
