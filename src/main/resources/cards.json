@@ -8,12 +8,14 @@
         {
             "text":"And the winner of the Bake Off is __________",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"There was some kind of reddit post which had 2 articles right next to eachother where it would say 'And the winner of the Bake Off is ...', 'Nine dismembered bodies', then someone mentioned how it was kind of like cards against humanity"
         },
         {
             "text":"We found _________!!! NOT CLICKBAIT",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Based as a truth version of the '9 dismembered bodies' card"
         },
         {
             "text":"No one is safe from __________.",
@@ -28,12 +30,14 @@
         {
             "text":"Nothing is better than __________.",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'Nothing is better than a slice of bread'"
         },
         {
             "text":"Cards\nAgainst\n__________.",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Cards Against Humanity Title"
         },
         {
             "text":"I ate _______ and it was DELICIOUS!",
@@ -53,17 +57,20 @@
         {
             "text":"I don't want _____ for Christmas",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"All I want for Christmas, is you"
         },
         {
             "text":"__________\nAgainst\nHumanity",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Cards Against Humanity Title"
         },
         {
             "text":"_____ wants to speak to the manager",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Based as a truth version of the 'Karen' card which itself is a truth version of the bakeoff card"
         },
         {
             "text":"Cards\nAgainst\nHumanity\n\nNow with ______",
@@ -73,12 +80,14 @@
         {
             "text":"All I want for Christmas is ________",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"All I want for Christmas, is you"
         },
         {
             "text":"________\nAgainst\n________",
             "cards": 2,
-            "by":""
+            "by":"",
+            "inspiration":"Cards Against Humanity Title"
         },
         {
             "text":"*sips drink* Tastes like _______",
@@ -93,17 +102,20 @@
         {
             "text":"Cards\nWith\n_______",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Cards Against Humanity Title Alternative"
         },
         {
             "text":"______\nWith\nHumanity",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Cards Against Humanity Title Alternative"
         },
         {
             "text":"______\nWith\n______",
             "cards": 2,
-            "by":""
+            "by":"",
+            "inspiration":"Cards Against Humanity Title Alternative"
         },
         {
             "text":"I always wash ______ with ______.",
@@ -143,8 +155,7 @@
         {
             "text":"For my next trick I will pull _____ out of ____",
             "cards": 2,
-            "by":"",
-            "note-to-self":"this is costume number 28 in the scratch project, that's where to continue off"
+            "by":""
         },
         {
             "text":"What is ____?",
@@ -204,7 +215,8 @@
         {
             "text":"Who put ____ in my Snickers bar?",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'Who put a razorblade in my Snickers bar?'"
         },
         {
             "text":"Was looking for my keys, but I found ____.\nDidn't know I had that.",
@@ -234,7 +246,8 @@
         {
             "text":"I found 2 hidden cards in ____",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"There's 2 hidden cards in one of those big cards against humanity set things"
         },
         {
             "text":"In my opinion, ____ is not good",
@@ -254,7 +267,8 @@
         {
             "text":"This message was sponsored by ____",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'This message was sponsored by Raid Shadow Legends'"
         },
         {
             "text":"Have you ever had this issue? Your ____ doesn't fit in ____",
@@ -289,7 +303,8 @@
         {
             "text":"What're they gonna do next?\nBag ____?",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Bagged milk"
         },
         {
             "text":"Researchers find deep in the the woods a cult worshipping ____",
@@ -314,7 +329,8 @@
         {
             "text":"Top 3 owners of nuclear warheads:\n3. Russia\n2: America\n1: ____",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Some kind of meme with a singular person being the one to own the most warheads"
         },
         {
             "text":"I found ____ in a dumpster in the alleyway",
@@ -344,7 +360,8 @@
         {
             "text":"Strange joke about ____ flooding the internet!",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"This is the 69th card in the scratch version"
         },
         {
             "text":"The invention of the ____ caused the decline of humanity",
@@ -409,7 +426,8 @@
         {
             "text":"No, it's not like I'm \"high on life\". I'm high on ____",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form '... I'm high on meth'"
         },
         {
             "text":"Word changed to insult. Here's the history of ____",
@@ -439,17 +457,20 @@
         {
             "text":"[Taking a picture]\nSay ____!",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'Say every type of cheese'"
         },
         {
             "text":"I'm making a call-out post on my twitter: ____, you got a stupid ____!",
             "cards": 2,
-            "by":""
+            "by":"",
+            "inspiration":"Snapcube Sonic Adventure 2 : Dark story, it's a big meme"
         },
         {
             "text":"You've been hit by, you've been struck by ____",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set with 3 different results"
         },
         {
             "text":"____, ____. Same thing.",
@@ -470,12 +491,14 @@
     "white":[
         {
             "text":"9 dismembered bodies",
-            "by":""
+            "by":"",
+            "inspiration":"There was some kind of reddit post which had 2 articles right next to eachother where it would say 'And the winner of the Bake Off is ...', 'Nine dismembered bodies', then someone mentioned how it was kind of like cards against humanity"
         },
         {
             "text":"Karen",
             "by":"",
-            "useAsName": true
+            "useAsName": true,
+            "inspiration":"Based as a truth version of the 'And the winner of the bakeoff is' card"
         },
         {
             "text":"A gun",
@@ -483,7 +506,8 @@
         },
         {
             "text":"A slice of bread",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'Nothing is better than a slice of bread'"
         },
         {
             "text":"Guy Fieri",
@@ -493,7 +517,8 @@
         {
             "text":"Humanity",
             "by":"",
-            "useAsName": true
+            "useAsName": true,
+            "inspiration":"Cards against Humanity title"
         },
         {
             "text":"Chicken",
@@ -526,7 +551,8 @@
         },
         {
             "text":"Cards",
-            "by":""
+            "by":"",
+            "inspiration":"Cards against Humanity title"
         },
         {
             "text":"The redditors",
@@ -552,7 +578,8 @@
         {
             "text":"Kevin",
             "by":"",
-            "useAsName": true
+            "useAsName": true,
+            "inspiration":"Made as a alternate version of 'Karen', there was also a kid in elementry school in one of my classes called Kevin, they're cool"
         },
         {
             "text":"Communism",
@@ -561,7 +588,8 @@
         {
             "text":"The manager",
             "by":"",
-            "useAsName": true
+            "useAsName": true,
+            "inspiration":"Made to be used with Karen white card and '___ against ___' black card"
         },
         {
             "text":"Keanu Reaves",
@@ -627,7 +655,8 @@
         {
             "text":"A saucy boy",
             "by":"",
-            "useAsName": true
+            "useAsName": true,
+            "inspiration":"I think there was some sort of Shakespear out of context thing with this"
         },
         {
             "text":"Vaccines",
@@ -662,7 +691,8 @@
         },
         {
             "text":"Max Temkin, one of the original creators of Cards Against Humanity",
-            "by":""
+            "by":"",
+            "inspiration":"It's true"
         },
         {
             "text":"Nothing",
@@ -727,7 +757,8 @@
         },
         {
             "text":"Strange promotional material",
-            "by":""
+            "by":"",
+            "inspiration":"This used to be 'Enenbee' in the original, which is also my scratch username"
         },
         {
             "text":"A MacBook",
@@ -743,7 +774,8 @@
         },
         {
             "text":"A razorblade",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'Who put a razorblade in my Snickers bar?'"
         },
         {
             "text":"Burgers",
@@ -773,11 +805,13 @@
         },
         {
             "text":"Anti-pineapples",
-            "by":""
+            "by":"",
+            "inspiration":"One of my friends had made a scratch Cards against Humanity game aswell and they had a pineapples card"
         },
         {
             "text":"A digital exclusive card",
-            "by":""
+            "by":"",
+            "inspiration":"I had made some layouts for a printed out version of some of the scratch cards, there was a printer exclusive card, too"
         },
         {
             "text":"Bad grammar",
@@ -794,7 +828,8 @@
         },
         {
             "text":"Raid Shadow Legends",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'This message was sponsored by Raid Shadow Legends'"
         },
         {
             "text":"The letter E",
@@ -818,7 +853,8 @@
         {
             "text":"Yo mama",
             "by":"",
-            "useAsName": true
+            "useAsName": true,
+            "inspiration":"Used to be a card called 'Your mom'"
         },
         {
             "text":"A rabbit with rabbies",
@@ -891,7 +927,8 @@
         },
         {
             "text":"A random award",
-            "by":""
+            "by":"",
+            "inspiration":"This was the 100th card in the scratch version"
         },
         {
             "text":"A drunken sailor",
@@ -916,7 +953,8 @@
         },
         {
             "text":"Meth",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form '... I'm high on meth'"
         },
         {
             "text":"The right to free speech",
@@ -952,7 +990,8 @@
         },
         {
             "text":"Every type of cheese",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'Say every type of cheese'"
         },
         {
             "text":"A walnut",
@@ -965,15 +1004,18 @@
         },
         {
             "text":"A smooth criminal",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set with 'You've been hit by, you've been struck by'"
         },
         {
             "text":"A shark burglar",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set with 'You've been hit by, you've been struck by', except it's a tumblr version"
         },
         {
             "text":"A truck",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set with 'You've been hit by, you've been struck by', except it's based on a different meme I saw once"
         },
         {
             "text":"Nazis",
