@@ -324,22 +324,22 @@
         {
             "text":"Oh no! Not ____ again!",
             "cards": 1,
-            "by":""
+            "by":"Egirl"
         },
         {
             "text":"Nothing makes my heart happy like ____",
             "cards": 1,
-            "by":""
+            "by":"Egirl"
         },
         {
             "text":"My cats always wake me up in the morning with ____",
             "cards": 1,
-            "by":""
+            "by":"Egirl"
         },
         {
             "text":"Tourists shocked to find ____ washed up on the beach",
             "cards": 1,
-            "by":""
+            "by":"Itzg"
         },
         {
             "text":"Strange joke about ____ flooding the internet!",
@@ -349,17 +349,17 @@
         {
             "text":"The invention of the ____ caused the decline of humanity",
             "cards": 1,
-            "by":""
+            "by":"Itzg"
         },
         {
             "text":"Sausage factory discovered ____ is the perfect ingredient",
             "cards": 1,
-            "by":""
+            "by":"Itzg"
         },
         {
             "text":"A cat's favorite toy is ____",
             "cards": 1,
-            "by":""
+            "by":"Itzg"
         },
         {
             "text":"Aw man, ____ just spontaneously combusted and now I  have to buy a new one",
@@ -455,6 +455,16 @@
             "text":"____, ____. Same thing.",
             "cards": 2,
             "by":""
+        },
+        {
+            "text":"____ cured my depression!",
+            "cards": 1,
+            "by": ""
+        },
+        {
+            "Hey, it's the person with the hair that looks like ____",
+            "cards": 1,
+            "by": ""
         }
     ],
     "white":[
@@ -859,24 +869,24 @@
         },
         {
             "text":"Squishy, fresh catpuke",
-            "by":""
+            "by":"Egirl"
         },
         {
             "text":"A Google rabbit hole",
-            "by":""
+            "by":"Egirl"
         },
         {
             "text":"Angry gnomes",
-            "by":"",
+            "by":"Egirl",
             "useAsName": true
         },
         {
             "text":"The lollipop I stole from a child",
-            "by":""
+            "by":"Egirl"
         },
         {
             "text":"A mermaid",
-            "by":"",
+            "by":"Itzg",
             "useAsName": true
         },
         {
@@ -885,19 +895,19 @@
         },
         {
             "text":"A drunken sailor",
-            "by":""
+            "by":"Itzg"
         },
         {
             "text":"A genie in a bottle",
-            "by":""
+            "by":"Itzg"
         },
         {
             "text":"A dozen eggs",
-            "by":""
+            "by":"Itzg"
         },
         {
             "text":"Severed fingers",
-            "by":""
+            "by":"Itzg"
         },
         {
             "text":"Your brain",
@@ -982,6 +992,14 @@
             "text":"My dad",
             "by":"",
             "useAsName": true
+        },
+        {
+            "text":"The News",
+            "by":""
+        },
+        {
+            "text":"Inappropriate Jokes",
+            "by":""
         }
     ]
 }
