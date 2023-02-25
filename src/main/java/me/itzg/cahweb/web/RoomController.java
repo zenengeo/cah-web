@@ -14,6 +14,7 @@ import me.itzg.cahweb.model.JoinRequest;
 import me.itzg.cahweb.model.ListResponse;
 import me.itzg.cahweb.model.PlayerInfo;
 import me.itzg.cahweb.model.PlayerScore;
+import me.itzg.cahweb.model.PlayerSession;
 import me.itzg.cahweb.model.RoomInfo;
 import me.itzg.cahweb.model.ValueResponse;
 import me.itzg.cahweb.model.WinningCard;
@@ -63,21 +64,28 @@ public class RoomController {
         @PathVariable String roomCode,
         @RequestBody @Validated JoinRequest joinRequest) {
 
-        final Object establishedPlayerObj =
+        final Object playerSessionObj =
             appProperties.disablePlayerSessions() ? null
                 : session.getAttributes().get(ATTR_PLAYER);
 
         final PlayerInfo playerInfo;
-        if (establishedPlayerObj instanceof PlayerInfo prevPlayerInfo) {
+        if (playerSessionObj instanceof PlayerSession playerSession &&
+            playerSession.roomCode().equals(roomCode)
+        ) {
             // Process requested player name to allow for rename
-            playerInfo = roomService.rejoin(roomCode, joinRequest.playerName(), prevPlayerInfo.playerId());
+            playerInfo = roomService.rejoin(roomCode, joinRequest.playerName(), playerSession.playerId());
         }
         else {
             playerInfo = roomService.join(roomCode, joinRequest.playerName());
         }
 
         if (!appProperties.disablePlayerSessions()) {
-            session.getAttributes().put(ATTR_PLAYER, playerInfo);
+            session.getAttributes().put(ATTR_PLAYER,
+                PlayerSession.builder()
+                    .playerId(playerInfo.playerId())
+                    .roomCode(roomCode)
+                    .build()
+                );
         }
 
         return playerInfo;

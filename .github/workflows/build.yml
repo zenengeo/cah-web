@@ -10,7 +10,7 @@ on:
 
 jobs:
   publish:
-    uses: itzg/github-workflows/.github/workflows/simple-boot-image-to-ghcr.yml@add-nodejs-option
+    uses: itzg/github-workflows/.github/workflows/simple-boot-image-to-ghcr.yml@main
     with:
       image-repo: "ghcr.io/zenengeo"
       image-platforms: "linux/amd64,linux/arm64"
