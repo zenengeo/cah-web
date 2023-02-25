@@ -318,7 +318,7 @@
         },
         {
             "text":"____ probably only goes well with ____",
-            "cards": 1,
+            "cards": 2,
             "by":""
         },
         {
@@ -486,6 +486,12 @@
             "text":"Hey, it's the person with the hair that looks like ____",
             "cards": 1,
             "by": ""
+        },
+        {
+            "text":"That's definitely AI-generated, why else would there be ____",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Goes with the 'too many fingers' card"
         }
     ],
     "white":[
@@ -1045,6 +1051,15 @@
         },
         {
             "text":"Something",
+            "by":""
+        },
+        {
+            "text":"Too many fingers",
+            "by":"",
+            "inspiration":"Goes with the Ai-generated card"
+        },
+        {
+            "text":"ChatGPT",
             "by":""
         }
     ]
