@@ -475,7 +475,8 @@
         {
             "text":"____, ____. Same thing.",
             "cards": 2,
-            "by":""
+            "by":"",
+            "inspiration":"Sliced bread, sliced edd, same thing"
         },
         {
             "text":"____ cured my depression!",
@@ -492,6 +493,28 @@
             "cards": 1,
             "by":"",
             "inspiration":"Goes with the 'too many fingers' card"
+        },
+        {
+            "text":"This was filmed in front of ___",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Combined to form 'This was filmed in front of a live studio audience'"
+        },
+        {
+            "text":"[Pulls off mask] I was actually ____ all along!",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"____ really needs _____",
+            "cards": 2,
+            "by":"",
+            "inspiration":"A overly-large violin, really needs a live studio audience"
+        },
+        {
+            "text":"How many times can you eat ____ before it's lethal?",
+            "cards": 1,
+            "by":""
         }
     ],
     "white":[
@@ -881,7 +904,8 @@
         {
             "text":"Sliced Edd",
             "by":"",
-            "useAsName": true
+            "useAsName": true,
+            "inspiration":"Sliced bread, sliced edd, same thing"
         },
         {
             "text":"My butt",
@@ -976,7 +1000,8 @@
         },
         {
             "text":"A bucket of vomit",
-            "by":""
+            "by":"",
+            "inspiration":"I got it from 'Oh...sir!! The Insult Simulator'"
         },
         {
             "text":"A disappointing hotdog",
@@ -1061,6 +1086,29 @@
         {
             "text":"ChatGPT",
             "by":""
+        },
+        {
+            "text":"Sadness",
+            "by":""
+        },
+        {
+            "text":"A live studio audience",
+            "by":"",
+            "inspiration":"Combined to form 'This was filmed in front of a live studio audience'"
+        },
+        {
+            "text":"Feces",
+            "by":""
+        },
+        {
+            "text":"A overly-large violin",
+            "by":"",
+            "inspiration":"World's smallest violin"
+        },
+        {
+            "text":"Stress",
+            "by":"",
+            "inspiration":"I put 9 cards in the same commit"
         }
     ]
 }
