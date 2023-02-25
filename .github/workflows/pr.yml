@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    uses: itzg/github-workflows/.github/workflows/gradle-build.yml@add-nodejs-option
+    uses: itzg/github-workflows/.github/workflows/gradle-build.yml@main
     with:
       arguments: test
       include-test-report: true
