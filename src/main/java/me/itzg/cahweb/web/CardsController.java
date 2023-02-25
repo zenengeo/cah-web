@@ -1,6 +1,6 @@
 package me.itzg.cahweb.web;
 
-import javax.validation.constraints.Min;
+import jakarta.validation.constraints.Min;
 import me.itzg.cahweb.model.ListResponse;
 import me.itzg.cahweb.model.WhiteCard;
 import me.itzg.cahweb.services.CardsProvider;

@@ -134,7 +134,7 @@ function Reveal({roomCode, round, startNewRound}) {
           </div>
         </div>
         <div className="FlexRow FlexJustifyCenter">
-          <Button className="StartNewRoundButton" autoFocus onClick={startNewRound}>Start New Round</Button>
+          <Button className="StartNewRoundButton ShrinkVertical" autoFocus onClick={startNewRound}>Start New Round</Button>
         </div>
       </main>
   );

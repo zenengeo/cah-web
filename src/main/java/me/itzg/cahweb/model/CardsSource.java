@@ -1,7 +1,7 @@
 package me.itzg.cahweb.model;
 
+import jakarta.validation.Valid;
 import java.util.List;
-import javax.validation.Valid;
 
 public record CardsSource(
     List<@Valid BlackCard> black,

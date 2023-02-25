@@ -1,0 +1,6 @@
+app:
+  disable-player-sessions: true
+
+logging:
+  level:
+    me.itzg.cahweb: debug

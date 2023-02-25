@@ -1,7 +1,7 @@
 package me.itzg.cahweb.model;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 public record BlackCard(
     @NotBlank String text,
@@ -14,11 +14,9 @@ public record BlackCard(
         if (this == o) {
             return true;
         }
-        if (!(o instanceof BlackCard)) {
+        if (!(o instanceof final BlackCard blackCard)) {
             return false;
         }
-
-        final BlackCard blackCard = (BlackCard) o;
 
         return text.equals(blackCard.text);
     }

@@ -4,6 +4,7 @@ import static me.itzg.cahweb.model.ListResponse.ofList;
 import static me.itzg.cahweb.model.ValueResponse.ofValue;
 
 import lombok.extern.slf4j.Slf4j;
+import me.itzg.cahweb.AppProperties;
 import me.itzg.cahweb.model.BlackCard;
 import me.itzg.cahweb.model.CardSubmission;
 import me.itzg.cahweb.model.DealHandRequest;
@@ -28,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Flux;
 
 @RestController
@@ -35,10 +37,14 @@ import reactor.core.publisher.Flux;
 @Slf4j
 public class RoomController {
 
-    private final RoomService roomService;
+    private static final String ATTR_PLAYER = "player";
 
-    public RoomController(RoomService roomService) {
+    private final RoomService roomService;
+    private final AppProperties appProperties;
+
+    public RoomController(RoomService roomService, AppProperties appProperties) {
         this.roomService = roomService;
+        this.appProperties = appProperties;
     }
 
     @PostMapping
@@ -53,9 +59,28 @@ public class RoomController {
 
     @PostMapping("/{roomCode}/join")
     public PlayerInfo joinRoom(
+        WebSession session,
         @PathVariable String roomCode,
         @RequestBody @Validated JoinRequest joinRequest) {
-        return roomService.join(roomCode, joinRequest.playerName());
+
+        final Object establishedPlayerObj =
+            appProperties.disablePlayerSessions() ? null
+                : session.getAttributes().get(ATTR_PLAYER);
+
+        final PlayerInfo playerInfo;
+        if (establishedPlayerObj instanceof PlayerInfo prevPlayerInfo) {
+            // Process requested player name to allow for rename
+            playerInfo = roomService.rejoin(roomCode, joinRequest.playerName(), prevPlayerInfo.playerId());
+        }
+        else {
+            playerInfo = roomService.join(roomCode, joinRequest.playerName());
+        }
+
+        if (!appProperties.disablePlayerSessions()) {
+            session.getAttributes().put(ATTR_PLAYER, playerInfo);
+        }
+
+        return playerInfo;
     }
 
     @GetMapping("/{roomCode}/players")

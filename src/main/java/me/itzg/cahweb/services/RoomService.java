@@ -93,6 +93,23 @@ public class RoomService {
         return playerInfo;
     }
 
+    public PlayerInfo rejoin(String roomCode, String playerName, String playerId) {
+        log.debug("Player re-joining room={} name={} id={}", roomCode, playerName, playerId);
+        final Room room = roomStorage.getRoom(roomCode);
+
+        final PlayerInfo updated = PlayerInfo.builder()
+            .playerId(playerId)
+            .playerName(playerName)
+            .build();
+        room.ensurePlayer(updated);
+
+        tellHost(room, roomCode, GameEvent.builder()
+            .action(Action.PlayerJoined)
+            .build());
+
+        return updated;
+    }
+
     private String generatePlayerId() {
         return UUID.randomUUID().toString();
     }

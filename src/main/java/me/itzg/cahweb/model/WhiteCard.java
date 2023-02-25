@@ -1,6 +1,6 @@
 package me.itzg.cahweb.model;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 
 public record WhiteCard(
     @NotBlank
@@ -14,11 +14,9 @@ public record WhiteCard(
         if (this == o) {
             return true;
         }
-        if (!(o instanceof WhiteCard)) {
+        if (!(o instanceof final WhiteCard whiteCard)) {
             return false;
         }
-
-        final WhiteCard whiteCard = (WhiteCard) o;
 
         return text.equals(whiteCard.text);
     }

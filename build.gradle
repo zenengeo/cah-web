@@ -1,12 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.5'
+    id 'org.springframework.boot' version '3.0.3'
     id 'io.spring.dependency-management' version '1.1.0'
     id 'java'
     // https://github.com/qoomon/gradle-git-versioning-plugin
     id 'me.qoomon.git-versioning' version '6.4.2'
     // https://github.com/node-gradle/gradle-node-plugin
     id "com.github.node-gradle.node" version '3.5.1'
-    id "io.github.itzg.simple-boot-image" version '0.5.2'
+    id "io.github.itzg.simple-boot-image" version '3.0.0'
 }
 
 version = '0.0.1-SNAPSHOT'
@@ -42,39 +42,38 @@ repositories {
     mavenCentral()
 }
 
-ext {
-    uiSrcDir = "${projectDir}/src/main/ui"
-    uiDestBuildDir = "${buildDir}/ui"
-}
+def uiSrcDir = layout.projectDirectory.dir('src/main/ui')
+def uiDestBuildDir = layout.buildDirectory.dir('ui')
 
 node {
     download = findProperty('downloadNode') as boolean
-    version = '16.15.0'
-    nodeProjectDir = file(uiSrcDir)
+    version = '18.12.1'
+    nodeProjectDir.set(uiSrcDir)
 }
 
-task reactTest(type: NpmTask) {
+tasks.register('reactTest', NpmTask) {
     dependsOn 'npmInstall'
     args = ['run', 'test']
 }
 
-task reactBuild(type: NpmTask) {
+tasks.register('reactBuild', NpmTask) {
     dependsOn 'npmInstall'
-    inputs.files("${uiSrcDir}/package.json", "${uiSrcDir}/package-lock.json")
-    inputs.dir("${uiSrcDir}/src")
-    inputs.dir("${uiSrcDir}/public")
+    inputs.files(uiSrcDir.file('package.json'), uiSrcDir.file('package-lock.json'))
+    inputs.dir(uiSrcDir.dir('src'))
+    inputs.dir(uiSrcDir.dir('public'))
     outputs.dir(uiDestBuildDir)
 
     args = ['run', 'build']
 
     execOverrides {
-        environment('BUILD_PATH', file("${uiDestBuildDir}/static"))
+        environment('BUILD_PATH', uiDestBuildDir.get().dir('static'))
     }
 }
 
 tasks.named('bootJar') {
     dependsOn reactBuild
-    classpath(file(uiDestBuildDir))
+
+    classpath(uiDestBuildDir)
 }
 
 dependencies {
