@@ -6,28 +6,9 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Setup Java JDK
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-          cache-dependency-path: 'src/main/ui/package-lock.json'
-
-      - name: Gradle build
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: |
-            build
+  test:
+    uses: itzg/github-workflows/.github/workflows/gradle-build.yml@add-nodejs-option
+    with:
+      arguments: test
+      include-test-report: true
+      include-nodejs: true
