@@ -75,6 +75,10 @@ public class Room {
         );
     }
 
+    public void ensurePlayer(PlayerInfo playerInfo) {
+        addPlayer(playerInfo);
+    }
+
     public synchronized void addGhostPlayer(PlayerInfo playerInfo) {
         addPlayer(playerInfo);
         ghostPlayersIds.add(playerInfo.playerId());
@@ -136,7 +140,7 @@ public class Room {
         submitted.put(playerId, cardId);
         final int subscriberCount = playersSink.currentSubscriberCount();
         final int dealtPlayerCount = dealtCardsByPlayer.size();
-        log.debug("Player={} submitted card={}, submitted={} subscribers={} dealt={}",
+        log.debug("Player={} submitted card={}, submitted={} subscriberCount={} dealt={}",
             playerId, cardId, submitted, subscriberCount, dealtPlayerCount);
         return submitted.size() >=
             Math.min(subscriberCount, dealtPlayerCount);
@@ -164,11 +168,17 @@ public class Room {
     }
 
     public synchronized boolean submitVote(String playerId, int cardId) {
+        final int subscriberCount = playersSink.currentSubscriberCount();
+        final int expectedVotes = submitted.size() - ghostPlayersIds().size();
+
         votes.put(playerId, cardId);
+
+        log.debug("Player={} voted for card={} with current voteCount={}, subscriberCount={}, expectedCount={}, ghostCount={}",
+            playerId, cardId, votes.size(), subscriberCount, expectedVotes, ghostPlayersIds.size());
         return votes.size() >=
             Math.min(
-                playersSink.currentSubscriberCount(),
-                submitted.size() - ghostPlayersIds().size()
+                subscriberCount,
+                expectedVotes
             );
     }
 

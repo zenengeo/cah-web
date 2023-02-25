@@ -2,7 +2,15 @@
 
 :root {
   --small-card-width: max(15vh,15vw);
-  --purply: #4545c4;
+  /* https://coolors.co/4545c4-91c4f2-8ca0d7-151515-a63d40 */
+  --purply: #4545c4ff;
+  --iris: #4545c4ff;
+  --jordy-blue: #91c4f2ff;
+  --vista-blue: #8ca0d7ff;
+  --night: #151515ff;
+  --redwood: #a63d40ff;
+
+  --height-breakpoint: 600px;
 }
 
 html {

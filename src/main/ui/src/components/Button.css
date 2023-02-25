@@ -6,6 +6,12 @@ button.Button {
   border-radius: 5px
 }
 
+@media (max-height: 600px) {
+  button.Button.ShrinkVertical {
+    padding: 2px 20px;
+  }
+}
+
 button.Button:hover {
   cursor: pointer;
   background-color: #ccc;

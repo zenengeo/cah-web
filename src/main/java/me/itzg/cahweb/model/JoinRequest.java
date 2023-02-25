@@ -1,6 +1,6 @@
 package me.itzg.cahweb.model;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 
 public record JoinRequest(
     @NotBlank String playerName
