@@ -160,7 +160,8 @@
         {
             "text":"What is ____?",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Combined as a set to form 'What is love?'"
         },
         {
             "text":"I found ____",
@@ -298,7 +299,8 @@
         {
             "text":"____ can be commonly used as a substitute for ____",
             "cards": 2,
-            "by":""
+            "by":"",
+            "inspiration":"This might've been based on something about how blood can replace like milk or something in cooking recipes technically"
         },
         {
             "text":"What're they gonna do next?\nBag ____?",
@@ -416,12 +418,14 @@
         {
             "text":"New insult called \" Being a ____\" is becoming popular among multiple generations",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Probably based on calling someone a boomer"
         },
         {
             "text":"What are they gonna take away next? ____?",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Combined as a set to form 'What are they gonna take away next? The right to free speech?'"
         },
         {
             "text":"No, it's not like I'm \"high on life\". I'm high on ____",
@@ -988,7 +992,8 @@
         },
         {
             "text":"The right to free speech",
-            "by":""
+            "by":"",
+            "inspiration":"Combined as a set to form 'What are they gonna take away next? The right to free speech?'"
         },
         {
             "text":"Slurs",
@@ -1009,7 +1014,8 @@
         },
         {
             "text":"Love",
-            "by":""
+            "by":"",
+            "inspiration":"Combined as a set to form 'What is love?'"
         },
         {
             "text":"Pain",
