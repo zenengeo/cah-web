@@ -3,7 +3,8 @@
         {
             "text":"I finally stopped when I saw __________",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"This is not actually the first card added, I think me and my dad thought of this from some part of something we said and we thought it sounded like it would fit here or something."
         },
         {
             "text":"And the winner of the Bake Off is __________",
@@ -1043,7 +1044,8 @@
         },
         {
             "text":"A disappointing hotdog",
-            "by":""
+            "by":"",
+            "inspiration":"I think I remember putting this into the original game after my mom made a hotdog using bread as a bun or something."
         },
         {
             "text":"Love",
@@ -1200,7 +1202,8 @@
         },
         {
             "text":"Hell",
-            "by":""
+            "by":"",
+            "inspiration":"When me and my parents were playing this, the bot with the name of 'Satan' won, so they get the hell card I guess"
         },
         {
             "text":"Jason",
@@ -1213,7 +1216,8 @@
         },
         {
             "text":"Exactly two and a half teaspoons of salt",
-            "by":""
+            "by":"",
+            "inspiration":"It's just a bit too much salt"
         },
         {
             "text":"A YouTuber",
@@ -1225,15 +1229,18 @@
         },
         {
             "text":"A third Valve game",
-            "by":""
+            "by":"",
+            "inspiration":"There hasn't been one with 3 in the name. Like HL:A is a 3rd half life game but it doesn't have a 3"
         },
         {
             "text":"A hidden camera",
-            "by":""
+            "by":"",
+            "inspiration":"Impractical Jokers or another show like that"
         },
         {
             "text":"A golden ticket",
-            "by":""
+            "by":"",
+            "inspiration":"Willy Wonka and the Chococlate Factory"
         },
         {
             "text":"A grandma",
