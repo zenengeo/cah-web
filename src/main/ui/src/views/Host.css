@@ -120,7 +120,7 @@
   margin-bottom: 1em;
 }
 
-@media (max-height: 600px) {
+@media (max-height: 620px) {
   .AllScores {
     padding-top: 2px;
     padding-bottom: 2px;

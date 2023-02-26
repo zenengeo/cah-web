@@ -6,7 +6,7 @@ button.Button {
   border-radius: 5px
 }
 
-@media (max-height: 600px) {
+@media (max-height: 620px) {
   button.Button.ShrinkVertical {
     padding: 2px 20px;
   }
