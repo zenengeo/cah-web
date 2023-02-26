@@ -115,7 +115,7 @@ public class RoomService {
     }
 
     private void tellHost(Room room, String roomCode, GameEvent event) {
-        log.debug("Telling host of room={} event={}", roomCode, event);
+        log.debug("Telling Host of room={} event={}", roomCode, event);
         room.hostSink().emitNext(
             event,
             (signalType, emitResult) -> {

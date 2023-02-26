@@ -3,6 +3,7 @@ import {getJson, postJson} from "../utils/fetchWrappers";
 import WhiteCard from "../components/WhiteCard";
 import "./Player.css";
 import Button from "../components/Button";
+import CardsContainer from "../components/CardsContainer";
 
 function Waiting({text}) {
   return (
@@ -30,7 +31,7 @@ function PickCards({roomCode, playerId, handleSubmitCard}) {
   return (
       <main className="PickCards">
         <h1>Pick your card to put up for vote</h1>
-        <div className="CardsContainer">
+        <CardsContainer>
           {
             cards.map(card =>
                 <WhiteCard key={card.id} text={card.card.text}
@@ -40,7 +41,7 @@ function PickCards({roomCode, playerId, handleSubmitCard}) {
                 />
             )
           }
-        </div>
+        </CardsContainer>
         <Button disabled={!selectedCard} className="PlayerSubmitButton" block
                 onClick={() => handleSubmitCard(selectedCard)}>Send</Button>
       </main>
@@ -61,21 +62,22 @@ function Vote({roomCode, round, handleVote}) {
   return (
       <main className="Vote">
         <h1>Pick your favorite</h1>
-        <div className="CardsContainer">
-          {candidates.map(card =>
-              <WhiteCard key={card.id} text={card.card.text}
-                         onClick={() => setVote(card)}
-                         selected={vote && vote.id === card.id}/>
-          )
+        <CardsContainer>
+          {
+            candidates.map(card =>
+                <WhiteCard key={card.id} text={card.card.text}
+                           onClick={() => setVote(card)}
+                           selected={vote && vote.id === card.id}/>
+            )
           }
-        </div>
-            <Button disabled={!vote} className="PlayerSubmitButton" block
-                    onClick={() => handleVote(vote)}>Send</Button>
+        </CardsContainer>
+        <Button disabled={!vote} className="PlayerSubmitButton" block
+                onClick={() => handleVote(vote)}>Send</Button>
       </main>
   )
 }
 
-function Player({roomCode, playerId, playerName}) {
+function Player({roomCode, playerId}) {
   const [state, setState] = useState("waiting_to_start");
   const [round, setRound] = useState(0);
 

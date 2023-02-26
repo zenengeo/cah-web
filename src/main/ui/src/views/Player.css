@@ -23,13 +23,3 @@
   box-shadow: 2px 2px 10px -2px #000000;
 }
 
-.CardsContainer {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
