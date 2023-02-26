@@ -166,7 +166,7 @@
             "text":"What is ____?",
             "cards": 1,
             "by":"",
-            "inspiration":"Combined as a set to form 'What is love?'"
+            "inspiration":"Combined as a set to form 'What is love?'. Fun fact: this card in the original original scratch version (pre-updated scratch version) this was ranked as the least funny card with a score of 0"
         },
         {
             "text":"I found ____",
@@ -532,6 +532,12 @@
             "cards": 1,
             "by":"",
             "inspiration":"Too many cooks and also meant to be combined with the 'feces' card"
+        },
+        {
+            "text":"____ is just hell on earth",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Thought of this after making the Hell card. I had to look up if this was a actual saying because I thought of this also from DooM"
         }
     ],
     "white":[
@@ -1171,6 +1177,20 @@
             "text":"A red card",
             "by":"",
             "inspiration":"This is about football and CAH"
+        },
+        {
+            "text":"19 dollars",
+            "by":"",
+            "inspiration":"IDK, it's not a major amount of money. Also thought of this from 19$ fortnite card meme or whatever"
+        },
+        {
+            "text":"Outdated memes",
+            "by":"",
+            "inspiration":"Is the 19$ fortnite card meme still a thing, i'm assuming it's not"
+        },
+        {
+            "text":"Hell",
+            "by":""
         }
     ]
 }
