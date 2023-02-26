@@ -706,7 +706,7 @@
             "text":"A saucy boy",
             "by":"",
             "useAsName": true,
-            "inspiration":"I think there was some sort of Shakespear out of context thing with this"
+            "inspiration":"I think there was some sort of Shakespeare out of context thing with this"
         },
         {
             "text":"Vaccines",
@@ -1141,12 +1141,36 @@
         {
             "text":"A flamingo",
             "by":"",
-            "inspiration":"I made this because I thought of the lethal dose card from the song 'Flamingo'"
+            "inspiration":"I made this because I thought of the lethal dose card which was based on the song 'Flamingo'"
         },
         {
             "text":"Too many cooks",
             "by":"",
             "inspiration":"Based on 'Too many cooks', also there's lots of white cards"
+        },
+        {
+            "text":"Antivaxxers",
+            "by":""
+        },
+        {
+            "text":"A generic billionaire",
+            "by":"",
+            "inspiration":"Yes this is talking about Elon Musk, I just don't wanna do another name card"
+        },
+        {
+            "text":"Kid cigars",
+            "by":"",
+            "inspiration":"I thought of this terrible card from the idea of a kid having a cigar, but you can also imagine this as cigars made from kids if you prefer"
+        },
+        {
+            "text":"A ham grenade",
+            "by":"",
+            "inspiration":"I first thought of a 'ham' card, but also Ham Grenade is hilarious"
+        },
+        {
+            "text":"A red card",
+            "by":"",
+            "inspiration":"This is about football and CAH"
         }
     ]
 }
