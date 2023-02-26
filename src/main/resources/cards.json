@@ -543,6 +543,11 @@
             "text":"Agent 47, we have something which we think will be perfect for this mission. It's ______",
             "cards": 1,
             "by":""
+        },
+        {
+            "text":"Are you sure we're not in a simulation? Look at ____.",
+            "cards": 1,
+            "by":""
         }
     ],
     "white":[
@@ -1184,7 +1189,7 @@
             "inspiration":"This is about football and is not a black card or white card"
         },
         {
-            "text":"19 dollars",
+            "text":"Nineteen dollars",
             "by":"",
             "inspiration":"IDK, it's not a major amount of money. Also thought of this from 19$ fortnite card meme or whatever"
         },
@@ -1204,6 +1209,46 @@
         },
         {
             "text":"\"Legally\" obtained organs",
+            "by":""
+        },
+        {
+            "text":"Exactly two and a half teaspoons of salt",
+            "by":""
+        },
+        {
+            "text":"A YouTuber",
+            "by":""
+        },
+        {
+            "text":"A unecessary sequal",
+            "by":""
+        },
+        {
+            "text":"A third Valve game",
+            "by":""
+        },
+        {
+            "text":"A hidden camera",
+            "by":""
+        },
+        {
+            "text":"A golden ticket",
+            "by":""
+        },
+        {
+            "text":"A grandma",
+            "by":""
+        },
+        {
+            "text":"The apocalypse",
+            "by":""
+        },
+        {
+            "text":"3 shots of vodka",
+            "by":""
+        },
+        {
+            "text":"The 80s",
             "by":""
         }
     ]
