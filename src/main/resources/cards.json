@@ -538,6 +538,11 @@
             "cards": 1,
             "by":"",
             "inspiration":"Thought of this after making the Hell card. I had to look up if this was a actual saying because I thought of this also from DooM"
+        },
+        {
+            "text":"Agent 47, we have something which we think will be perfect for this mission. It's ______",
+            "cards": 1,
+            "by":""
         }
     ],
     "white":[
@@ -1176,7 +1181,7 @@
         {
             "text":"A red card",
             "by":"",
-            "inspiration":"This is about football and CAH"
+            "inspiration":"This is about football and is not a black card or white card"
         },
         {
             "text":"19 dollars",
@@ -1190,6 +1195,15 @@
         },
         {
             "text":"Hell",
+            "by":""
+        },
+        {
+            "text":"Jason",
+            "by":"",
+            "inspiration":"I thought of this from .json, even though I pronounce it slightly differently from Jason"
+        },
+        {
+            "text":"\"Legally\" obtained organs",
             "by":""
         }
     ]
