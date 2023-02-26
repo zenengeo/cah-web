@@ -20,12 +20,14 @@
         {
             "text":"No one is safe from __________.",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'No one is safe from a gun'"
         },
         {
             "text":"______ killed me.",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'A gun killed me'"
         },
         {
             "text":"Nothing is better than __________.",
@@ -42,12 +44,14 @@
         {
             "text":"I ate _______ and it was DELICIOUS!",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Probably made as a set to form 'I ate chicken and it was DELICIOUS'"
         },
         {
             "text":"Chillin with ____, eating bread.",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'Chillin with the ducks, eating bread'"
         },
         {
             "text":"We found ______ in a sewer drain.",
@@ -125,7 +129,8 @@
         {
             "text":"In 'Merica, we have _______.",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'In 'Merica, we have kinder surprise eggs', which is a lie, guns also fits here too"
         },
         {
             "text":"I found ___ while looking for _______",
@@ -176,7 +181,8 @@
         {
             "text":"BREAKING NEWS: Floridaman stabbed person with ____",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set for anything, literally any of these white cards are nonsensical to be stabbed with"
         },
         {
             "text":"I made a book that talks about ____",
@@ -518,7 +524,14 @@
         {
             "text":"How many times can you eat ____ before it's lethal?",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"About stuff like apples technically having a lethal dose and also the song 'Flamingo'"
+        },
+        {
+            "text":"There's just too much ____ in the soup",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Too many cooks and also meant to be combined with the 'feces' card"
         }
     ],
     "white":[
@@ -535,7 +548,8 @@
         },
         {
             "text":"A gun",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'No one is safe from a gun'"
         },
         {
             "text":"A slice of bread",
@@ -556,11 +570,13 @@
         {
             "text":"Chicken",
             "by":"",
-            "useAsName": true
+            "useAsName": true,
+            "inspiration":"Probably made as a set to form 'I ate chicken and it was DELICIOUS'"
         },
         {
             "text":"The ducks",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'Chillin with the ducks, eating bread'"
         },
         {
             "text":"You",
@@ -658,7 +674,8 @@
         },
         {
             "text":"Kinder surprise eggs",
-            "by":""
+            "by":"",
+            "inspiration":"Made as a set to form 'In 'Merica, we have kinder surprise eggs', which is a lie"
         },
         {
             "text":"Disappointment",
@@ -1115,6 +1132,21 @@
             "text":"Stress",
             "by":"",
             "inspiration":"I put 9 cards in the same commit"
+        },
+        {
+            "text":"Lies",
+            "by":"",
+            "inspiration":"Haha I wasn't actually stressed making 9 cards in the same commit, since I am not in any rush"
+        },
+        {
+            "text":"A flamingo",
+            "by":"",
+            "inspiration":"I made this because I thought of the lethal dose card from the song 'Flamingo'"
+        },
+        {
+            "text":"Too many cooks",
+            "by":"",
+            "inspiration":"Based on 'Too many cooks', also there's lots of white cards"
         }
     ]
 }
