@@ -549,6 +549,34 @@
             "text":"Are you sure we're not in a simulation? Look at ____.",
             "cards": 1,
             "by":""
+        },
+        {
+            "text":"_____ just destroyed my entire house, I guess",
+            "cards": 1,
+            "by":"",
+            "inspiration":"This Onion article: https://www.theonion.com/1850156124"
+        },
+        {
+            "text":"Yeah I own _____. What's weird about that?",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"You know you have a problem when you have _____.",
+            "cards": 1,
+            "by":""
+        },
+        {
+            "text":"Note to self: Don't bring _____ to a funeral.",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Based on a Youtube Shorts video of someone playing a ragtime piano right after the death scene in UP"
+        },
+        {
+            "text":"Obliterate _____, and we'll tell you what kind of cheese you are.",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Based on a Buzzfeed Quiz or something with the name 'Break up with you spouse and we'll tell you what BTS member you are' or something dumb like that."
         }
     ],
     "white":[
@@ -1257,6 +1285,29 @@
         {
             "text":"The 80s",
             "by":""
+        },
+        {
+            "text":"2 cards",
+            "by":"",
+            "inspiration":"This is talking about how you currently can't get black cards that have 2 white cards with it. Once that's added, pretend this card is about 2 black cards"
+        },
+        {
+            "text":"Twitter",
+            "by":""
+        },
+        {
+            "text":"Autotune",
+            "by":""
+        },
+        {
+            "text":"A entire piano",
+            "by":"",
+            "inspiration":"Based on a Youtube Shorts video of someone playing a ragtime piano right after the death scene in UP"
+        },
+        {
+            "text":"The moon",
+            "by":"",
+            "inspiration":"Meant to go with the obliterate card"
         }
     ]
 }
