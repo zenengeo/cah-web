@@ -667,7 +667,8 @@
         },
         {
             "text":"A can of Heinz beans",
-            "by":""
+            "by":"",
+            "inspiration":"Beans is also one that was kind of just funny to say"
         },
         {
             "text":"Kevin",
@@ -677,7 +678,8 @@
         },
         {
             "text":"Communism",
-            "by":""
+            "by":"",
+            "inspiration":"IDK, when I was a kid it was just one of those things that was funny to say I guess"
         },
         {
             "text":"The manager",
@@ -693,11 +695,13 @@
         {
             "text":"Bees",
             "by":"",
-            "useAsName": true
+            "useAsName": true,
+            "inspiration":"So I have the username 'enenbee'"
         },
         {
             "text":"A lifetime supply of soup",
-            "by":""
+            "by":"",
+            "inspiration":"Soup just isn't that good, why do you need 70 years worth of soup"
         },
         {
             "text":"Half a banana",
@@ -796,7 +800,8 @@
         },
         {
             "text":"The latest iPhone",
-            "by":""
+            "by":"",
+            "inspiration":"I think I remember this being the iPhone 11 card maybe, idk, I just remember it being a specific iPhone version"
         },
         {
             "text":"A box full of water",
@@ -825,7 +830,7 @@
             "by":""
         },
         {
-            "text":"A strand of Coronavirus",
+            "text":"A strand of COVID-19",
             "by":""
         },
         {
@@ -861,7 +866,8 @@
         },
         {
             "text":"The $1000 Mac Pro stand",
-            "by":""
+            "by":"",
+            "inspiration":"That costs alot"
         },
         {
             "text":"Drugs",
@@ -891,7 +897,8 @@
         },
         {
             "text":"A different set of cards",
-            "by":""
+            "by":"",
+            "inspiration":"I think I remember that this card would change into a different white card when clicked"
         },
         {
             "text":"PETA",
@@ -910,7 +917,8 @@
         },
         {
             "text":"Bad grammar",
-            "by":""
+            "by":"",
+            "inspiration":"I think I put this in after correcting the grammar in another card. When this was originally added, however, it had bad spelling"
         },
         {
             "text":"A baseball bat",
@@ -952,7 +960,7 @@
             "inspiration":"Used to be a card called 'Your mom'"
         },
         {
-            "text":"A rabbit with rabbies",
+            "text":"A rabbit with rabies",
             "by":""
         },
         {
@@ -965,7 +973,8 @@
         },
         {
             "text":"A jelly-filled donut",
-            "by":""
+            "by":"",
+            "inspiration":"In a 4kids dub of Pokemon (the anime), Brock calls rice balls a 'jelly-filled donut' even though it is very much not a donut"
         },
         {
             "text":"Sliced Edd",
@@ -1300,7 +1309,7 @@
             "by":""
         },
         {
-            "text":"A entire piano",
+            "text":"An entire piano",
             "by":"",
             "inspiration":"Based on a Youtube Shorts video of someone playing a ragtime piano right after the death scene in UP"
         },
