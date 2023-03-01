@@ -589,6 +589,12 @@
             "cards": 1,
             "by":"",
             "inspiration":"I accidentally wrote 'tracking' instead of 'traffic' at first with the previous card, so now ____ is tracking you"
+        },
+        {
+            "text":"I sawed ______ in half!",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Flex Tape ads"
         }
     ],
     "white":[
@@ -1378,6 +1384,31 @@
             "text":"A small boulder",
             "by":"",
             "inspiration":"Based on some news article with the title of something like 'A large boulder the size of a small boulder is blocking traffic'"
+        },
+        {
+            "text":"Racism",
+            "by":"",
+            "inspiration":"This card wasn't already here?"
+        },
+        {
+            "text":"Testicles",
+            "by":"",
+            "inspiration":"A github-exclusive card! Saying that incase the newer cards get ported to some scratch version"
+        },
+        {
+            "text":"A coma",
+            "by":"",
+            "inspiration":"Was watching a Food Theory video and they mentioned football"
+        },
+        {
+            "text":"A big plastic bowl",
+            "by":"",
+            "inspiration":"Perhaps even, a super bowl?"
+        },
+        {
+            "text":"A mutant",
+            "by":"",
+            "inspiration":"Thought of this from one of my own unreleased games"
         }
     ]
 }
