@@ -453,7 +453,8 @@
         {
             "text":"New social media site just turned into people talking about ____",
             "cards": 1,
-            "by":""
+            "by":"",
+            "inspiration":"The Jeremy Renner app"
         },
         {
             "text":"I'm like ____. Y'know what I mean?",
@@ -478,7 +479,7 @@
             "inspiration":"Snapcube Sonic Adventure 2 : Dark story, it's a big meme"
         },
         {
-            "text":"You've been hit by, you've been struck by ____",
+            "text":"You've been hit by,\nyou've been struck by\n____",
             "cards": 1,
             "by":"",
             "inspiration":"Made as a set with 3 different results"
@@ -567,7 +568,7 @@
             "by":""
         },
         {
-            "text":"Note to self: Don't bring _____ to a funeral.",
+            "text":"Note to self:\nDon't bring _____ to a funeral.",
             "cards": 1,
             "by":"",
             "inspiration":"Based on a Youtube Shorts video of someone playing a ragtime piano right after the death scene in UP"
@@ -1314,7 +1315,7 @@
             "by":""
         },
         {
-            "text":"2 cards",
+            "text":"Two cards",
             "by":"",
             "inspiration":"This is talking about how you currently can't get black cards that have 2 white cards with it. Once that's added, pretend this card is about 2 black cards"
         },
