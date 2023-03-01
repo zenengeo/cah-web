@@ -577,6 +577,18 @@
             "cards": 1,
             "by":"",
             "inspiration":"Based on a Buzzfeed Quiz or something with the name 'Break up with you spouse and we'll tell you what BTS member you are' or something dumb like that."
+        },
+        {
+            "text":"A large boulder the size of _____ just rolled onto a road.",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Based on some news article with the title of something like 'A large boulder the size of a small boulder is blocking traffic'"
+        },
+        {
+            "text":"____ is actually just made up by the government, it never existed.",
+            "cards": 1,
+            "by":"",
+            "inspiration":"I accidentally wrote 'tracking' instead of 'traffic' at first with the previous card, so now ____ is tracking you"
         }
     ],
     "white":[
@@ -1346,11 +1358,26 @@
         {
             "text":"Ohio",
             "by":"",
-            "inspiration":"This one is not based on a onion article"
+            "inspiration":"This one is only partially based on a onion article"
         },
         {
             "text":"Texas",
             "by":""
+        },
+        {
+            "text":"Mr. Gerry the Salamander",
+            "by":"",
+            "inspiration":"Fun fact: Gerrymander is named after a person named Elbridge Gerry redistricted a place and it ended up looking like a salamander"
+        },
+        {
+            "text":"A entire football field",
+            "by":"",
+            "inspiration":"The most american form of measurement"
+        },
+        {
+            "text":"A small boulder",
+            "by":"",
+            "inspiration":"Based on some news article with the title of something like 'A large boulder the size of a small boulder is blocking traffic'"
         }
     ]
 }
