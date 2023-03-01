@@ -89,7 +89,7 @@
             "inspiration":"All I want for Christmas, is you"
         },
         {
-            "text":"________\nAgainst\n________",
+            "text":"________\nAgainst\n________ [MFD]",
             "cards": 2,
             "by":"",
             "inspiration":"Cards Against Humanity Title"
@@ -105,19 +105,19 @@
             "by":"itzg"
         },
         {
-            "text":"Cards\nWith\n_______",
+            "text":"Cards\nWith\n_______ [MFD]",
             "cards": 1,
             "by":"",
             "inspiration":"Cards Against Humanity Title Alternative"
         },
         {
-            "text":"______\nWith\nHumanity",
+            "text":"______\nWith\nHumanity [MFD]",
             "cards": 1,
             "by":"",
             "inspiration":"Cards Against Humanity Title Alternative"
         },
         {
-            "text":"______\nWith\n______",
+            "text":"______\nWith\n______ [MFD]",
             "cards": 2,
             "by":"",
             "inspiration":"Cards Against Humanity Title Alternative"
@@ -144,7 +144,7 @@
             "by":""
         },
         {
-            "text":"You are ____",
+            "text":"You are ____ [MFD]",
             "cards": 1,
             "by":""
         },
@@ -164,13 +164,13 @@
             "by":""
         },
         {
-            "text":"What is ____?",
+            "text":"What is ____? [MFD]",
             "cards": 1,
             "by":"",
             "inspiration":"Combined as a set to form 'What is love?'. Fun fact: this card in the original original scratch version (pre-updated scratch version) this was ranked as the least funny card with a score of 0"
         },
         {
-            "text":"I found ____",
+            "text":"I found ____ [MFD]",
             "cards": 1,
             "by":""
         },
@@ -191,7 +191,7 @@
             "by":""
         },
         {
-            "text":"When I say potato you say ____.",
+            "text":"When I say potato you say ____. [MFD]",
             "cards": 1,
             "by":""
         },
@@ -258,12 +258,12 @@
             "inspiration":"There's 2 hidden cards in one of those big cards against humanity set things"
         },
         {
-            "text":"In my opinion, ____ is not good",
+            "text":"In my opinion, ____ is not good [MFD]",
             "cards": 1,
             "by":""
         },
         {
-            "text":"In my opinion, ____ is AMAZING",
+            "text":"In my opinion, ____ is AMAZING [MFD]",
             "cards": 1,
             "by":""
         },
@@ -294,7 +294,7 @@
             "by":""
         },
         {
-            "text":"The next meme is going to be ____ with a ____",
+            "text":"The next meme is going to be ____ with ____",
             "cards": 2,
             "by":""
         },
@@ -403,7 +403,7 @@
             "by":""
         },
         {
-            "text":"It would be so cool if it was possible to just make ____ out of nowhere",
+            "text":"It would be so cool if it was possible to just make ____ out of nowhere [MFD]",
             "cards": 1,
             "by":""
         },
@@ -621,7 +621,7 @@
             "inspiration":"Made as a set to form 'Nothing is better than a slice of bread'"
         },
         {
-            "text":"Guy Fieri",
+            "text":"Guy Fieri [MFD]",
             "by":"",
             "useAsName": true
         },
@@ -672,7 +672,7 @@
             "by":""
         },
         {
-            "text":"The only blank cards in the deck",
+            "text":"The only blank card in the deck",
             "by":""
         },
         {
@@ -1136,7 +1136,7 @@
             "inspiration":"Made as a set with 'You've been hit by, you've been struck by'"
         },
         {
-            "text":"A shark burglar",
+            "text":"A shark burglar [MFD]",
             "by":"",
             "inspiration":"Made as a set with 'You've been hit by, you've been struck by', except it's a tumblr version"
         },
@@ -1181,7 +1181,7 @@
             "inspiration":"Goes with the Ai-generated card"
         },
         {
-            "text":"ChatGPT",
+            "text":"ChatGPT [MFD]",
             "by":""
         },
         {
@@ -1242,7 +1242,7 @@
             "inspiration":"I first thought of a 'ham' card, but also Ham Grenade is hilarious"
         },
         {
-            "text":"A red card",
+            "text":"A red card [MFD]",
             "by":"",
             "inspiration":"This is about football and is not a black card or white card"
         },
@@ -1392,7 +1392,7 @@
             "inspiration":"This card wasn't already here?"
         },
         {
-            "text":"Testicles",
+            "text":"Testicles [MFD]",
             "by":"",
             "inspiration":"A github-exclusive card! Saying that incase the newer cards get ported to some scratch version"
         },
