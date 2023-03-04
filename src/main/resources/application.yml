@@ -1,3 +1,4 @@
+
 spring:
   cache:
     cache-names: rooms
@@ -17,3 +18,5 @@ management:
     web:
       exposure:
         include: health,startup
+server:
+  port: ${PORT:8080}
