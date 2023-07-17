@@ -564,6 +564,12 @@
             "cards": 1,
             "by":"",
             "inspiration":"Flex Tape ads"
+        },
+        {
+            "text":"Maybe the real ___ was the friends we made along the way",
+            "cards": 1,
+            "by":"",
+            "inspiration":"I had made a program which generated these kind of phrases. Also this card was originally 'Maybe the real ___ was the ____ we made along the way' "
         }
     ],
     "white":[
@@ -1354,6 +1360,46 @@
             "text":"A mutant",
             "by":"",
             "inspiration":"Thought of this from one of my own unreleased games"
+        },
+        {
+            "text":"A picture of John Cena",
+            "by":"",
+            "inspiration":""
+        },
+        {
+            "text":"Kids",
+            "by":"",
+            "inspiration":"There was a truck with text that said 'Kids against hunger', but I misread it as 'Kids against humanity'"
+        },
+        {
+            "text":"Clones",
+            "by":"",
+            "inspiration":"Clones against humanity title"
+        },
+        {
+            "text":"Hidden treasure",
+            "by":"",
+            "inspiration":"Maybe the real treasure was right behind the fake treasure"
+        },
+        {
+            "text":"A minor misspellng",
+            "by":"",
+            "inspiration":"I had accidentally misspelled misspelling. Yes I am aware it is misspelled in the card itself. This used to be misspelled in a different way, but I thought it wasn't noticable enough."
+        },
+        {
+            "text":"Cookies",
+            "by":"",
+            "inspiration":"I've been playing cookie clicker (This was written when I played Cookie Clicker more)"
+        },
+        {
+            "text":"A banana for scale",
+            "by":"",
+            "inspiration":"Thought of from some youtube video and other times the size of something in a image has been shown with a banana"
+        },
+        {
+            "text":"Hunger",
+            "by":"",
+            "inspiration":""
         }
     ]
 }
