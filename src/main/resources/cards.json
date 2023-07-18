@@ -570,6 +570,11 @@
             "cards": 1,
             "by":"",
             "inspiration":"I had made a program which generated these kind of phrases. Also this card was originally 'Maybe the real ___ was the ____ we made along the way' "
+        },
+        {
+            "text":"The man, the myth, the legend, _____",
+            "by":"",
+            "inspiration":"There was some tumblr post about a twitter post reading 'Guys be like 'The man, the myth, the legend' and it's just their pal, Greg' "
         }
     ],
     "white":[
@@ -1400,6 +1405,11 @@
             "text":"Hunger",
             "by":"",
             "inspiration":""
+        },
+        {
+            "text":"Some guy named 'Greg'",
+            "by":"",
+            "inspiration":"There was some tumblr post about a twitter post reading 'Guys be like 'The man, the myth, the legend' and it's just their pal, Greg' "
         }
     ]
 }
