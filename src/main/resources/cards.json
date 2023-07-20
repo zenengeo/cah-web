@@ -588,6 +588,12 @@
             "cards": 1,
             "by":"",
             "inspiration":"Some guy named greg card"
+        },
+        {
+            "text":"Now introducing, the fight you all have been waiting for:\n___ vs. ____!",
+            "cards": 1,
+            "by":"",
+            "inspiration":"There is no good way to adapt this to 1 card input, so this won't show up for a bit. This is based on the 'Coughing Baby vs Hydrogen Bomb' meme which is used to express very unfair matchups with one being clearly better"
         }
     ],
     "white":[
@@ -1433,6 +1439,38 @@
             "text":"Random number generation",
             "by":"",
             "inspiration":"Why does the bot player always win? _____."
+        },
+        
+        {
+            "text":"A coughing baby",
+            "by":"",
+            "inspiration":"This is based on the 'Coughing Baby vs Hydrogen Bomb' meme which is used to express very unfair matchups with one being clearly better. Also I have been coughing"
+        },
+        {
+            "text":"A hydrogen bomb",
+            "by":"",
+            "inspiration":"This is based on the 'Coughing Baby vs Hydrogen Bomb' meme which is used to express very unfair matchups with one being clearly better"
+        },
+        
+        {
+            "text":"A apology video",
+            "by":"",
+            "inspiration":"Based on a controversial apology video where they don't actually apologize"
+        },
+        {
+            "text":"A ukulele",
+            "by":"",
+            "inspiration":"Based on a controversial apology video where they don't actually apologize"
+        },
+        {
+            "text":"Not caring at all",
+            "by":"",
+            "inspiration":"Based on a controversial apology video where they don't actually apologize"
+        },
+        {
+            "text":"A train",
+            "by":"",
+            "inspiration":""
         }
     ]
 }
