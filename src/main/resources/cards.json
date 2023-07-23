@@ -89,7 +89,7 @@
             "inspiration":"All I want for Christmas, is you"
         },
         {
-            "text":"*sips drink* Tastes like _______",
+            "text":"[sips drink] Tastes like _______",
             "cards": 1,
             "by":""
         },
@@ -341,7 +341,7 @@
             "inspiration":"This is the 69th card in the scratch version"
         },
         {
-            "text":"The invention of the ____ caused the decline of humanity",
+            "text":"The invention of ____ caused the decline of humanity",
             "cards": 1,
             "by":"Itzg"
         },
@@ -591,7 +591,7 @@
         },
         {
             "text":"Now introducing, the fight you all have been waiting for:\n___ vs. ____!",
-            "cards": 1,
+            "cards": 2,
             "by":"",
             "inspiration":"There is no good way to adapt this to 1 card input, so this won't show up for a bit. This is based on the 'Coughing Baby vs Hydrogen Bomb' meme which is used to express very unfair matchups with one being clearly better"
         }
@@ -1161,7 +1161,8 @@
         },
         {
             "text":"Something",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"Too many fingers",
@@ -1199,7 +1200,8 @@
         {
             "text":"A flamingo",
             "by":"",
-            "inspiration":"I made this because I thought of the lethal dose card which was based on the song 'Flamingo'"
+            "inspiration":"I made this because I thought of the lethal dose card which was based on the song 'Flamingo'",
+            "useAsName": true
         },
         {
             "text":"Too many cooks",
@@ -1208,12 +1210,14 @@
         },
         {
             "text":"Antivaxxers",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A generic billionaire",
             "by":"",
-            "inspiration":"Yes this is talking about Elon Musk, I just don't wanna do another name card"
+            "inspiration":"Yes this is talking about Elon Musk, I just don't wanna do another name card",
+            "useAsName": true
         },
         {
             "text":"Kid cigars",
@@ -1243,11 +1247,13 @@
         {
             "text":"Jason",
             "by":"",
-            "inspiration":"I thought of this from .json, even though I pronounce it slightly differently from Jason"
+            "inspiration":"I thought of this from .json, even though I pronounce it slightly differently from Jason",
+            "useAsName": true
         },
         {
             "text":"\"Legally\" obtained organs",
-            "by":""
+            "by":"",
+            "inspiration":"This might have accidentally been inspired by the 'A cooler full of organs' white card from the real game"
         },
         {
             "text":"Exactly two and a half teaspoons of salt",
@@ -1256,7 +1262,8 @@
         },
         {
             "text":"A YouTuber",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"A unecessary sequal",
@@ -1279,7 +1286,8 @@
         },
         {
             "text":"A grandma",
-            "by":""
+            "by":"",
+            "useAsName": true
         },
         {
             "text":"The apocalypse",
@@ -1319,7 +1327,8 @@
         {
             "text":"Michael Phelps",
             "by":"",
-            "inspiration":"Based on this Clickhole clickventure https://clickhole.com/you-re-a-single-celled-organism-can-you-evolve-into-a-1825124331/, don't ask how it relates"
+            "inspiration":"Based on this Clickhole clickventure https://clickhole.com/you-re-a-single-celled-organism-can-you-evolve-into-a-1825124331/, don't ask how it relates",
+            "useAsName": true
         },
         {
             "text":"Recursion",
@@ -1383,22 +1392,25 @@
         {
             "text":"A mutant",
             "by":"",
-            "inspiration":"Thought of this from one of my own unreleased games"
+            "inspiration":"Thought of this from one of my own unreleased games",
+            "useAsName": true
         },
         {
             "text":"A picture of John Cena",
             "by":"",
-            "inspiration":""
+            "inspiration":"I think this was a card that I thought of adding at the end of a session"
         },
         {
             "text":"Kids",
             "by":"",
-            "inspiration":"There was a truck with text that said 'Kids against hunger', but I misread it as 'Kids against humanity'"
+            "inspiration":"There was a truck with text that said 'Kids against hunger', but I misread it as 'Kids against humanity'",
+            "useAsName": true
         },
         {
             "text":"Clones",
             "by":"",
-            "inspiration":"Clones against humanity title"
+            "inspiration":"Clones against humanity title",
+            "useAsName": true
         },
         {
             "text":"Hidden treasure",
@@ -1423,12 +1435,13 @@
         {
             "text":"Hunger",
             "by":"",
-            "inspiration":""
+            "inspiration":"Based off of the same truck inspiration as the 'Kids' card"
         },
         {
             "text":"Some guy named 'Greg'",
             "by":"",
-            "inspiration":"There was some tumblr post about a twitter post reading 'Guys be like 'The man, the myth, the legend' and it's just their pal, Greg' "
+            "inspiration":"There was some tumblr post about a twitter post reading 'Guys be like 'The man, the myth, the legend' and it's just their pal, Greg' ",
+            "useAsName": true
         },
         {
             "text":"Too many bees",
@@ -1444,7 +1457,8 @@
         {
             "text":"A coughing baby",
             "by":"",
-            "inspiration":"This is based on the 'Coughing Baby vs Hydrogen Bomb' meme which is used to express very unfair matchups with one being clearly better. Also I have been coughing"
+            "inspiration":"This is based on the 'Coughing Baby vs Hydrogen Bomb' meme which is used to express very unfair matchups with one being clearly better. Also I have been coughing",
+            "useAsName": true
         },
         {
             "text":"A hydrogen bomb",
@@ -1470,7 +1484,7 @@
         {
             "text":"A train",
             "by":"",
-            "inspiration":""
+            "inspiration":"Based on a line in a controversial apology video where they don't actually apologize"
         }
     ]
 }
