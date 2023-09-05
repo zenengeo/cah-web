@@ -5,11 +5,29 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      patches:
+        patterns:
+          - "*"
+        update-types:
+          - patch
   - package-ecosystem: gradle
     directory: /
     schedule:
       interval: weekly
+    groups:
+      patches:
+        patterns:
+          - "*"
+        update-types:
+          - patch
   - package-ecosystem: npm
     directory: "/src/main/ui"
     schedule:
       interval: weekly
+    groups:
+      patches:
+        patterns:
+          - "*"
+        update-types:
+          - patch
