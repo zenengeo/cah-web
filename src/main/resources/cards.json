@@ -594,6 +594,24 @@
             "cards": 2,
             "by":"",
             "inspiration":"There is no good way to adapt this to 1 card input, so this won't show up for a bit. This is based on the 'Coughing Baby vs Hydrogen Bomb' meme which is used to express very unfair matchups with one being clearly better"
+        },
+        {
+            "text":"What you need, is ____, and if that don't work, use more ____",
+            "cards": 1,
+            "by":"",
+            "inspiration":"This is actually correctly designed for 1 white card. Also this is based on the 'Meet the Engineer' TF2 short"
+        },
+        {
+            "text":"One does not simply imagine ____",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Based on that one old meme format and also designed to pair with the 'Dragons!' card"
+        },
+        {
+            "text":"Hi i'm Etmon John the third, but you can just call me ____",
+            "cards": 1,
+            "by":"",
+            "inspiration":"Literally any white card in this game is a weird nickname"
         }
     ],
     "white":[
@@ -1524,7 +1542,7 @@
         },
         {
             "text":"Someone's partially-eaten beef stew",
-            "by":"",
+            "by":"Egirl",
             "inspiration":""
         },
         {
@@ -1536,6 +1554,31 @@
             "text":"A fabulous flying corpse",
             "by":"",
             "inspiration":"I thought of calling myself that during stickfight"
+        },
+        {
+            "text":"30,000 bees",
+            "by":"",
+            "inspiration":"That's too many bees. Also I just realized there's already a 'Too many bees' card, maybe that one will be marked for removal?"
+        },
+        {
+            "text":"Every single Hallmark film",
+            "by":"",
+            "inspiration":"There's a lot"
+        },
+        {
+            "text":"Constant meowing",
+            "by":"",
+            "inspiration":""
+        },
+        {
+            "text":"Dragons!",
+            "by":"",
+            "inspiration":""
+        },
+        {
+            "text":"A immortal snail that constantly moves towards you and kills you when it touches you",
+            "by":"",
+            "inspiration":"There's some 'meme' with this concept"
         }
     ]
 }
