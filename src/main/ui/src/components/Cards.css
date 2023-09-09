@@ -1,6 +1,14 @@
+.SmallestCard {
+  height: max(15vh,15vw);
+  width: max(11vh,11vw);
+  border-radius: 2vh;
+  padding: 1vh;
+  font-size: max(1.5vh,1.5vw);
+}
+
 .SmallCard {
   height: max(20vh,20vw);
-  width: var(--small-card-width);
+  width: max(15vh,15vw);
   border-radius: 3vh;
   padding: 2vh;
   font-size: max(2vh,2vw);

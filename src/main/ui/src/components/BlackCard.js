@@ -1,14 +1,30 @@
-import "./Cards.css";
-import "./BlackCard.css";
-import BreakableText from "./BreakableText";
+import './Cards.css';
+import './BlackCard.css';
+import BreakableText from './BreakableText';
 
-function BlackCard({text, by, large=true}) {
+function BlackCard({text, large=true, sizing}) {
   let className = "BlackCard";
-  if (large) {
-    className += " LargeCard";
+  if (sizing) {
+    switch (sizing) {
+      case 'smallest':
+        className += ' SmallestCard'
+        break;
+      case 'small':
+        className += ' SmallCard';
+        break;
+      case 'large':
+      default:
+        className += ' LargeCard';
+        break;
+    }
   }
   else {
-    className += " SmallCard";
+    if (large) {
+      className += " LargeCard";
+    }
+    else {
+      className += " SmallCard";
+    }
   }
   return (
       <div className={className}>

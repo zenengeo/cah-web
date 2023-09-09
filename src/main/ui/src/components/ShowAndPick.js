@@ -1,7 +1,7 @@
-import BlackCard from './BlackCard'
-import CardsContainer from './CardsContainer'
-import WhiteCard from './WhiteCard'
-import './ShowAndPick.css'
+import BlackCard from './BlackCard';
+import CardsContainer from './CardsContainer';
+import WhiteCard from './WhiteCard';
+import './ShowAndPick.css';
 
 /**
  *
@@ -16,7 +16,7 @@ import './ShowAndPick.css'
 function ShowAndPick({blackCard, whiteCards, selectedCard, handleSelected, annotate}) {
   return (
     <div className="ShowAndPick">
-      <BlackCard text={blackCard.text} by={blackCard.by} large={false}/>
+      <BlackCard text={blackCard.text} by={blackCard.by} large={false} sizing="smallest"/>
       <CardsContainer>
         {
           whiteCards.map(card =>
