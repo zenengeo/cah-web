@@ -1,16 +1,46 @@
-import {useEffect, useState} from "react";
-import {getJson, postJson} from "../../utils/fetchWrappers";
+import { useEffect, useState } from 'react'
+import { getJson, postJson } from '../../utils/fetchWrappers'
 
+class BlackCardModel {
+  constructor (text, slots, by) {
+    this.text = text
+    this.slots = slots
+    this.by = by
+  }
+
+  /**
+   * @type string
+   */
+  text;
+  /**
+   * @type number
+   */
+  slots;
+  /**
+   * @type string
+   */
+  by;
+}
+
+/**
+ *
+ * @param roomCode
+ * @param round
+ * @returns {BlackCardModel}
+ */
 export function useCurrentBlackCard(roomCode, round) {
-  const [blackCard, setBlackCard] = useState();
+  const [blackCard, setBlackCard] = useState(null)
 
   useEffect(() => {
     getJson(`/room/${roomCode}/blackCard`)
-        .then(json => setBlackCard(json))
-        .catch(err => console.error("Failed to get black card", err));
-  }, [roomCode, round]);
+    .then(json => setBlackCard(new BlackCardModel(
+          json.text, json.slots, json.by,
+        )),
+      )
+    .catch(err => console.error('Failed to get black card', err))
+  }, [roomCode, round])
 
-  return blackCard;
+  return blackCard
 }
 
 export function useWinners(roomCode, round) {

@@ -1,22 +1,19 @@
 package me.itzg.cahweb.services;
 
-import static java.util.stream.Collectors.collectingAndThen;
-import static java.util.stream.Collectors.toList;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
-import java.util.function.Predicate;
 import me.itzg.cahweb.AppProperties;
 import me.itzg.cahweb.model.BlackCard;
 import me.itzg.cahweb.model.CardsSource;
 import me.itzg.cahweb.model.WhiteCard;
 import org.springframework.stereotype.Service;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.*;
+import java.util.function.Predicate;
+
+import static java.util.stream.Collectors.collectingAndThen;
+import static java.util.stream.Collectors.toList;
 
 @Service
 public class CardsProvider {
@@ -39,7 +36,7 @@ public class CardsProvider {
         while (picked.size() < count) {
             final BlackCard card = cardsSource.black().get(rand.nextInt(0, cardsSource.black().size()));
 
-            if (card.cards() == 1) {
+            if (card.slots() == 1) {
                 // duplicate just gets skipped since it's a set
                 picked.add(card);
             }
