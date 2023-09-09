@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 
 public record BlackCard(
     @NotBlank String text,
-    @Min(1) int cards,
+    @Min(1) int slots,
     String by
 ) {
 

@@ -1,10 +1,10 @@
-import {useState} from "react";
-import WhiteCard from "../../components/WhiteCard";
-import "./Player.css";
-import Button from "../../components/Button";
-import CardsContainer from "../../components/CardsContainer";
-import {usePlayerCards, useVotingCards} from "../../api/cards";
-import {usePlayerWiring} from "./data";
+import { useState } from 'react'
+import './Player.css'
+import Button from '../../components/Button'
+import { usePlayerCards, useVotingCards } from '../../api/cards'
+import { usePlayerWiring } from './data'
+import { useCurrentBlackCard } from '../Host/data'
+import ShowAndPick from '../../components/ShowAndPick'
 
 function Waiting({text}) {
   return (
@@ -14,49 +14,52 @@ function Waiting({text}) {
   )
 }
 
-function PickCards({roomCode, playerId, handleSubmitCard}) {
+function PickCards({roomCode, round, playerId, handleSubmitCard}) {
   const [selectedCard, setSelectedCard] = useState();
   const cards = usePlayerCards(roomCode, playerId);
+  const blackCard = useCurrentBlackCard(roomCode, round);
 
   return (
+      cards && blackCard ?
       <main className="PickCards">
-        <h1>Pick your card to put up for vote</h1>
-        <CardsContainer>
-          {
-            cards.map(card =>
-                <WhiteCard key={card.id} text={card.card.text}
-                           onClick={() => setSelectedCard(card)}
-                           selected={selectedCard && selectedCard.id
-                               === card.id}
-                />
-            )
-          }
-        </CardsContainer>
+        <h1>Pick your card</h1>
+        <ShowAndPick
+          blackCard={blackCard}
+          whiteCards={cards}
+          selectedCard={selectedCard}
+          handleSelected={setSelectedCard}
+          />
         <Button disabled={!selectedCard} className="PlayerSubmitButton" block
                 onClick={() => handleSubmitCard(selectedCard)}>Send</Button>
       </main>
+        : <div/>
   )
 }
 
-function Vote({roomCode, round, handleVote}) {
+function Vote({roomCode, round, handleVote, submittedCard}) {
   const [vote, setVote] = useState();
   const candidates = useVotingCards(roomCode, round);
+  const blackCard = useCurrentBlackCard(roomCode, round);
+
+  function annotate(card) {
+    return card.id === submittedCard.id ? 'Yours' : null;
+  }
 
   return (
+      candidates && blackCard ?
       <main className="Vote">
-        <h1>Pick your favorite</h1>
-        <CardsContainer>
-          {
-            candidates.map(card =>
-                <WhiteCard key={card.id} text={card.card.text}
-                           onClick={() => setVote(card)}
-                           selected={vote && vote.id === card.id}/>
-            )
-          }
-        </CardsContainer>
+        <h1>Vote!</h1>
+        <ShowAndPick
+          blackCard={blackCard}
+          whiteCards={candidates}
+          selectedCard={vote}
+          handleSelected={setVote}
+          annotate={annotate}
+          />
         <Button disabled={!vote} className="PlayerSubmitButton" block
                 onClick={() => handleVote(vote)}>Send</Button>
       </main>
+        : <div/>
   )
 }
 
@@ -65,7 +68,8 @@ function Player({roomCode, playerId}) {
     state,
     round,
     handleSubmitCard,
-    handleVote
+    handleVote,
+    submittedCard
   } = usePlayerWiring(roomCode, playerId);
 
   switch (state) {
@@ -83,7 +87,7 @@ function Player({roomCode, playerId}) {
 
     case "voting":
       console.debug("voting -> Vote")
-      return <Vote roomCode={roomCode} round={round} handleVote={handleVote} />;
+      return <Vote roomCode={roomCode} round={round} handleVote={handleVote} submittedCard={submittedCard}/>;
     case "voted":
       return <Waiting text="Waiting for others to vote..."/>
 

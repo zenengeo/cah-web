@@ -1,8 +1,8 @@
-import "./Cards.css";
-import "./WhiteCard.css";
-import BreakableText from "./BreakableText";
+import './Cards.css'
+import './WhiteCard.css'
+import BreakableText from './BreakableText'
 
-function WhiteCard({text, by, selected=false, onClick, large=false}) {
+function WhiteCard({text, selected=false, onClick, large=false, annotated}) {
   let className = "WhiteCard";
   if (onClick) {
     className += " Clickable";
@@ -18,6 +18,7 @@ function WhiteCard({text, by, selected=false, onClick, large=false}) {
   }
   return (
       <div onClick={onClick} className={className}>
+        { annotated && <div className="Annotation">{annotated}</div> }
         <BreakableText text={text}/>
       </div>
   );

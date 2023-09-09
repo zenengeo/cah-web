@@ -1,24 +1,7 @@
 package me.itzg.cahweb.services;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
-import me.itzg.cahweb.model.Action;
-import me.itzg.cahweb.model.BlackCard;
-import me.itzg.cahweb.model.DealtCard;
-import me.itzg.cahweb.model.GameEvent;
-import me.itzg.cahweb.model.PlayerInfo;
-import me.itzg.cahweb.model.PlayerScore;
-import me.itzg.cahweb.model.RoomInfo;
-import me.itzg.cahweb.model.WhiteCard;
-import me.itzg.cahweb.model.WinningCard;
+import me.itzg.cahweb.model.*;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -26,6 +9,10 @@ import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Sinks.EmitFailureHandler;
 import reactor.core.publisher.Sinks.EmitResult;
+
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -164,7 +151,7 @@ public class RoomService {
         room.blackCard(
             room.dealNextBlackCard(() -> cardsProvider.shuffleDeckOfBlackCards(
                 // can only handle one slot for now
-                blackCard -> blackCard.cards() == 1
+                blackCard -> blackCard.slots() == 1
             ))
         );
 

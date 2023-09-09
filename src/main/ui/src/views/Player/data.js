@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import {getJson, postJson} from "../../utils/fetchWrappers";
+import { useEffect, useState } from 'react'
+import { getJson, postJson } from '../../utils/fetchWrappers'
 
 class PlayerWiring {
   /**
@@ -18,21 +18,27 @@ class PlayerWiring {
    * @type {function(DealtCard)}
    */
   handleVote;
+  /**
+   * @type DealtCard
+   */
+  submittedCard;
 
-  constructor(state, round, handleSubmitCard, handleVote) {
+  constructor(state, round, handleSubmitCard, handleVote, submittedCard) {
     this.state = state;
     this.round = round;
     this.handleSubmitCard = handleSubmitCard;
     this.handleVote = handleVote;
+    this.submittedCard = submittedCard;
   }
 }
 
 /**
- * @return PlayerWiring
+ * @return {PlayerWiring}
  */
 export function usePlayerWiring(roomCode, playerId) {
   const [state, setState] = useState("waiting_to_start");
   const [round, setRound] = useState(0);
+  const [submittedCard, setSubmittedCard] = useState(null);
 
   useEffect(() => {
 
@@ -80,6 +86,9 @@ export function usePlayerWiring(roomCode, playerId) {
       cardId: card.id,
       playerId
     })
+        .then(() => {
+          setSubmittedCard(card);
+        })
         .catch(err => {
           console.error("Failed to submit card", err);
         });
@@ -96,5 +105,5 @@ export function usePlayerWiring(roomCode, playerId) {
         });
   }
 
-  return new PlayerWiring(state, round, handleSubmitCard, handleVote);
+  return new PlayerWiring(state, round, handleSubmitCard, handleVote, submittedCard);
 }
