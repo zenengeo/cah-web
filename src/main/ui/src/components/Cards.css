@@ -1,20 +1,34 @@
-.SmallestCard {
-  height: max(15vh,15vw);
-  width: max(11vh,11vw);
+
+
+.Card.small {
+  --card-dynamic-height: 16vh;
+  --card-dynamic-width: 12vh;
+  --max-card-height: 160px;
+  --max-card-width: 120px;
+  --min-card-font-size: 12px;
+  --card-dynamic-font-size: 2vh;
+  --max-card-font-size: 18px;
+}
+
+.Card.medium {
+  --card-dynamic-height: 32vh;
+  --max-card-height: 300px;
+  --card-dynamic-width: 24vh;
+  --max-card-width: 225px;
+  --min-card-font-size: 16px;
+  --card-dynamic-font-size: 3vh;
+  --max-card-font-size: 30px;
+}
+
+.Card {
+  height: clamp(120px, var(--card-dynamic-height), var(--max-card-height));
+  width: clamp(90px, var(--card-dynamic-width), var(--max-card-width));
   border-radius: 2vh;
-  padding: 1vh;
-  font-size: max(1.5vh,1.5vw);
-}
-
-.SmallCard {
-  height: max(20vh,20vw);
-  width: max(15vh,15vw);
-  border-radius: 3vh;
   padding: 2vh;
-  font-size: max(2vh,2vw);
+  font-size: clamp(var(--min-card-font-size), var(--card-dynamic-font-size), var(--max-card-font-size));
 }
 
-.LargeCard {
+.Card.large {
   /* About 0.625 ratio */
   height: 70vh;
   width: 44vh;

@@ -2,13 +2,13 @@ button.Button {
   color: #000;
   background-color: #f3f3f3;
   border: thin solid black;
-  padding: 20px;
+  padding: 15px;
   border-radius: 5px
 }
 
 @media (max-height: 620px) {
   button.Button.ShrinkVertical {
-    padding: 2px 20px;
+    padding: 2px 15px;
   }
 }
 

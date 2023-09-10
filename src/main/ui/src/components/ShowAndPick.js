@@ -16,7 +16,9 @@ import './ShowAndPick.css';
 function ShowAndPick({blackCard, whiteCards, selectedCard, handleSelected, annotate}) {
   return (
     <div className="ShowAndPick">
-      <BlackCard text={blackCard.text} by={blackCard.by} large={false} sizing="smallest"/>
+      <CardsContainer>
+        <BlackCard text={blackCard.text} by={blackCard.by} sizing="small"/>
+      </CardsContainer>
       <CardsContainer>
         {
           whiteCards.map(card =>
