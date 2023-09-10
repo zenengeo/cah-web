@@ -8,16 +8,16 @@
 
 .WhiteCard > .Annotation {
   text-align: center;
-  font-size: 50%;
+  font-size: 75%;
   color: var(--iris);
   border: thin solid var(--iris);
   margin-bottom: 5px;
 }
 
-.Clickable {
+.WhiteCard.Clickable {
   cursor: pointer;
 }
 
-.Selected {
+.WhiteCard.Selected {
   background-color: var(--vista-blue);
 }

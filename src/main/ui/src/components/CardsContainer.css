@@ -1,12 +1,8 @@
 .CardsContainer {
-  /* shift cards towards top */
-  margin-bottom: auto;
 }
 
 .CardsContainerContent {
-  flex: 1;
   padding: 10px;
-  overflow-y: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

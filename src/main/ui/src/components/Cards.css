@@ -1,20 +1,20 @@
-.SmallestCard {
-  height: max(15vh,15vw);
-  width: max(11vh,11vw);
+.Card.small {
+  height: max(16vh,160px);
+  width: max(12vh,120px);
   border-radius: 2vh;
-  padding: 1vh;
-  font-size: max(1.5vh,1.5vw);
-}
-
-.SmallCard {
-  height: max(20vh,20vw);
-  width: max(15vh,15vw);
-  border-radius: 3vh;
   padding: 2vh;
-  font-size: max(2vh,2vw);
+  font-size: min(max(2vh,2vw,12px), 18px);
 }
 
-.LargeCard {
+.Card.medium {
+  height: max(16vh,220px);
+  width: max(12vh,165px);
+  border-radius: 2vh;
+  padding: 2vh;
+  font-size: min(max(2vh,2vw,12px), 20px);
+}
+
+.Card.large {
   /* About 0.625 ratio */
   height: 70vh;
   width: 44vh;

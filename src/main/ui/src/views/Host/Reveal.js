@@ -1,8 +1,8 @@
-import {useCurrentBlackCard, useScores, useWinners} from "./data";
-import BlackCard from "../../components/BlackCard";
-import GhostIcon from "../../components/GhostIcon";
-import WhiteCard from "../../components/WhiteCard";
-import Button from "../../components/Button";
+import { useCurrentBlackCard, useScores, useWinners } from './data';
+import BlackCard from '../../components/BlackCard';
+import GhostIcon from '../../components/GhostIcon';
+import WhiteCard from '../../components/WhiteCard';
+import Button from '../../components/Button';
 
 export function Reveal({roomCode, round, startNewRound}) {
   const blackCard = useCurrentBlackCard(roomCode, round);
@@ -16,7 +16,7 @@ export function Reveal({roomCode, round, startNewRound}) {
   return (
       <main className="Reveal">
         <div className="Cards">
-          <BlackCard text={blackCard.text} large={false}/>
+          <BlackCard text={blackCard.text} sizing="medium"/>
           <div className="WinningCards">
             {
               winners.map(winner =>
@@ -29,7 +29,7 @@ export function Reveal({roomCode, round, startNewRound}) {
                     > 1 ? "s" : ""}
                     </div>
                     <div>
-                      <WhiteCard text={winner.card.card.text}/>
+                      <WhiteCard text={winner.card.card.text} sizing="medium"/>
                     </div>
                   </div>
               )

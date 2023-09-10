@@ -1,21 +1,16 @@
-import './Cards.css'
-import './WhiteCard.css'
-import BreakableText from './BreakableText'
+import './Cards.css';
+import './WhiteCard.css';
+import BreakableText from './BreakableText';
 
-function WhiteCard({text, selected=false, onClick, large=false, annotated}) {
-  let className = "WhiteCard";
+function WhiteCard({text, selected=false, onClick, sizing = 'small', annotated}) {
+  let className = `Card WhiteCard ${sizing}`;
   if (onClick) {
     className += " Clickable";
   }
   if (selected) {
     className += " Selected";
   }
-  if (large) {
-    className += " LargeCard";
-  }
-  else {
-    className += " SmallCard";
-  }
+
   return (
       <div onClick={onClick} className={className}>
         { annotated && <div className="Annotation">{annotated}</div> }

@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import './Player.css'
-import Button from '../../components/Button'
-import { usePlayerCards, useVotingCards } from '../../api/cards'
-import { usePlayerWiring } from './data'
-import { useCurrentBlackCard } from '../Host/data'
-import ShowAndPick from '../../components/ShowAndPick'
+import { useState } from 'react';
+import './Player.css';
+import Button from '../../components/Button';
+import { usePlayerCards, useVotingCards } from '../../api/cards';
+import { usePlayerWiring } from './data';
+import { useCurrentBlackCard } from '../Host/data';
+import ShowAndPick from '../../components/ShowAndPick';
 
 function Waiting({text}) {
   return (
@@ -48,7 +48,7 @@ function Vote({roomCode, round, handleVote, submittedCard}) {
   return (
       candidates && blackCard ?
       <main className="Vote">
-        <h1>Vote!</h1>
+        <h1>Vote for the best</h1>
         <ShowAndPick
           blackCard={blackCard}
           whiteCards={candidates}
