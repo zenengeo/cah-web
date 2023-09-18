@@ -1,18 +1,22 @@
-import {useEffect, useState} from "react";
-import {getJson, postJson} from "../utils/fetchWrappers";
+import { useEffect, useState } from 'react';
+import { getJson, postJson } from '../utils/fetchWrappers';
 
-export class DealtCard {
+export class DealtCardModel {
   /**
    * @type string
    */
   id
   /**
-   * @type WhiteCard
+   * @type WhiteCardModel
    */
   card
 }
 
-export class WhiteCard {
+export class WhiteCardModel {
+  constructor (text) {
+    this.text = text;
+  }
+
   /**
    * @type string
    */
@@ -23,7 +27,7 @@ export class WhiteCard {
  *
  * @param roomCode
  * @param round
- * @returns {DealtCard[]}
+ * @returns {DealtCardModel[]}
  */
 export function useVotingCards(roomCode, round) {
   const [candidates, setCandidates] = useState([]);
@@ -41,7 +45,7 @@ export function useVotingCards(roomCode, round) {
  *
  * @param roomCode
  * @param playerId
- * @returns {DealtCard[]}
+ * @returns {DealtCardModel[]}
  */
 export function usePlayerCards(roomCode, playerId) {
   const [cards, setCards] = useState([]);
@@ -57,4 +61,35 @@ export function usePlayerCards(roomCode, playerId) {
   }, [roomCode, playerId]);
 
   return cards;
+}
+
+export class BlackCardModel {
+  constructor (text, slots, by) {
+    this.text = text;
+    this.slots = slots;
+    this.by = by;
+  }
+
+  /**
+   * @type string
+   */
+  text;
+  /**
+   * @type number
+   */
+  slots;
+  /**
+   * @type string
+   */
+  by;
+}
+
+export function blackCardFromJson (json) {
+  return new BlackCardModel(
+    json.text, json.slots, json.by,
+  );
+}
+
+export function whiteCardFromJson (json) {
+  return new WhiteCardModel(json.text);
 }

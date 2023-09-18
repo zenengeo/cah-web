@@ -1,8 +1,8 @@
 import './Lobby.css';
-import {useEffect, useState} from "react";
-import TextInput from "../components/TextInput";
-import Button from "../components/Button";
-import {getJson, useClickOnce} from "../utils/fetchWrappers";
+import { useEffect, useState } from 'react';
+import TextInput from '../components/TextInput';
+import Button from '../components/Button';
+import { getJson, useClickOnce } from '../utils/fetchWrappers';
 
 function CrossFade({text}) {
   const [textToRender, setTextToRender] = useState(text);
@@ -41,7 +41,15 @@ function useTimedNameSwap(name, setName) {
   }, [name, setName])
 }
 
-function Choosing({handleJoin, handleHost}) {
+/**
+ *
+ * @param handleJoin {function():void}
+ * @param handleHost {function():void}
+ * @param handleBrowseCards {function():void}
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function Choosing({handleJoin, handleHost, handleBrowseCards}) {
   const [clicked, clickWrapper] = useClickOnce();
   const [upper, setUpper] = useState("Clones");
   const [lower, setLower] = useState("Humanity");
@@ -60,6 +68,7 @@ function Choosing({handleJoin, handleHost}) {
           <div className="ChoiceDivider">or</div>
           <Button disabled={clicked} className="ChoiceButton" onClick={clickWrapper(handleJoin)}>Join</Button>
         </div>
+        <Button block={true} className="BrowseButton" onClick={handleBrowseCards}>Browse the Cards</Button>
       </div>
   )
 }
@@ -99,11 +108,15 @@ function EnterDetails({startAsPlayer}) {
   )
 }
 
-function Lobby({startAsHost, startAsPlayer}) {
+function Lobby({startAsHost, startAsPlayer, startBrowsingCards}) {
   const [joining, setJoining] = useState(false);
 
   const enterDetails = <EnterDetails startAsPlayer={startAsPlayer} />;
-  const choosing = <Choosing handleHost={startAsHost} handleJoin={() => setJoining(true)}/>;
+  const choosing = <Choosing
+    handleHost={startAsHost}
+    handleJoin={() => setJoining(true)}
+    handleBrowseCards={startBrowsingCards}
+  />;
 
   return (
       <main className="Lobby">

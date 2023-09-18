@@ -1,12 +1,12 @@
 
 
 .Card.small {
-  --card-dynamic-height: 16vh;
-  --card-dynamic-width: 12vh;
+  --card-dynamic-height: 18vh;
+  --card-dynamic-width: 13vh;
   --max-card-height: 160px;
   --max-card-width: 120px;
   --min-card-font-size: 12px;
-  --card-dynamic-font-size: 2vh;
+  --card-dynamic-font-size: 1.8vh;
   --max-card-font-size: 18px;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .Card.large {
-  /* About 0.625 ratio */
+  /* About 10:6.2:1 ratio */
   height: 70vh;
   width: 44vh;
   border-radius: 5vh;

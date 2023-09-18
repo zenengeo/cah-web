@@ -1,9 +1,10 @@
 import './App.css';
-import {useState} from "react";
-import Lobby from "./views/Lobby";
-import Host from "./views/Host";
-import Player from "./views/Player";
-import {postJson} from "./utils/fetchWrappers";
+import { useState } from 'react';
+import Lobby from './views/Lobby';
+import Host from './views/Host';
+import Player from './views/Player';
+import { postJson } from './utils/fetchWrappers';
+import Browse from './views/Browse';
 
 function App() {
   const [mode, setMode] = useState("lobby");
@@ -33,15 +34,28 @@ function App() {
         .catch(err => console.error("Failed to join", err));
   }
 
+  function startBrowsingCards() {
+    setMode('browse');
+  }
+
   switch (mode) {
     case "host":
       return <Host roomCode={roomCode}/>
+
     case "player":
       return <Player playerId={playerId} playerName={playerName}
                      roomCode={roomCode}/>
+
+    case 'browse':
+      return <Browse/>
+
     case "lobby":
     default:
-      return <Lobby startAsHost={startAsHost} startAsPlayer={startAsPlayer}/>
+      return <Lobby
+        startAsHost={startAsHost}
+        startAsPlayer={startAsPlayer}
+        startBrowsingCards={startBrowsingCards}
+      />
 
   }
 }

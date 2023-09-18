@@ -1,6 +1,16 @@
 import './Button.css';
 
-function Button({children, block, className, onClick, ...other}) {
+/**
+ *
+ * @param children
+ * @param block {boolean} display as block or span
+ * @param className {string} extra class name to apply
+ * @param onClick {function(MouseEvent):void}
+ * @param other all other properties will be placed on the HTML button
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function Button({children, block, className='', onClick, ...other}) {
   let extraClasses = "";
   if (block) {
     extraClasses = "block";

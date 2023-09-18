@@ -1,6 +1,7 @@
 package me.itzg.cahweb.web;
 
 import jakarta.validation.constraints.Min;
+import me.itzg.cahweb.model.BlackCard;
 import me.itzg.cahweb.model.ListResponse;
 import me.itzg.cahweb.model.WhiteCard;
 import me.itzg.cahweb.services.CardsProvider;
@@ -25,6 +26,20 @@ public class CardsController {
     public ListResponse<WhiteCard> randomNameCards(@RequestParam(defaultValue = "1") @Min(1) int count) {
         return ListResponse.ofList(
             cardsProvider.getSomeWhiteCards(count, WhiteCard::useAsName)
+        );
+    }
+
+    @GetMapping("/randomWhite")
+    public ListResponse<WhiteCard> randomWhiteCards(@RequestParam(defaultValue = "1") @Min(1) int count) {
+        return ListResponse.ofList(
+            cardsProvider.getSomeWhiteCards(count, whiteCard -> true)
+        );
+    }
+
+    @GetMapping("/randomBlack")
+    public ListResponse<BlackCard> randomBlackCards(@RequestParam(defaultValue = "1") @Min(1) int count) {
+        return ListResponse.ofList(
+            cardsProvider.getSomeBlackCards(count)
         );
     }
 }

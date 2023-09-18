@@ -8,8 +8,8 @@ import './ShowAndPick.css';
  * @param blackCard
  * @param whiteCards
  * @param selectedCard
- * @param handleSelected {function(DealtCard)}
- * @param annotate {function(DealtCard):string}
+ * @param handleSelected {function(DealtCardModel)}
+ * @param annotate {function(DealtCardModel):string}
  * @returns {JSX.Element}
  * @constructor
  */

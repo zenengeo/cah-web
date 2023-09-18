@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { getJson, postJson } from '../../utils/fetchWrappers'
+import { useEffect, useState } from 'react';
+import { getJson, postJson } from '../../utils/fetchWrappers';
 
 class PlayerWiring {
   /**
@@ -11,15 +11,15 @@ class PlayerWiring {
    */
   round;
   /**
-   * @type {function(DealtCard)}
+   * @type {function(DealtCardModel)}
    */
   handleSubmitCard;
   /**
-   * @type {function(DealtCard)}
+   * @type {function(DealtCardModel)}
    */
   handleVote;
   /**
-   * @type DealtCard
+   * @type DealtCardModel
    */
   submittedCard;
 

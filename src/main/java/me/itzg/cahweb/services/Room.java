@@ -1,26 +1,16 @@
 package me.itzg.cahweb.services;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import me.itzg.cahweb.model.BlackCard;
-import me.itzg.cahweb.model.DealtCard;
-import me.itzg.cahweb.model.GameEvent;
-import me.itzg.cahweb.model.PlayerInfo;
-import me.itzg.cahweb.model.PlayerScore;
-import me.itzg.cahweb.model.WinningCard;
+import me.itzg.cahweb.model.*;
 import reactor.core.publisher.Sinks.Many;
+
+import java.util.*;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Slf4j
 public class Room {
@@ -37,6 +27,7 @@ public class Room {
 
     private Iterator<BlackCard> deckOfBlackCards;
 
+    @Getter
     private final Map<String/*playerId*/, List<DealtCard>> dealtCardsByPlayer = new HashMap<>();
 
     private final Map<Integer/*cardId*/, DealtCard> allDealtCards = new HashMap<>();

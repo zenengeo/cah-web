@@ -1,26 +1,6 @@
-import { useEffect, useState } from 'react'
-import { getJson, postJson } from '../../utils/fetchWrappers'
-
-class BlackCardModel {
-  constructor (text, slots, by) {
-    this.text = text
-    this.slots = slots
-    this.by = by
-  }
-
-  /**
-   * @type string
-   */
-  text;
-  /**
-   * @type number
-   */
-  slots;
-  /**
-   * @type string
-   */
-  by;
-}
+import { useEffect, useState } from 'react';
+import { getJson, postJson } from '../../utils/fetchWrappers';
+import { BlackCardModel } from '../../api/cards';
 
 /**
  *
