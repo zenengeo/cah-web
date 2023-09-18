@@ -612,6 +612,12 @@
             "slots": 1,
             "by":"",
             "inspiration":"Literally any white card in this game is a weird nickname"
+        },
+        {
+            "text":"Y'know, now that I think about it, I don't think i've ever seen ____",
+            "slots": 1,
+            "by":"",
+            "inspiration":"Based on how there's so many black and white cards that it's not guaranteed to see all the new ones"
         }
     ],
     "white":[
@@ -1579,6 +1585,72 @@
             "text":"A immortal snail that constantly moves towards you and kills you when it touches you",
             "by":"",
             "inspiration":"There's some 'meme' with this concept"
+        },
+        
+        {
+            "text":"The worst person you know",
+            "by":"",
+            "inspiration":"Based on some Clickhole article"
+        },
+        {
+            "text":"A immortal snail that constantly moves towards you and kills you when it touches you",
+            "by":"",
+            "inspiration":"There's some 'meme' with this concept"
+        },
+        {
+            "text":"A forklift",
+            "by":"",
+            "inspiration":""
+        },
+        {
+            "text":"Wikipedia",
+            "by":"",
+            "inspiration":""
+        },
+        {
+            "text":"Gordon",
+            "by":"",
+            "inspiration":"Simultaneously Ramsey and Freeman"
+        },
+        {
+            "text":"Jeans, Jirt, and a Jelt",
+            "by":"",
+            "inspiration":"There was some meme with having something be the jeans version of it and then replacing the start with 'J'. Also I was originally going to have 'Joots' instead of 'Jirt'. Also jeans is first so that you can understand why the rest start with a j"
+        },
+        {
+            "text":"It",
+            "by":"",
+            "inspiration":"Not the movie"
+        },
+        {
+            "text":"The Creature™",
+            "by":"",
+            "inspiration":""
+        },
+        {
+            "text":"Eggnog",
+            "by":"",
+            "inspiration":""
+        },
+        {
+            "text":"A sudden burst of inspration",
+            "by":"",
+            "inspiration":"Wow there's a lot of cards I added"
+        },
+        {
+            "text":"Google Translate",
+            "by":"",
+            "inspiration":""
+        },
+        {
+            "text":"Legally not Mickey Mouse",
+            "by":"",
+            "inspiration":""
+        },
+        {
+            "text":"Inspiration",
+            "by":"",
+            "inspiration":"Hey that's me"
         }
     ]
 }
