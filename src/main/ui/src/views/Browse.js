@@ -36,24 +36,24 @@ function Cards ({ cardSet, sizing }) {
 function Browse () {
   const sizing = 'medium';
   const [cardSet, setCardSet] = useState(null);
-  const [retrieving, setRetrieving] = useState(true);
+  const [retrieving, setRetrieving] = useState(false);
 
   function loadNextCards () {
-    setRetrieving(true);
-    getJson('/cards/randomBlack')
-      .then(resp => {
-        const blackCard = blackCardFromJson(resp.contents[0]);
-        getJson(`/cards/randomWhite?count=${blackCard.slots}`)
-          .then(resp => {
+      setRetrieving(true);
+      getJson('/cards/randomBlack')
+        .then(resp => {
+          const blackCard = blackCardFromJson(resp.contents[0]);
+          getJson(`/cards/randomWhite?count=${blackCard.slots}`)
+            .then(resp => {
               setCardSet(
                 new CardSet(blackCard,
                   resp.contents.map(json => whiteCardFromJson(json)),
                 ),
               );
               setRetrieving(false);
-            },
-          );
-      });
+              },
+            );
+        });
   }
 
   useEffect(() => {
@@ -64,8 +64,8 @@ function Browse () {
     cardSet && <main className="Browse">
       <Cards cardSet={cardSet} sizing={sizing}/>
       <div className="BrowseControls">
-        <Button autoFocus disabled={retrieving}
-                onClick={loadNextCards}
+        <Button autoFocus aria-disabled={retrieving}
+                onClick={() => {retrieving || loadNextCards()}}
                 block={true}>Next</Button>
       </div>
     </main>

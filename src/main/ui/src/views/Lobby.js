@@ -68,7 +68,7 @@ function Choosing({handleJoin, handleHost, handleBrowseCards}) {
           <div className="ChoiceDivider">or</div>
           <Button disabled={clicked} className="ChoiceButton" onClick={clickWrapper(handleJoin)}>Join</Button>
         </div>
-        <Button block={true} className="BrowseButton" onClick={handleBrowseCards}>Browse the Cards</Button>
+        <Button block={true} className="BrowseButton" onClick={handleBrowseCards}>Browse Pairings</Button>
       </div>
   )
 }

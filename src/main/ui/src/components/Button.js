@@ -1,4 +1,5 @@
 import './Button.css';
+import { forwardRef } from 'react';
 
 /**
  *
@@ -10,12 +11,16 @@ import './Button.css';
  * @returns {JSX.Element}
  * @constructor
  */
-function Button({children, block, className='', onClick, ...other}) {
+const Button = forwardRef(function Button(
+  {children, block, className='', onClick, ...other},
+  ref
+) {
   let extraClasses = "";
   if (block) {
     extraClasses = "block";
   }
-  return <button className={`Button ${className} ${extraClasses}`} onClick={onClick} {...other}>{children}</button>;
-}
+  return <button className={`Button ${className} ${extraClasses}`} onClick={onClick}
+                 {...other} ref={ref}>{children}</button>;
+});
 
 export default Button;
