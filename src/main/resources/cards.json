@@ -1564,7 +1564,8 @@
         {
             "text":"30,000 bees",
             "by":"",
-            "inspiration":"That's too many bees. Also I just realized there's already a 'Too many bees' card, maybe that one will be marked for removal?  This was simultaneously inspired by 'High Five' by Tom Cardy and 'Fireflies' by Owl City"
+            "inspiration":"That's too many bees. Also I just realized there's already a 'Too many bees' card, maybe that one will be marked for removal?  This was simultaneously inspired by 'High Five' by Tom Cardy and 'Fireflies' by Owl City",
+            "useAsName": true
         },
         {
             "text":"Every single Hallmark film",
@@ -1579,7 +1580,8 @@
         {
             "text":"Dragons!",
             "by":"",
-            "inspiration":"This is meant to be read in a excited tone, dragons are neat"
+            "inspiration":"This is meant to be read in a excited tone, dragons are neat",
+            "useAsName": true
         },
         {
             "text":"A immortal snail that constantly moves towards you and kills you when it touches you",
@@ -1605,7 +1607,8 @@
         {
             "text":"Gordon",
             "by":"",
-            "inspiration":"Simultaneously Ramsey and Freeman"
+            "inspiration":"Simultaneously Ramsey and Freeman",
+            "useAsName": true
         },
         {
             "text":"Jeans, Jirt, and a Jelt",
@@ -1615,12 +1618,14 @@
         {
             "text":"it",
             "by":"",
-            "inspiration":"Not the movie"
+            "inspiration":"Not the movie. Also this was originally going to be a card with literally nothing on it, but I realized it wouldn't work in most cases",
+            "useAsName": true
         },
         {
             "text":"The Creature™",
             "by":"",
-            "inspiration":"Based on https://www.reddit.com/r/TwoSentenceHorror/comments/rgcmuf/"
+            "inspiration":"Based on https://www.reddit.com/r/TwoSentenceHorror/comments/rgcmuf/",
+            "useAsName": true
         },
         {
             "text":"Eggnog",
