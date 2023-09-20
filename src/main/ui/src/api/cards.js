@@ -29,7 +29,7 @@ export class WhiteCardModel {
  * @param round
  * @returns {DealtCardModel[]}
  */
-export function useVotingCards(roomCode, round) {
+export function useCandidateCards(roomCode, round) {
   const [candidates, setCandidates] = useState([]);
   useEffect(() => {
     getJson(`/room/${roomCode}/submittedCards`)

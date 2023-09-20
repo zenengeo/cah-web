@@ -1,12 +1,12 @@
 
 
 .Card.small {
-  --card-dynamic-height: 18vh;
+  --card-dynamic-height: 17vh;
   --card-dynamic-width: 13vh;
   --max-card-height: 160px;
   --max-card-width: 120px;
   --min-card-font-size: 12px;
-  --card-dynamic-font-size: 1.8vh;
+  --card-dynamic-font-size: 1.7vh;
   --max-card-font-size: 18px;
 }
 

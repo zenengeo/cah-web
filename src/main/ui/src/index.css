@@ -9,13 +9,14 @@
   --vista-blue: #8ca0d7ff;
   --night: #151515ff;
   --redwood: #a63d40ff;
+  --background-color: #aaa;
 
   --height-breakpoint: 620px;
 }
 
 html {
   font-family: 'Inter', sans-serif;
-  background-color: #aaa;
+  background-color: var(--background-color);
 }
 
 body {
@@ -39,4 +40,10 @@ html, body, .root {
 
 .TextCenter {
   text-align: center;
+}
+
+.FlexGrowOnly {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
 }
