@@ -2,34 +2,34 @@
     "black":[
         {
             "text": "________\nAgainst\n________",
-            "cards": 2,
+            "slots": 2,
             "by": "zEnenbee",
             "inspiration": "Cards Against Humanity Title"
         },
         {
             "text": "You are ____",
-            "cards": 1,
+            "slots": 1,
             "by": "zEnenbee"
         },
         {
             "text": "What is ____?",
-            "cards": 1,
+            "slots": 1,
             "by": "zEnenbee",
             "inspiration": "Combined as a set to form 'What is love?'. Fun fact: this card in the original original scratch version (pre-updated scratch version) this was ranked as the least funny card with a score of 0"
         },
         {
             "text": "I found ____",
-            "cards": 1,
+            "slots": 1,
             "by": "zEnenbee"
         },
         {
             "text": "When I say potato you say ____.",
-            "cards": 1,
+            "slots": 1,
             "by": "zEnenbee"
         },
         {
             "text": "In my opinion, ____ is not good",
-            "cards": 1,
+            "slots": 1,
             "by": "zEnenbee"
         }
     ],
