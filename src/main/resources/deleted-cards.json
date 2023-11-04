@@ -1,62 +1,57 @@
 {
     "black":[
         {
-            "text":"________\nAgainst\n________ [MFD]",
+            "text": "________\nAgainst\n________",
             "cards": 2,
-            "by":"",
-            "inspiration":"Cards Against Humanity Title"
+            "by": "zEnenbee",
+            "inspiration": "Cards Against Humanity Title"
         },
         {
-            "text":"You are ____ [MFD]",
+            "text": "You are ____",
             "cards": 1,
-            "by":""
+            "by": "zEnenbee"
         },
         {
-            "text":"What is ____? [MFD]",
+            "text": "What is ____?",
             "cards": 1,
-            "by":"",
-            "inspiration":"Combined as a set to form 'What is love?'. Fun fact: this card in the original original scratch version (pre-updated scratch version) this was ranked as the least funny card with a score of 0"
+            "by": "zEnenbee",
+            "inspiration": "Combined as a set to form 'What is love?'. Fun fact: this card in the original original scratch version (pre-updated scratch version) this was ranked as the least funny card with a score of 0"
         },
         {
-            "text":"I found ____ [MFD]",
+            "text": "I found ____",
             "cards": 1,
-            "by":""
+            "by": "zEnenbee"
         },
         {
-            "text":"When I say potato you say ____. [MFD]",
+            "text": "When I say potato you say ____.",
             "cards": 1,
-            "by":""
+            "by": "zEnenbee"
         },
         {
-            "text":"In my opinion, ____ is not good [MFD]",
+            "text": "In my opinion, ____ is not good",
             "cards": 1,
-            "by":""
+            "by": "zEnenbee"
         }
     ],
     "white":[
         {
-            "text":"Guy Fieri [MFD]",
-            "by":"",
+            "text": "Guy Fieri",
+            "by": "zEnenbee",
             "useAsName": true
         },
         {
-            "text":"A shark burglar [MFD]",
-            "by":"",
-            "inspiration":"Made as a set with 'You've been hit by, you've been struck by', except it's a tumblr version"
+            "text": "A shark burglar",
+            "by": "zEnenbee",
+            "inspiration": "Made as a set with 'You've been hit by, you've been struck by', except it's a tumblr version"
         },
         {
-            "text":"ChatGPT [MFD]",
-            "by":""
+            "text": "ChatGPT",
+            "by": "zEnenbee"
         },
         {
-            "text":"A red card [MFD]",
-            "by":"",
-            "inspiration":"This is about football and is not a black card or white card"
-        },
-        {
-            "text":"Testicles [MFD]",
-            "by":"",
-            "inspiration":"A github-exclusive card! Saying that incase the newer cards get ported to some scratch version"
+            "text": "A red card",
+            "by": "zEnenbee",
+            "inspiration": "This is about football and is not a black card or white card"
         }
     ]
 }
