@@ -37,12 +37,6 @@
             "inspiration": "Made as a set to form 'Nothing is better than a slice of bread'"
         },
         {
-            "text": "Cards\nAgainst\n__________.",
-            "slots": 1,
-            "by": "zEnenbee",
-            "inspiration": "Cards Against Humanity Title"
-        },
-        {
             "text": "I ate _______ and it was DELICIOUS!",
             "slots": 1,
             "by": "zEnenbee",
@@ -107,12 +101,6 @@
         {
             "text": "______\nWith\nHumanity",
             "slots": 1,
-            "by": "zEnenbee",
-            "inspiration": "Cards Against Humanity Title Alternative"
-        },
-        {
-            "text": "______\nWith\n______",
-            "slots": 2,
             "by": "zEnenbee",
             "inspiration": "Cards Against Humanity Title Alternative"
         },
@@ -254,20 +242,11 @@
         {
             "text": "Revealed at E3: a new game called ____: Rise of ____",
             "slots": 2,
-            "by": "zEnenbee"
+            "by": "zEnenbee",
+            "inspiration": "Named based on 'Legend of Zelda : Breath of the wild', I think"
         },
         {
             "text": "Who even cares about ____ when there's ____",
-            "slots": 2,
-            "by": "zEnenbee"
-        },
-        {
-            "text": "The next meme is going to be ____ with ____",
-            "slots": 2,
-            "by": "zEnenbee"
-        },
-        {
-            "text": "BREAKING NEWS: People start treating ____ like it's ____",
             "slots": 2,
             "by": "zEnenbee"
         },
@@ -376,16 +355,6 @@
             "by": "zEnenbee"
         },
         {
-            "text": "Studies show that ____ under the influence of ____ has major side effects",
-            "slots": 2,
-            "by": "zEnenbee"
-        },
-        {
-            "text": "They speak to me at night; they say \"Bring ____, Eliminate ___\"",
-            "slots": 2,
-            "by": "zEnenbee"
-        },
-        {
             "text": "New, strange internet term \"____ ____\" exists and we don't want to know what it means",
             "slots": 2,
             "by": "zEnenbee"
@@ -439,12 +408,6 @@
             "slots": 1,
             "by": "zEnenbee",
             "inspiration": "Made as a set to form 'Say every type of cheese'"
-        },
-        {
-            "text": "I'm making a call-out post on my twitter: ____, you got a stupid ____!",
-            "slots": 2,
-            "by": "zEnenbee",
-            "inspiration": "Snapcube Sonic Adventure 2 : Dark story, it's a big meme"
         },
         {
             "text": "You've been hit by,\nyou've been struck by\n____",
@@ -542,12 +505,6 @@
             "inspiration": "Based on a Youtube Shorts video of someone playing a ragtime piano right after the death scene in UP"
         },
         {
-            "text": "Obliterate _____, and we'll tell you what kind of cheese you are.",
-            "slots": 1,
-            "by": "zEnenbee",
-            "inspiration": "Based on a Buzzfeed Quiz or something with the name 'Break up with you spouse and we'll tell you what BTS member you are' or something dumb like that."
-        },
-        {
             "text": "A large boulder the size of _____ just rolled onto a road.",
             "slots": 1,
             "by": "zEnenbee",
@@ -570,12 +527,6 @@
             "slots": 1,
             "by": "zEnenbee",
             "inspiration": "I had made a program which generated these kind of phrases. Also this card was originally 'Maybe the real ___ was the ____ we made along the way' "
-        },
-        {
-            "text": "The man, the myth, the legend, _____",
-            "slots": 1,
-            "by": "zEnenbee",
-            "inspiration": "There was some tumblr post about a twitter post reading 'Guys be like 'The man, the myth, the legend' and it's just their pal, Greg' "
         },
         {
             "text": "Wanna know how I think robots will take over the world?\n____",
