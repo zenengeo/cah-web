@@ -31,7 +31,57 @@
             "text": "In my opinion, ____ is not good",
             "slots": 1,
             "by": "zEnenbee"
-        }
+        },
+        {
+            "text": "Cards\nAgainst\n__________.",
+            "slots": 1,
+            "by": "zEnenbee",
+            "inspiration": "Cards Against Humanity Title"
+        },
+        {
+            "text": "______\nWith\n______",
+            "slots": 2,
+            "by": "zEnenbee",
+            "inspiration": "Cards Against Humanity Title Alternative"
+        },
+        {
+            "text": "The next meme is going to be ____ with ____",
+            "slots": 2,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "BREAKING NEWS: People start treating ____ like it's ____",
+            "slots": 2,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "Studies show that ____ under the influence of ____ has major side effects",
+            "slots": 2,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "They speak to me at night; they say \"Bring ____, Eliminate ___\"",
+            "slots": 2,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "I'm making a call-out post on my twitter: ____, you got a stupid ____!",
+            "slots": 2,
+            "by": "zEnenbee",
+            "inspiration": "Snapcube Sonic Adventure 2 : Dark story, it's a big meme"
+        },
+        {
+            "text": "Obliterate _____, and we'll tell you what kind of cheese you are.",
+            "slots": 1,
+            "by": "zEnenbee",
+            "inspiration": "Based on a Buzzfeed Quiz or something with the name 'Break up with you spouse and we'll tell you what BTS member you are' or something dumb like that."
+        },
+        {
+            "text": "The man, the myth, the legend, _____",
+            "slots": 1,
+            "by": "zEnenbee",
+            "inspiration": "There was some tumblr post about a twitter post reading 'Guys be like 'The man, the myth, the legend' and it's just their pal, Greg' "
+        },
     ],
     "white":[
         {
