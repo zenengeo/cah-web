@@ -172,7 +172,7 @@
             "by": "zEnenbee"
         },
         {
-            "text": "I think it was ____ who killed the person",
+            "text": "I think it was ____ that killed the person",
             "slots": 1,
             "by": "zEnenbee"
         },
@@ -569,6 +569,24 @@
             "slots": 1,
             "by": "zEnenbee",
             "inspiration": "Based on how there's so many black and white cards that it's not guaranteed to see all the new ones"
+        },
+        
+        {
+            "text": "[Thrown a rock]\nSir, sir!\nYes, you, with ____,\nI'm talking about you",
+            "slots": 1,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "Oh, wait, I think I know what you're talking about.\n____, you're talking about ____.",
+            "slots": 1,
+            "by": "zEnenbee",
+            "inspiration": "Meant to be combined with the 'Furries' card, I guess"
+        },
+        {
+            "text": "What's my biggest red flag?\nProbably _____.",
+            "slots": 1,
+            "by": "zEnenbee",
+            "inspiration": "Used to be a black card exclusive to the title screen of the solo version of this game"
         }
     ],
     "white": [
@@ -1691,6 +1709,16 @@
             "text": "Trademarks®",
             "by": "zEnenbee",
             "inspiration": "I added trademark symbols to some random white cards in this same update"
+        },
+        
+        {
+            "text": "Bad breath",
+            "by": "zEnenbee"
+        },
+        {
+            "text": "Mods",
+            "by": "zEnenbee",
+            "inspiration": "Used to be exclusive to a button in the title screen of the solo version of this game"
         }
     ]
 }
