@@ -26,6 +26,13 @@ updates:
     schedule:
       interval: weekly
     groups:
+      fortawesome:
+        patterns:
+          - "@fortawesome*"
+        update-types:
+          - patch
+          - minor
+          - major
       patches:
         patterns:
           - "*"
