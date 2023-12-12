@@ -569,24 +569,6 @@
             "slots": 1,
             "by": "zEnenbee",
             "inspiration": "Based on how there's so many black and white cards that it's not guaranteed to see all the new ones"
-        },
-        
-        {
-            "text": "[Thrown a rock]\nSir, sir!\nYes, you, with ____,\nI'm talking about you",
-            "slots": 1,
-            "by": "zEnenbee"
-        },
-        {
-            "text": "Oh, wait, I think I know what you're talking about.\n____, you're talking about ____.",
-            "slots": 1,
-            "by": "zEnenbee",
-            "inspiration": "Meant to be combined with the 'Furries' card, I guess"
-        },
-        {
-            "text": "What's my biggest red flag?\nProbably _____.",
-            "slots": 1,
-            "by": "zEnenbee",
-            "inspiration": "Used to be a black card exclusive to the title screen of the solo version of this game"
         }
     ],
     "white": [
@@ -1719,6 +1701,37 @@
             "text": "Mods",
             "by": "zEnenbee",
             "inspiration": "Used to be exclusive to a button in the title screen of the solo version of this game"
+        },
+        
+        {
+            "text": "Brfxxccxxmnpcccclllmmnprxvclmnckssqlbb11116\n(It's pronounced 'Albin')",
+            "by": "zEnenbee",
+            "inspiration": "A name that someone tried to name their child as a protest of the naming law in Sweden\nTheir second attempt was 'A' (also pronounced 'Albin'), but that failed aswell\nMeant to go with the '..but you can just call me ____' card"
+        },
+        {
+            "text": "Portals",
+            "by": "zEnenbee",
+            "inspiration": "Thought of from Portal"
+        },
+        {
+            "text": "Everything",
+            "by": "zEnenbee",
+            "inspiration": "Opposite of 'nothing' card"
+        },
+        {
+            "text": "2009",
+            "by": "zEnenbee",
+            "inspiration": "Some year in the past"
+        },
+        {
+            "text": "The year 3000",
+            "by": "zEnenbee",
+            "inspiration": "Thought of from the 2009 card and specifically the Jonas Brothers cover of Year 3000"
+        },
+        {
+            "text": "Verbs",
+            "by": "zEnenbee",
+            "inspiration": "At some point I wanted to add a 'Punching everyone' card, and it would fit in with some white cards, but not all white cards, so it can't be added"
         }
     ]
 }
