@@ -1,4 +1,5 @@
 {
+    "id":"base",
     "black": [
         {
             "text": "I finally stopped when I saw __________",
@@ -15,6 +16,7 @@
         {
             "text": "We found _________!!! NOT CLICKBAIT",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Based as a truth version of the '9 dismembered bodies' card"
         },
@@ -39,18 +41,21 @@
         {
             "text": "I ate _______ and it was DELICIOUS!",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Probably made as a set to form 'I ate chicken and it was DELICIOUS'"
         },
         {
             "text": "Chillin with ____, eating bread.",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Made as a set to form 'Chillin with the ducks, eating bread'"
         },
         {
             "text": "We found ______ in a sewer drain.",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -85,6 +90,7 @@
         {
             "text": "[sips drink] Tastes like _______",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -107,6 +113,7 @@
         {
             "text": "I always wash ______ with ______.",
             "slots": 2,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -118,16 +125,19 @@
         {
             "text": "I found ___ while looking for _______",
             "slots": 2,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
             "text": "Make sure to subscribe to get ______",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
             "text": "Chillin' with _____, eating ______",
             "slots": 2,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -138,16 +148,19 @@
         {
             "text": "For my next trick I will pull _____ out of ____",
             "slots": 2,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
             "text": "I feel like ____ is just staring at me",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
             "text": "BREAKING NEWS: Floridaman stabbed person with ____",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Made as a set for anything, literally any of these white cards are nonsensical to be stabbed with"
         },
@@ -159,6 +172,7 @@
         {
             "text": "For Halloween, I got ____",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -169,6 +183,7 @@
         {
             "text": "BREAKING NEWS: Local man shot with ____",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -184,12 +199,14 @@
         {
             "text": "Who put ____ in my Snickers bar?",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Made as a set to form 'Who put a razorblade in my Snickers bar?'"
         },
         {
             "text": "Was looking for my keys, but I found ____.\nDidn't know I had that.",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -210,11 +227,13 @@
         {
             "text": "Apparently eating ____ can cure multiple kinds of diseases",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
             "text": "I found 2 hidden cards in ____",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "There's 2 hidden cards in one of those big cards against humanity set things"
         },
@@ -237,6 +256,7 @@
         {
             "text": "Have you ever had this issue? Your ____ doesn't fit in ____",
             "slots": 2,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -259,6 +279,7 @@
         {
             "text": "What're they gonna do next?\nBag ____?",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Bagged milk"
         },
@@ -285,12 +306,14 @@
         {
             "text": "Top 3 owners of nuclear warheads:\n3. Russia\n2. America\n1. ____",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Some kind of meme with a singular person being the one to own the most warheads"
         },
         {
             "text": "I found ____ in a dumpster in the alleyway",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -311,6 +334,7 @@
         {
             "text": "Tourists shocked to find ____ washed up on the beach",
             "slots": 1,
+            "noverb":true,
             "by": "Itzg"
         },
         {
@@ -335,8 +359,9 @@
             "by": "Itzg"
         },
         {
-            "text": "Aw man, ____ just spontaneously combusted and now I  have to buy a new one",
+            "text": "Aw man, ____ just spontaneously combusted and now I have to buy a new one",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -352,6 +377,7 @@
         {
             "text": "It would be so cool if it was possible to just make ____ out of nowhere",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -362,6 +388,7 @@
         {
             "text": "New insult called \" Being a ____\" is becoming popular among multiple generations",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Probably based on calling someone a boomer"
         },
@@ -406,12 +433,14 @@
         {
             "text": "[Taking a picture]\nSay ____!",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Made as a set to form 'Say every type of cheese'"
         },
         {
             "text": "You've been hit by,\nyou've been struck by\n____",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Made as a set with 'A smooth criminal', 'A truck', and the now-removed 'Shark burgler'"
         },
@@ -429,6 +458,7 @@
         {
             "text": "Hey, it's the person with the hair that looks like ____",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -440,6 +470,7 @@
         {
             "text": "This was filmed in front of ___",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Combined to form 'This was filmed in front of a live studio audience'"
         },
@@ -451,18 +482,21 @@
         {
             "text": "____ really needs _____",
             "slots": 2,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "A overly-large violin, really needs a live studio audience"
         },
         {
             "text": "How many times can you eat ____ before it's lethal?",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "About stuff like apples technically having a lethal dose and also the song 'Flamingo'"
         },
         {
             "text": "There's just too much ____ in the soup",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Too many cooks and also meant to be combined with the 'feces' card"
         },
@@ -480,6 +514,7 @@
         {
             "text": "Are you sure we're not in a simulation? Look at ____.",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -491,11 +526,13 @@
         {
             "text": "Yeah I own _____. What's weird about that?",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
             "text": "You know you have a problem when you have _____.",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee"
         },
         {
@@ -507,6 +544,7 @@
         {
             "text": "A large boulder the size of _____ just rolled onto a road.",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Based on some news article with the title of something like 'A large boulder the size of a small boulder is blocking traffic'"
         },
@@ -519,6 +557,7 @@
         {
             "text": "I sawed ______ in half!",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Flex Tape ads"
         },
@@ -537,6 +576,7 @@
         {
             "text": "As I walked into my attic I found a box, and when I opened it, I found ____ inside",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Some guy named greg card"
         },
@@ -561,6 +601,7 @@
         {
             "text": "Hi i'm Etmon John the third, but you can just call me ____",
             "slots": 1,
+            "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Literally any white card in this game is a weird nickname"
         },
@@ -1727,6 +1768,24 @@
             "text": "Verbs",
             "by": "zEnenbee",
             "inspiration": "At some point I wanted to add a 'Punching everyone' card, and it would fit in with some white cards, but not all white cards, so it can't be added"
+        },
+        
+        {
+            "text": "Just a really small hat",
+            "by": "zEnenbee"
+        },
+        {
+            "text": "Probably 2 tons-worth of mayonaise",
+            "by": "zEnenbee"
+        },
+        {
+            "text": "Repetition.\nRepetition.\nRepetition.\nRepetition.",
+            "by": "zEnenbee"
+        },
+        {
+            "text": "The enter key",
+            "by": "zEnenbee",
+            "inspiration": "Hopefully white cards are able to work with newlines"
         }
     ]
 }
