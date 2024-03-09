@@ -547,10 +547,10 @@
             "inspiration": "There is no good way to adapt this to 1 card input, so this won't show up for a bit. This is based on the 'Coughing Baby vs Hydrogen Bomb' meme which is used to express very unfair matchups with one being clearly better"
         },
         {
-            "text": "What you need, is ____, and if that don't work, use more ____",
+            "text": "What you need, is ____, and if that don't work, use more _[SAME]_",
             "slots": 1,
             "by": "zEnenbee",
-            "inspiration": "This is actually correctly designed for 1 white card. Also this is based on the 'Meet the Engineer' TF2 short"
+            "inspiration": "This is based on the 'Meet the Engineer' TF2 short"
         },
         {
             "text": "One does not simply imagine ____",
