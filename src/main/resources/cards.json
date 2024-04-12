@@ -613,10 +613,10 @@
         },
         
         {
-            "text": "Okay, get this, ____, but with ____",
-            "slots": 2,
+            "text": "Ah, you, you must be ____",
+            "slots": 1,
             "by": "zEnenbee",
-            "inspiration": "Based on, on Smosh, 'Sniper Chess'. also thought of this because it would work with verb cards, but also this has 2 inputs, so it still won't show up"
+            "inspiration": "Designed to work with verbs aswell ig"
         }
     ],
     "white": [
@@ -1793,6 +1793,18 @@
             "text": "The enter key",
             "by": "zEnenbee",
             "inspiration": "Hopefully white cards are able to work with newlines"
+        },
+        
+        {
+            "text": "Punching Everyone",
+            "by": "zEnenbee",
+            "verb": true
+        },
+        {
+            "text": "Slowly turning into a crab",
+            "by": "zEnenbee",
+            "inspiration": "https://en.wikipedia.org/wiki/Carcinisation",
+            "verb": true
         }
     ]
 }
