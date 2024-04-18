@@ -11,7 +11,7 @@
             "text": "And the winner of the Bake Off is __________",
             "slots": 1,
             "by": "zEnenbee",
-            "inspiration": "There was some kind of reddit post which had 2 articles right next to eachother where it would say 'And the winner of the Bake Off is ...', 'Nine dismembered bodies', then someone mentioned how it was kind of like cards against humanity"
+            "inspiration": "There was some kind of reddit post which had 2 articles right next to eachother where it would say 'And the winner of the Bake Off is ...', 'Nine dismembered bodies', then someone mentioned how it was kind of like cards against humanity \n Had probably saw it originally on a YouTube video, still, but: https://www.reddit.com/r/unfortunateplacement/comments/j9u1yo/cards_against_humanity_irl/"
         },
         {
             "text": "We found _________!!! NOT CLICKBAIT",
@@ -617,6 +617,13 @@
             "slots": 1,
             "by": "zEnenbee",
             "inspiration": "Designed to work with verbs aswell ig"
+        },
+        
+        {
+            "text": "What's worse than _____?\n_____",
+            "slots": 2,
+            "by": "zEnenbee",
+            "inspiration":"Not based on that one Vine"
         }
     ],
     "white": [
@@ -1805,6 +1812,16 @@
             "by": "zEnenbee",
             "inspiration": "https://en.wikipedia.org/wiki/Carcinisation",
             "verb": true
+        },
+        
+        {
+            "text": "Exploding into a billion pieces",
+            "by": "zEnenbee",
+            "verb": true
+        },
+        {
+            "text": "Murder",
+            "by": "zEnenbee"
         }
     ]
 }
