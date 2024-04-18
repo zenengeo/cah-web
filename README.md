@@ -42,4 +42,16 @@ docker run -d --name cah -p 8080:8080 ghcr.io/zenengeo/cah-web
 
 This application is a hybrid of Spring Boot for the backend/API and a React for the frontend. The Spring Boot code is located in the usual places, such as `src/main/java` along with cards and config in `src/main/resources`. The frontend code is located in `src/main/ui`.
 
-Building the image with `./gradlew jib` blends the frontend and backend all into one server jar.
+Build the combined backend-frontend jar using
+
+```shell
+./gradlew build
+```
+
+Or build a Docker image with:
+
+```shell
+`./gradlew buildSimpleBootImage -PimageName=cah-web`
+```
+
+Refer [to the io.github.itzg.simple-boot-image plugin](https://github.com/itzg/simple-boot-image-gradle-plugin) for more image build options.
