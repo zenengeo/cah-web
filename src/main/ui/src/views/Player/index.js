@@ -39,7 +39,7 @@ function Vote ({ roomCode, round, handleVote, submittedCard }) {
   return (
     candidates && blackCard &&
       <ShowAndPick
-        title="Vote for the b"
+        title="Vote for the best"
         submitText="Vote"
         blackCard={blackCard}
         whiteCards={candidates}
