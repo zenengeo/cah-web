@@ -613,7 +613,7 @@
         },
         
         {
-            "text": "Ah, you, you must be ____",
+            "text": "Ah, you. You must be ____",
             "slots": 1,
             "by": "zEnenbee",
             "inspiration": "Designed to work with verbs aswell ig"
@@ -1296,7 +1296,7 @@
             "useAsName": true
         },
         {
-            "text": "A unecessary sequal",
+            "text": "A necessary sequel",
             "by": "zEnenbee"
         },
         {
@@ -1548,7 +1548,7 @@
             "inspiration": ""
         },
         {
-            "text": "Quote-on-quote \"Beans\"",
+            "text": "Quote-unquote \"Beans\"",
             "by": "zEnenbee",
             "inspiration": ""
         },
