@@ -46,13 +46,6 @@
             "inspiration": "Probably made as a set to form 'I ate chicken and it was DELICIOUS'"
         },
         {
-            "text": "Chillin with ____, eating bread.",
-            "slots": 1,
-            "noverb":true,
-            "by": "zEnenbee",
-            "inspiration": "Made as a set to form 'Chillin with the ducks, eating bread'"
-        },
-        {
             "text": "We found ______ in a sewer drain.",
             "slots": 1,
             "noverb":true,
@@ -97,18 +90,6 @@
             "text": "The best way to control my game is with ______.",
             "slots": 1,
             "by": "itzg"
-        },
-        {
-            "text": "Cards\nWith\n_______",
-            "slots": 1,
-            "by": "zEnenbee",
-            "inspiration": "Cards Against Humanity Title Alternative"
-        },
-        {
-            "text": "______\nWith\nHumanity",
-            "slots": 1,
-            "by": "zEnenbee",
-            "inspiration": "Cards Against Humanity Title Alternative"
         },
         {
             "text": "I always wash ______ with ______.",
@@ -254,12 +235,6 @@
             "inspiration": "Made as a set to form 'This message was sponsored by Raid Shadow Legends'"
         },
         {
-            "text": "Have you ever had this issue? Your ____ doesn't fit in ____",
-            "slots": 2,
-            "noverb":true,
-            "by": "zEnenbee"
-        },
-        {
             "text": "Revealed at E3: a new game called ____: Rise of ____",
             "slots": 2,
             "by": "zEnenbee",
@@ -302,13 +277,6 @@
             "text": "Time traveller asked about the future, says \"It's all ____\"",
             "slots": 1,
             "by": "zEnenbee"
-        },
-        {
-            "text": "Top 3 owners of nuclear warheads:\n3. Russia\n2. America\n1. ____",
-            "slots": 1,
-            "noverb":true,
-            "by": "zEnenbee",
-            "inspiration": "Some kind of meme with a singular person being the one to own the most warheads"
         },
         {
             "text": "I found ____ in a dumpster in the alleyway",
@@ -362,27 +330,6 @@
             "text": "Aw man, ____ just spontaneously combusted and now I have to buy a new one",
             "slots": 1,
             "noverb":true,
-            "by": "zEnenbee"
-        },
-        {
-            "text": "Scientists discovered you don't actually need ____",
-            "slots": 1,
-            "by": "zEnenbee"
-        },
-        {
-            "text": "New variant of snakes and ladders: ____ and ____",
-            "slots": 2,
-            "by": "zEnenbee"
-        },
-        {
-            "text": "It would be so cool if it was possible to just make ____ out of nowhere",
-            "slots": 1,
-            "noverb":true,
-            "by": "zEnenbee"
-        },
-        {
-            "text": "New, strange internet term \"____ ____\" exists and we don't want to know what it means",
-            "slots": 2,
             "by": "zEnenbee"
         },
         {
@@ -480,31 +427,11 @@
             "by": "zEnenbee"
         },
         {
-            "text": "____ really needs _____",
-            "slots": 2,
-            "noverb":true,
-            "by": "zEnenbee",
-            "inspiration": "A overly-large violin, really needs a live studio audience"
-        },
-        {
-            "text": "How many times can you eat ____ before it's lethal?",
-            "slots": 1,
-            "noverb":true,
-            "by": "zEnenbee",
-            "inspiration": "About stuff like apples technically having a lethal dose and also the song 'Flamingo'"
-        },
-        {
             "text": "There's just too much ____ in the soup",
             "slots": 1,
             "noverb":true,
             "by": "zEnenbee",
             "inspiration": "Too many cooks and also meant to be combined with the 'feces' card"
-        },
-        {
-            "text": "____ is just hell on earth",
-            "slots": 1,
-            "by": "zEnenbee",
-            "inspiration": "Thought of this after making the Hell card. I had to look up if this was a actual saying because I thought of this also from DooM"
         },
         {
             "text": "Agent 47, we have something which we think will be perfect for this mission. It's ______",
@@ -555,13 +482,6 @@
             "inspiration": "I accidentally wrote 'tracking' instead of 'traffic' at first with the previous card, so now ____ is tracking you"
         },
         {
-            "text": "I sawed ______ in half!",
-            "slots": 1,
-            "noverb":true,
-            "by": "zEnenbee",
-            "inspiration": "Flex Tape ads"
-        },
-        {
             "text": "Maybe the real ___ was the friends we made along the way",
             "slots": 1,
             "by": "zEnenbee",
@@ -572,13 +492,6 @@
             "slots": 1,
             "by": "zEnenbee",
             "inspiration": "I thought of from my joke black card idea for the random number generation card"
-        },
-        {
-            "text": "As I walked into my attic I found a box, and when I opened it, I found ____ inside",
-            "slots": 1,
-            "noverb":true,
-            "by": "zEnenbee",
-            "inspiration": "Some guy named greg card"
         },
         {
             "text": "Now introducing, the fight you all have been waiting for:\n___ vs. ____!",
@@ -617,13 +530,6 @@
             "slots": 1,
             "by": "zEnenbee",
             "inspiration": "Designed to work with verbs aswell ig"
-        },
-        
-        {
-            "text": "What's worse than _____?\n_____",
-            "slots": 2,
-            "by": "zEnenbee",
-            "inspiration":"Not based on that one Vine"
         }
     ],
     "white": [
@@ -689,10 +595,6 @@
             "text": "Cards",
             "by": "zEnenbee",
             "inspiration": "Cards against Humanity title"
-        },
-        {
-            "text": "The redditors",
-            "by": "zEnenbee"
         },
         {
             "text": "The only blank card in the deck",
@@ -885,10 +787,6 @@
             "useAsName": true
         },
         {
-            "text": "A pre-school full of children",
-            "by": "zEnenbee"
-        },
-        {
             "text": "An alligator",
             "by": "zEnenbee",
             "useAsName": true
@@ -1019,12 +917,6 @@
             "inspiration": "In a 4kids dub of Pokemon (the anime), Brock calls rice balls a 'jelly-filled donut' even though it is very much not a donut"
         },
         {
-            "text": "Sliced Edd",
-            "by": "zEnenbee",
-            "useAsName": true,
-            "inspiration": "Sliced bread, sliced edd, same thing"
-        },
-        {
             "text": "My butt",
             "by": "zEnenbee",
             "useAsName": true
@@ -1052,10 +944,6 @@
         },
         {
             "text": "Squishy, fresh catpuke",
-            "by": "Egirl"
-        },
-        {
-            "text": "A Google rabbit hole",
             "by": "Egirl"
         },
         {
@@ -1104,11 +992,6 @@
             "inspiration": "Made as a set to form '... I'm high on meth'"
         },
         {
-            "text": "The right to free speech",
-            "by": "zEnenbee",
-            "inspiration": "Combined as a set to form 'What are they gonna take away next? The right to free speech?'"
-        },
-        {
             "text": "Slurs",
             "by": "zEnenbee"
         },
@@ -1125,11 +1008,6 @@
             "text": "A disappointing hotdog",
             "by": "zEnenbee",
             "inspiration": "I think I remember putting this into the original game after my mom made a hotdog using bread as a bun or something."
-        },
-        {
-            "text": "Love",
-            "by": "zEnenbee",
-            "inspiration": "Combined as a set to form 'What is love?'"
         },
         {
             "text": "Pain",
@@ -1164,17 +1042,8 @@
             "inspiration": "Made as a set with 'You've been hit by, you've been struck by', except it's based on a different meme I saw once"
         },
         {
-            "text": "Nazis",
-            "by": "zEnenbee"
-        },
-        {
             "text": "White people",
             "by": "zEnenbee"
-        },
-        {
-            "text": "Hitler",
-            "by": "zEnenbee",
-            "useAsName": true
         },
         {
             "text": "My dad",
@@ -1751,11 +1620,6 @@
         {
             "text": "Bad breath",
             "by": "zEnenbee"
-        },
-        {
-            "text": "Mods",
-            "by": "zEnenbee",
-            "inspiration": "Used to be exclusive to a button in the title screen of the solo version of this game"
         },
         
         {
