@@ -83,6 +83,100 @@
             "by": "zEnenbee",
             "inspiration": "There was some tumblr post about a twitter post reading 'Guys be like 'The man, the myth, the legend' and it's just their pal, Greg' "
         },
+        
+        {
+            "text": "Chillin with ____, eating bread.",
+            "slots": 1,
+            "noverb":true,
+            "by": "zEnenbee",
+            "inspiration": "Made as a set to form 'Chillin with the ducks, eating bread'"
+        },
+        {
+            "text": "Cards\nWith\n_______",
+            "slots": 1,
+            "by": "zEnenbee",
+            "inspiration": "Cards Against Humanity Title Alternative"
+        },
+        {
+            "text": "______\nWith\nHumanity",
+            "slots": 1,
+            "by": "zEnenbee",
+            "inspiration": "Cards Against Humanity Title Alternative"
+        },
+        {
+            "text": "Have you ever had this issue? Your ____ doesn't fit in ____",
+            "slots": 2,
+            "noverb":true,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "Top 3 owners of nuclear warheads:\n3. Russia\n2. America\n1. ____",
+            "slots": 1,
+            "noverb":true,
+            "by": "zEnenbee",
+            "inspiration": "Some kind of meme with a singular person being the one to own the most warheads"
+        },
+        {
+            "text": "Scientists discovered you don't actually need ____",
+            "slots": 1,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "New variant of snakes and ladders: ____ and ____",
+            "slots": 2,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "It would be so cool if it was possible to just make ____ out of nowhere",
+            "slots": 1,
+            "noverb":true,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "New, strange internet term \"____ ____\" exists and we don't want to know what it means",
+            "slots": 2,
+            "by": "zEnenbee"
+        },
+        {
+            "text": "____ really needs _____",
+            "slots": 2,
+            "noverb":true,
+            "by": "zEnenbee",
+            "inspiration": "A overly-large violin, really needs a live studio audience"
+        },
+        {
+            "text": "How many times can you eat ____ before it's lethal?",
+            "slots": 1,
+            "noverb":true,
+            "by": "zEnenbee",
+            "inspiration": "About stuff like apples technically having a lethal dose and also the song 'Flamingo'"
+        },
+        {
+            "text": "____ is just hell on earth",
+            "slots": 1,
+            "by": "zEnenbee",
+            "inspiration": "Thought of this after making the Hell card. I had to look up if this was a actual saying because I thought of this also from DooM"
+        },
+        {
+            "text": "I sawed ______ in half!",
+            "slots": 1,
+            "noverb":true,
+            "by": "zEnenbee",
+            "inspiration": "Flex Tape ads"
+        },
+        {
+            "text": "As I walked into my attic I found a box, and when I opened it, I found ____ inside",
+            "slots": 1,
+            "noverb":true,
+            "by": "zEnenbee",
+            "inspiration": "Some guy named greg card"
+        },
+        {
+            "text": "What's worse than _____?\n_____",
+            "slots": 2,
+            "by": "zEnenbee",
+            "inspiration":"Not based on that one Vine"
+        }
     ],
     "white":[
         {
@@ -103,6 +197,49 @@
             "text": "A red card",
             "by": "zEnenbee",
             "inspiration": "This is about football and is not a black card or white card"
+        },
+        
+        {
+            "text": "The redditors",
+            "by": "zEnenbee"
+        },
+        {
+            "text": "Sliced Edd",
+            "by": "zEnenbee",
+            "useAsName": true,
+            "inspiration": "Sliced bread, sliced edd, same thing"
+        },
+        {
+            "text": "A Google rabbit hole",
+            "by": "Egirl"
+        },
+        {
+            "text": "The right to free speech",
+            "by": "zEnenbee",
+            "inspiration": "Combined as a set to form 'What are they gonna take away next? The right to free speech?'"
+        },
+        {
+            "text": "Nazis",
+            "by": "zEnenbee"
+        },
+        {
+            "text": "Hitler",
+            "by": "zEnenbee",
+            "useAsName": true
+        },
+        {
+            "text": "A pre-school full of children",
+            "by": "zEnenbee"
+        },
+        {
+            "text": "Love",
+            "by": "zEnenbee",
+            "inspiration": "Combined as a set to form 'What is love?'"
+        },
+        {
+            "text": "Mods",
+            "by": "zEnenbee",
+            "inspiration": "Used to be exclusive to a button in the title screen of the solo version of this game"
         }
     ]
 }
