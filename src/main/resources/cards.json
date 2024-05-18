@@ -530,7 +530,13 @@
             "slots": 1,
             "by": "zEnenbee",
             "inspiration": "Designed to work with verbs aswell ig"
-        }
+        },
+
+        {
+            "text": "___.\nHaven't had that happen before.",
+            "slots": 1,
+            "by": "Egirl"
+        },
     ],
     "white": [
         {
@@ -1686,6 +1692,13 @@
         {
             "text": "Murder",
             "by": "zEnenbee"
+        },
+        
+        {
+            "text": "Climbing an entire mountain",
+            "by": "zEnenbee",
+            "inspiration": "Based on the game 'Getting Over It with Bennett Foddy'",
+            "verb": true
         }
     ]
 }
