@@ -1,5 +1,7 @@
 package me.itzg.cahweb.services;
 
+import com.fasterxml.jackson.core.json.JsonReadFeature;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import me.itzg.cahweb.AppProperties;
 import me.itzg.cahweb.model.BlackCard;
@@ -25,7 +27,11 @@ public class CardsProvider {
         ObjectMapper objectMapper
         ) throws IOException {
         try (InputStream cardsIn = appProperties.cardsJson().getInputStream()) {
-            cardsSource = objectMapper.readValue(cardsIn, CardsSource.class);
+            cardsSource = objectMapper
+                .enable(JsonReadFeature.ALLOW_TRAILING_COMMA.mappedFeature())
+                .readValue(cardsIn, CardsSource.class);
+        } catch (JsonMappingException e) {
+            throw new IllegalStateException("Failed to parse cards json", e);
         }
 
         rand = new Random();
