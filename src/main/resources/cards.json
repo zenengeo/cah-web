@@ -537,6 +537,12 @@
             "slots": 1,
             "by": "Egirl"
         },
+
+        {
+            "text": "Hey, It's me, Charles Charles. You may know me for this, already, but in this book, I will teach you about ___",
+            "slots": 1,
+            "by": "zEnenbee"
+        },
     ],
     "white": [
         {
@@ -1699,6 +1705,35 @@
             "by": "zEnenbee",
             "inspiration": "Based on the game 'Getting Over It with Bennett Foddy'",
             "verb": true
-        }
+        },
+        
+        {
+            "text": "Bunkers",
+            "by": "zEnenbee",
+            "inspiration": "Based on a game I (zen) made"
+        },
+        {
+            "text": "Dying",
+            "by": "zEnenbee",
+            "verb": true
+        },
+        {
+            "text": "Exploding the Moon",
+            "by": "zEnenbee",
+            "inspiration": "Not related to that one Realtime Fandub, it fits, but I wasn't thinking of it",
+            "verb": true
+        },
+        {
+            "text": "Roleplaying",
+            "by": "zEnenbee",
+            "inspiration": "D&D I guess? Thought of since my original idea was 'Meowing constantly' for another verb thing, but there's already 'Constant Meowing' as a card",
+            "verb": true
+        },
+        {
+            "text": "Scurrying around like a little creature",
+            "by": "zEnenbee",
+            "verb": true
+        },
+        
     ]
 }
