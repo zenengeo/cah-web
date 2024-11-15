@@ -539,7 +539,14 @@
         },
 
         {
-            "text": "Hey, It's me, Charles Charles. You may know me for this, already, but in this book, I will teach you about ___",
+            "text": "Hey, It's me, Charles Charles. In this book, I will teach you about ___",
+            "slots": 1,
+            "by": "zEnenbee"
+        },
+
+
+        {
+            "text": "It's not ____, it's DiGiorno",
             "slots": 1,
             "by": "zEnenbee"
         },
@@ -1733,6 +1740,17 @@
             "text": "Scurrying around like a little creature",
             "by": "zEnenbee",
             "verb": true
+        },
+        
+        {
+            "text": "Here",
+            "by": "zEnenbee",
+            "verb": true
+        },
+        {
+            "text": "Not *not* feces",
+            "inspiration": "Based on the DiGiorno card, this was originally going to be 'Not Feces' for the double negative on *that* card, but this allows for double negative everywhere",
+            "by": "zEnenbee"
         },
         
     ]
