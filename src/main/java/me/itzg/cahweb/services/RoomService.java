@@ -29,7 +29,7 @@ public class RoomService {
     }
 
     public RoomInfo createRoom() {
-        final String roomCode = RandomStringUtils.randomAlphabetic(4).toUpperCase();
+        final String roomCode = RandomStringUtils.secure().next(4).toUpperCase();
 
         roomStorage.getRoom(roomCode);
 

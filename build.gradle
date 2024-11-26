@@ -6,7 +6,7 @@ plugins {
     id 'me.qoomon.git-versioning' version '6.4.4'
     // https://github.com/node-gradle/gradle-node-plugin
     id "com.github.node-gradle.node" version '7.1.0'
-    id "io.github.itzg.simple-boot-image" version '3.2.1'
+    id "io.github.itzg.simple-boot-image" version '3.4.1'
 }
 
 version = '0.0.1-SNAPSHOT'
@@ -26,7 +26,7 @@ gitVersioning.apply {
 
 group = 'me.itzg'
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
 }
 
 configurations {
@@ -91,6 +91,6 @@ dependencies {
     testImplementation 'io.projectreactor:reactor-test'
 }
 
-tasks.named('test') {
+tasks.named('test', Test) {
     useJUnitPlatform()
 }

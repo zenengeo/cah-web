@@ -12,3 +12,4 @@ jobs:
       arguments: test
       include-test-report: true
       include-nodejs: true
+      java-version: "21"
