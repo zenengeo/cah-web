@@ -1,0 +1,25 @@
+{
+  "id": "test",
+  "white": [
+    {
+      "text": "Just text"
+    },
+    {
+      "text": "With author",
+      "by": "author"
+    },
+    {
+      "text": "Some name",
+      "useAsName": true
+    },
+    {
+      "text": "Digital exclusive",
+      "exclusive": "digital"
+    },
+    {
+      "text": "Print exclusive",
+      "exclusive": "print"
+    }
+  ],
+  "black": []
+}

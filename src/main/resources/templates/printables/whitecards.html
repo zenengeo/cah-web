@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Printable White Cards</title>
+    <link rel="stylesheet" href="/css/printables.css">
+</head>
+<body>
+<div class="cards">
+    <div class="card" th:each="card: ${cards}">
+        <span class="text" th:text="${card.text()}"></span>
+    </div>
+</div>
+<div class="controls">
+    <form method="get">
+        <input type="hidden" name="offset" th:value="${offset + count}">
+        <input type="submit" value="Next">
+        <input type="number" id="count" name="count" min="1" size="2" th:value="${count}">
+        <label for="count">cards</label>
+    </form>
+</div>
+</body>
+</html>

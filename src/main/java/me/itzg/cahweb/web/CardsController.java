@@ -2,6 +2,7 @@ package me.itzg.cahweb.web;
 
 import jakarta.validation.constraints.Min;
 import me.itzg.cahweb.model.BlackCard;
+import me.itzg.cahweb.model.ExclusiveType;
 import me.itzg.cahweb.model.ListResponse;
 import me.itzg.cahweb.model.WhiteCard;
 import me.itzg.cahweb.services.CardsProvider;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/cards")
@@ -40,6 +43,15 @@ public class CardsController {
     public ListResponse<BlackCard> randomBlackCards(@RequestParam(defaultValue = "1") @Min(1) int count) {
         return ListResponse.ofList(
             cardsProvider.getSomeBlackCards(count)
+        );
+    }
+
+    @GetMapping("/whiteCards")
+    public ListResponse<WhiteCard> whiteCards(@RequestParam List<ExclusiveType> excludeExclusiveTypes,
+        @RequestParam(defaultValue = "0") int offset, @RequestParam(defaultValue = "8") int count
+        ) {
+        return ListResponse.ofList(
+            cardsProvider.getWhitecards(excludeExclusiveTypes, offset, count)
         );
     }
 }
