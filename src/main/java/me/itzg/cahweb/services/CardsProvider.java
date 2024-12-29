@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import me.itzg.cahweb.AppProperties;
 import me.itzg.cahweb.model.BlackCard;
 import me.itzg.cahweb.model.CardsSource;
+import me.itzg.cahweb.model.ExclusiveType;
 import me.itzg.cahweb.model.WhiteCard;
 import org.springframework.stereotype.Service;
 
@@ -76,5 +77,15 @@ public class CardsProvider {
             }
         }
         return picked;
+    }
+
+    public Collection<WhiteCard> getWhitecards(List<ExclusiveType> excludeExclusiveTypes, int offset, int count) {
+        return cardsSource.white().stream()
+            .filter(whiteCard -> excludeExclusiveTypes == null ||
+                excludeExclusiveTypes.stream().noneMatch(t -> Objects.equals(whiteCard.exclusive(), t))
+                )
+            .skip(offset)
+            .limit(count)
+            .collect(toList());
     }
 }

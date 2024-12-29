@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5mm;
+}
+
+.card {
+    border: 0.5mm solid black;
+    border-radius: 2mm;
+    border-collapse: collapse;
+    height: 87mm;
+    width: 63mm;
+    box-sizing: border-box;
+    padding: 5mm;
+
+
+    > .text {
+        font-size: 5mm;
+        font-weight: 600;
+        display: block;
+    }
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+@media print {
+    .controls {
+        display: none;
+    }
+}

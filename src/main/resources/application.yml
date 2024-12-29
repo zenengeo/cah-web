@@ -11,12 +11,9 @@ logging:
 management:
   server:
     port: 9090
-  endpoint:
-    startup:
-      enabled: true
   endpoints:
     web:
       exposure:
-        include: health,startup
+        include: health
 server:
   port: ${PORT:8080}

@@ -7,6 +7,8 @@ plugins {
     // https://github.com/node-gradle/gradle-node-plugin
     id "com.github.node-gradle.node" version '7.1.0'
     id "io.github.itzg.simple-boot-image" version '3.4.3'
+    // https://github.com/ben-manes/gradle-versions-plugin
+    id "com.github.ben-manes.versions" version "0.51.0"
 }
 
 version = '0.0.1-SNAPSHOT'
@@ -83,6 +85,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.apache.commons:commons-lang3:3.17.0'
     implementation 'com.github.ben-manes.caffeine:caffeine'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
