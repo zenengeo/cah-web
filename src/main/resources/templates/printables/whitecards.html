@@ -13,11 +13,21 @@
 </div>
 <div class="controls">
     <form method="get">
+        <button id="printBtn">Print</button>
         <input type="hidden" name="offset" th:value="${offset + count}">
-        <input type="submit" value="Next">
+        <input type="submit" value="Get next">
         <input type="number" id="count" name="count" min="1" size="2" th:value="${count}">
         <label for="count">cards</label>
     </form>
 </div>
+
+<script>
+    const printBtn = document.querySelector("#printBtn");
+    printBtn.addEventListener('click', () => {
+      // initiate print dialog
+      print();
+    });
+</script>
+
 </body>
 </html>
